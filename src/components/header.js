@@ -1,33 +1,51 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "./image"
+import Navbar from "./navbar"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#2074b0`,
       marginBottom: `1.45rem`,
+      // display: `flex`,
+      justifyContent: `space-evenly`,
+      alignItems: `center`,
+      color: `#fff`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        margin: `0 120px`,
+        // maxWidth: 960,
+        display: `flex`,
+        justifyContent: `space-around`,
+        alignItems: "center",
+        // padding: `1.45rem 1.0875rem`,
+        padding: `50px`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Link to="/">
+          <div style={{ width: "120px" }}>
+            <Image />
+          </div>
         </Link>
-      </h1>
+        <div>
+          <p style={{ margin: 0, paddinbg: 0 }}>| Image Capture Review</p>
+        </div>
+      </div>
+
+      <div>
+        <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
+      </div>
+
+      <button>Log In</button>
+
+      <input type="search" placeholder="search site" />
     </div>
+    <Navbar />
   </header>
 )
 
