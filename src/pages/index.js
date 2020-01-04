@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div>&larr; Carousel &rarr;</div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/about/">Go to About page 2</Link>
   </Layout>
 )
 
