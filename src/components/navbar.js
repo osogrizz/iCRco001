@@ -5,10 +5,15 @@ const Navbar = () => {
   return (
     <div
       style={{
+        bottom: 0,
+        left: 0,
         width: "100%",
         background: "#fff",
-        borderBottom: "2px solid #111",
-        padding: "10px",
+        borderBottom: "2px solid #555",
+        padding: "12px",
+        margin: 0,
+        marginBottom: `1.45rem`,
+        boxShadow: "0 0 12px #666",
       }}
     >
       <div
@@ -17,8 +22,10 @@ const Navbar = () => {
           justifyContent: "space-around",
           margin: "0 auto",
           maxWidth: "960px",
-          display: "flex",
-          justifyContent: "space-around",
+          textTransform: "uppercase",
+          fontSize: "0.775rem",
+          fontWeight: "700",
+          letterSpacing: "1px",
         }}
       >
         <Link to="/">Home</Link>

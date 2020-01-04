@@ -5,48 +5,63 @@ import Image from "./image"
 import Navbar from "./navbar"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#2074b0`,
-      marginBottom: `1.45rem`,
-      // display: `flex`,
-      justifyContent: `space-evenly`,
-      alignItems: `center`,
-      color: `#fff`,
-    }}
-  >
-    <div
+  <div style={{ position: "relative", width: "100%", marginBottom: `2.45rem` }}>
+    <header
       style={{
-        margin: `0 120px`,
-        // maxWidth: 960,
-        display: `flex`,
-        justifyContent: `space-around`,
-        alignItems: "center",
-        // padding: `1.45rem 1.0875rem`,
-        padding: `50px`,
+        width: `100%`,
+        height: "180px",
+        background: "linear-gradient(#5290c0, #2074b0)",
+        justifyContent: `space-evenly`,
+        alignItems: `center`,
+        color: `#fff`,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Link to="/">
-          <div style={{ width: "120px" }}>
-            <Image />
+      <div
+        style={{
+          margin: `0 auto`,
+          display: `flex`,
+          justifyContent: `space-around`,
+          alignItems: "center",
+          padding: `50px`,
+          maxWidth: "1110px",
+          fontSize: "1.1rem",
+          fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Link to="/">
+            <div style={{ width: "150px" }}>
+              <Image />
+            </div>
+          </Link>
+          <div>
+            <p style={{ margin: "0  0  0 10px", paddinbg: 0 }}>
+              {" "}
+              | Image Capture Review
+            </p>
           </div>
-        </Link>
-        <div>
-          <p style={{ margin: 0, paddinbg: 0 }}>| Image Capture Review</p>
         </div>
+
+        <div>
+          <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
+        </div>
+
+        <button
+          style={{ background: "transparent", color: "#fff", border: "none" }}
+        >
+          Log In
+        </button>
+
+        <input
+          type="search"
+          placeholder="search site"
+          style={{ borderRadius: "4px" }}
+        />
       </div>
-
-      <div>
-        <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
-      </div>
-
-      <button>Log In</button>
-
-      <input type="search" placeholder="search site" />
-    </div>
+    </header>
     <Navbar />
-  </header>
+  </div>
 )
 
 Header.propTypes = {
