@@ -9,7 +9,9 @@ import { FaPhone } from "react-icons/fa"
 import styled from "@emotion/styled"
 
 const HeaderWrapper = styled("div")`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   margin-bottom: 2.45rem;
 `

@@ -37,11 +37,11 @@ const Navbar = () => {
     <NavWrapper>
       <NavContainer>
         <Link to="/">Home</Link>
-        <Link>Solutions</Link>
-        <Link>Specialties</Link>
-        <Link>Services & Support</Link>
+        <Link to="/solutions/">Solutions</Link>
+        <Link to="/specialties/">Specialties</Link>
+        <Link to="/services/">Services & Support</Link>
         <Link to="/about/">About</Link>
-        <Link>Contact Us</Link>
+        <Link to="/contact/">Contact Us</Link>
       </NavContainer>
     </NavWrapper>
   )
