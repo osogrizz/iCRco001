@@ -11,7 +11,7 @@ const NavWrapper = styled("nav")`
   width: 100%;
   background: #fff;
   border-bottom: 2px solid #555;
-  padding: 12px;
+  padding: 0.3rem;
   box-shadow: 0 0 12px #666;
 `
 
