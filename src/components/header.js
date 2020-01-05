@@ -78,10 +78,11 @@ const PhoneText = styled("div")`
 `
 
 const PhoneImage = styled("div")`
-  /* transform: scaleX(-1); */
-  transform: rotate(-23deg);
-  margin: 0.785rem 0.745rem 0;
+  transform: scaleX(-1) rotate(-13deg);
+  /* transform: rotate(-23deg); */
+  margin: 0.685rem 0.745rem 0;
   padding: 0;
+  font-size: 1.375rem;
 `
 
 const LogIn = styled("button")`
