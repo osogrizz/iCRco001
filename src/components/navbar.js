@@ -32,16 +32,32 @@ const NavContainer = styled("div")`
   }
 `
 
+const activeStyles = {
+  color: "#5290c0",
+}
+
 const Navbar = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <Link to="/">Home</Link>
-        <Link to="/solutions/">Solutions</Link>
-        <Link to="/specialties/">Specialties</Link>
-        <Link to="/services/">Services & Support</Link>
-        <Link to="/about/">About</Link>
-        <Link to="/contact/">Contact Us</Link>
+        <Link activeStyle={activeStyles} to="/">
+          Home
+        </Link>
+        <Link activeStyle={activeStyles} to="/solutions/">
+          Solutions
+        </Link>
+        <Link activeStyle={activeStyles} to="/specialties/">
+          Specialties
+        </Link>
+        <Link activeStyle={activeStyles} to="/services/">
+          Services & Support
+        </Link>
+        <Link activeStyle={activeStyles} to="/about/">
+          About
+        </Link>
+        <Link activeStyle={activeStyles} to="/contact/">
+          Contact Us
+        </Link>
       </NavContainer>
     </NavWrapper>
   )

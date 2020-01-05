@@ -51,6 +51,12 @@ const AboutWrapper = styled("div")`
   }
 `
 
+const AboutHero = styled("div")`
+  /* background-image: url("../images/hero-about.webp"); */
+  width: 100%;
+  height: 100px;
+`
+
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
@@ -82,21 +88,17 @@ const SecondPage = () => (
         <h2>Reliable</h2>
       </div>
 
-      <div>
-        <img src="" alt="proudly made in usa" />
-      </div>
+      <AboutHero></AboutHero>
 
       <section>
         <h2></h2>
       </section>
       <section>
         <div>
-          <h2></h2>
-          <img src="" alt="stuff1" />
+          <h2>title1</h2>
         </div>
         <div>
-          <h2></h2>
-          <img src="" alt="stuff2" />
+          <h2>title2</h2>
         </div>
       </section>
       <section>
