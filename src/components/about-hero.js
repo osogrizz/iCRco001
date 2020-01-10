@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,12 +18,10 @@ const ImageBackground = styled(BackgroundImage)`
 
   h2 {
     color: #222;
-    /* color: #fff; */
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.5rem;
     border: 4px solid black;
-    /* border: 4px solid #fff; */
     text-align: center;
     padding: 1rem 1.875rem;
     max-width: 800px;
