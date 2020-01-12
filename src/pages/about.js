@@ -19,8 +19,12 @@ const AboutWrapper = styled("div")`
     letter-spacing: 0.7rem;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   section {
-    margin: 0 auto;
+    margin: 0 auto 80px;
   }
 `
 const WhoWeAre = styled("section")`
@@ -177,6 +181,46 @@ const Earth = styled("section")`
   }
 `
 
+const CEO = styled("section")`
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+
+  h2 {
+    text-transform: uppercase;
+    color: #0069aa;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+  }
+
+  p {
+    font-size: 0.875rem;
+    padding-right: 24px;
+
+    span {
+      font-weight: bold;
+      color: #0069aa;
+    }
+  }
+
+  div {
+    width: 400px;
+  }
+`
+
+const Thirty = styled("section")`
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    color: #0069aa;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+  }
+`
+
 const AboutPage = ({ data }) => (
   <Layout>
     {console.log(data)}
@@ -276,25 +320,25 @@ const AboutPage = ({ data }) => (
         </div>
       </Philo>
 
-      <section>
+      <CEO>
         <div>
           <h2>Our CEO</h2>
           <p>
-            Aside from being iCRco's reliable leader, STEPHEN NEUSHUL is an
-            incredibly innovative individual who greatly enjoys tinkering and
-            engineering over the business aspects. You'll find him on the
-            production floor more than in his office. More than anything, he
-            passionately enjoys seeing the benefits of his creativity in
-            engineering.
+            Aside from being iCRco's reliable leader,{" "}
+            <span>STEPHEN NEUSHUL</span> is an incredibly innovative individual
+            who greatly enjoys tinkering and engineering over the business
+            aspects. You'll find him on the production floor more than in his
+            office. More than anything, he passionately enjoys seeing the
+            benefits of his creativity in engineering.
           </p>
           <button>Read More</button>
         </div>
         <div>
-          <img src="" alt="portrait" />
+          <Img fluid={data.ceo.fluid} />
         </div>
-      </section>
+      </CEO>
 
-      <section>
+      <Thirty>
         <h2>iCRCO APPROACHING 30 YEARS</h2>
         <h4>Achieving Milestones in Innovation and Technology.</h4>
         <article>
@@ -304,7 +348,7 @@ const AboutPage = ({ data }) => (
           critical need, I am truly humbled by the journey.”
         </article>
         <button>Read More</button>
-      </section>
+      </Thirty>
     </AboutWrapper>
   </Layout>
 )
@@ -324,6 +368,11 @@ export const query = graphql`
       }
     }
     philo: imageSharp(fluid: { originalName: { eq: "philosophy.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    ceo: imageSharp(fluid: { originalName: { eq: "ceo.png" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
