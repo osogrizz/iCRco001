@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import AboutHero from "../components/about-hero"
 
 import Layout from "../components/layout"
@@ -17,15 +19,15 @@ const AboutWrapper = styled("div")`
   }
 
   section {
-    max-width: 960px;
+    /* max-width: 960px; */
     margin: 0 auto;
-    h2 {
+    /* h2 {
       text-align: center;
       text-transform: uppercase;
       color: #0069aa;
       font-weight: 400;
       letter-spacing: 4.4px;
-    }
+    } */
   }
 `
 const WhoWeAre = styled("section")`
@@ -34,14 +36,15 @@ const WhoWeAre = styled("section")`
   div {
     margin: 3.745rem 0.945rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   h2 {
     text-transform: uppercase;
     color: #0069aa;
-    font-weight: 700;
-    letter-spacing: 4px;
+    font-weight: 600;
+    letter-spacing: 5.8px;
+    font-size: 1.485rem;
   }
 
   article {
@@ -54,6 +57,7 @@ const WhoWeAre = styled("section")`
     color: #313538;
     font-size: 0.795rem;
     font-weight: 400;
+    padding: 0 40px;
   }
 
   span {
@@ -65,22 +69,100 @@ const WhoWeAre = styled("section")`
     height: 120px;
   }
 `
-// const HeroBox = styled("div")`
-//   h2 {
-//     color: #222;
-//     font-size: 2rem;
-//     font-weight: 700;
-//     letter-spacing: 0.5rem;
-//     border: 4px solid black;
-//     text-align: center;
-//     padding: 1rem 0;
-//     max-width: 800px;
-//     margin: 0 auto;
-//   }
-// `
 
-const AboutPage = () => (
+const InHouse = styled("section")`
+  max-width: 1120px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.275rem;
+    height: auto;
+    letter-spacing: 2.2px;
+  }
+
+  .container-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    h3 {
+      width: max-content;
+    }
+  }
+  .container-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+
+    h3 {
+      margin-left: 10%;
+      text-align: center;
+    }
+  }
+
+  .image-top {
+    width: 55%;
+    img {
+      padding: 0;
+    }
+  }
+  .image-bottom {
+    flex-direction: row-reverse;
+    width: 55%;
+    img {
+      padding: 0;
+    }
+  }
+`
+
+const Philo = styled("section")`
+  max-width: 800px;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    color: #0069aa;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .features {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    background: #f3f3f3;
+    padding-bottom: 0;
+
+    h3 {
+      color: #0069aa;
+      font-size: 1.175rem;
+      font-weight: 400;
+      padding: 0;
+      margin: 15px 20px;
+      letter-spacing: 1px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+`
+
+const AboutPage = ({ data }) => (
   <Layout>
+    {console.log(data)}
     <SEO title="About page" />
     <AboutWrapper>
       <WhoWeAre>
@@ -114,37 +196,62 @@ const AboutPage = () => (
 
       <AboutHero />
 
-      <section>
-        <h2></h2>
-      </section>
-      <section>
-        <div>
-          <h2>WE MANUFACTURE IN-HOUSE</h2>
+      <InHouse>
+        <div className="container-top">
+          <div>
+            <h3>WE MANUFACTURE IN-HOUSE</h3>
+          </div>
+          <div className="image-top">
+            <Img fluid={data.future.fluid} />
+          </div>
         </div>
-        <div>
-          <h2>WE REDEFINE THE FIELD OF DIGITAL IMAGING</h2>
+
+        <div className="container-bottom">
+          <div>
+            <h3>WE REDEFINE THE FIELD OF DIGITAL IMAGING</h3>
+          </div>
+          <div className="image-bottom">
+            <Img fluid={data.prod.fluid} />
+          </div>
         </div>
-      </section>
-      <section>
+      </InHouse>
+
+      <Philo>
         <h2>OUR PHILOSOPHY</h2>
         <h4>
-          "Good patient care is what it's all about. Better patient care, better
-          patient outcome."
+          <i>
+            "Good patient care is what it's all about. Better patient care,
+            better patient outcome."
+          </i>
         </h4>
-        <img src="" alt="" />
-        <div style={{ display: "flex" }}>
+        <Img fluid={data.philo.fluid} />
+
+        <div className="features">
           <div>
-            <h3>Better Image</h3>
-            <h3>Exceeding Expectations</h3>
-            <h3>Product Flexibility</h3>
+            <h3>
+              Better <span>Image</span>
+            </h3>
+            <h3>
+              Exceeding <span>Expectations</span>
+            </h3>
+            <h3>
+              Product <span>Flexibility</span>
+            </h3>
           </div>
+
           <div>
-            <h3>Low Dose Solutions</h3>
-            <h3>Accessible Image Systems</h3>
-            <h3>It's in our Design.</h3>
+            <h3>
+              Low Dose <span>Solutions</span>
+            </h3>
+            <h3>
+              Accessible <span>Image Systems</span>
+            </h3>
+            <h3>
+              It's in our <span>Design.</span>
+            </h3>
           </div>
         </div>
-      </section>
+      </Philo>
 
       <section>
         <div>
@@ -181,10 +288,22 @@ const AboutPage = () => (
 
 export default AboutPage
 
-// export const query = graphql`
-//   query AboutQuery {
-//     card: imageSharp(fluid: {originalName: {eq: "about-hero.png" } } ) {
-//       fluid(maxWidth: 400) {
-//       ...GatsbyImageSharpFluid
-//       }
-//     }
+export const query = graphql`
+  query AboutQuery {
+    future: imageSharp(fluid: { originalName: { eq: "Future_of_CR.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    prod: imageSharp(fluid: { originalName: { eq: "production_floor.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    philo: imageSharp(fluid: { originalName: { eq: "philosophy.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
