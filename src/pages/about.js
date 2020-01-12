@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import AboutHero from "../components/about-hero"
+import EarthHero from "../components/earh-hero"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -154,7 +155,26 @@ const Philo = styled("section")`
 `
 
 const Earth = styled("section")`
-  background: #444;
+  background: #181a1c;
+
+  div {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 960px;
+    text-align: center;
+
+    h2 {
+      margin: 6rem 0 0.45rem;
+      font-size: 1.975rem;
+      letter-spacing: 1.4px;
+    }
+
+    p {
+      width: 738px;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+    }
+  }
 `
 
 const AboutPage = ({ data }) => (
@@ -215,7 +235,7 @@ const AboutPage = ({ data }) => (
 
       <Earth>
         <div>
-          <Img fluid={data.earth.fluid} />
+          <EarthHero />
         </div>
       </Earth>
 
@@ -304,11 +324,6 @@ export const query = graphql`
       }
     }
     philo: imageSharp(fluid: { originalName: { eq: "philosophy.png" } }) {
-      fluid(maxWidth: 400) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    earth: imageSharp(fluid: { originalName: { eq: "earth.png" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }

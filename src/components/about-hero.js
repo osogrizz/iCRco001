@@ -10,8 +10,8 @@ const ImageBackground = styled(BackgroundImage)`
   height: 400px;
   width: 100%;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
+      rgba(150, 150, 150, 0.4),
+      rgba(150, 150, 150, 0.4)
     ),
     url("../images/about-hero.png");
   background-size: cover;

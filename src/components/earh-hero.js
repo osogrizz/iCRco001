@@ -4,25 +4,23 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
+  z-index: 5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("../images/about-hero.png");
+  background-image: url() ("../images/earth.png");
   background-size: cover;
+  color: #fff;
+  text-align: center;
 
   h2 {
-    color: #222;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.5rem;
-    border: 4px solid black;
-    text-align: center;
     padding: 1rem 1.875rem;
     max-width: 800px;
     margin: 0 auto;
@@ -30,13 +28,31 @@ const ImageBackground = styled(BackgroundImage)`
 `
 
 const EarthHero = () => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "earth.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1120) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <ImageBackground
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
     >
-      <h2>Proudly Made in the USA</h2>
+      <h2>1.4 Billion Images Captured</h2>
+      <p>
+        Since it’s inception, iCRco, has been committed to providing healthcare
+        professionals the best in imaging technology while pulling costs out of
+        healthcare. iCRco is proudly represented in the most busiest and exotic
+        locations in over 90 countries worldwide. Recently iCRco calculated
+        almost 1.4 billion images captured since it entered the global arena.
+      </p>
     </ImageBackground>
   )
 }
