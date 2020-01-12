@@ -5,7 +5,8 @@ import SEO from "../components/seo"
 import styled from "@emotion/styled"
 
 const Container = styled("div")`
-  margin: 40px auto 0;
+  margin: 40px auto;
+  text-align: center;
 `
 
 const NotFoundPage = () => (
