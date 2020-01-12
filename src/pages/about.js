@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+
 import AboutHero from "../components/about-hero"
 import EarthHero from "../components/earh-hero"
 
@@ -187,6 +188,10 @@ const CEO = styled("section")`
   justify-content: center;
   padding: 40px;
 
+  div:first-of-type {
+    margin-right: 24px;
+  }
+
   h2 {
     text-transform: uppercase;
     color: #0069aa;
@@ -196,8 +201,9 @@ const CEO = styled("section")`
   }
 
   p {
-    font-size: 0.875rem;
-    padding-right: 24px;
+    font-size: 0.865rem;
+    font-weight: 300;
+    padding-right: 75px;
 
     span {
       font-weight: bold;
