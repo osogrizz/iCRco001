@@ -19,15 +19,7 @@ const AboutWrapper = styled("div")`
   }
 
   section {
-    /* max-width: 960px; */
     margin: 0 auto;
-    /* h2 {
-      text-align: center;
-      text-transform: uppercase;
-      color: #0069aa;
-      font-weight: 400;
-      letter-spacing: 4.4px;
-    } */
   }
 `
 const WhoWeAre = styled("section")`
@@ -81,7 +73,7 @@ const InHouse = styled("section")`
     font-weight: 700;
     font-size: 1.275rem;
     height: auto;
-    letter-spacing: 2.2px;
+    letter-spacing: 4.2px;
   }
 
   .container-top {
@@ -103,7 +95,8 @@ const InHouse = styled("section")`
     width: 100%;
 
     h3 {
-      margin-left: 10%;
+      padding: 0 16%;
+      line-height: 1.875rem;
       text-align: center;
     }
   }
@@ -158,6 +151,10 @@ const Philo = styled("section")`
       }
     }
   }
+`
+
+const Earth = styled("section")`
+  background: #444;
 `
 
 const AboutPage = ({ data }) => (
@@ -215,6 +212,12 @@ const AboutPage = ({ data }) => (
           </div>
         </div>
       </InHouse>
+
+      <Earth>
+        <div>
+          <Img fluid={data.earth.fluid} />
+        </div>
+      </Earth>
 
       <Philo>
         <h2>OUR PHILOSOPHY</h2>
@@ -301,6 +304,11 @@ export const query = graphql`
       }
     }
     philo: imageSharp(fluid: { originalName: { eq: "philosophy.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    earth: imageSharp(fluid: { originalName: { eq: "earth.png" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
