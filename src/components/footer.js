@@ -2,6 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 // import { graphql } from "gatsby"
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa"
 
 import FlagImage from "../components/flag-image"
 
@@ -67,6 +74,24 @@ const Wrapper = styled("div")`
     margin: 20px;
     font-weight: 400;
     font-size: 0.775rem;
+  }
+
+  svg {
+    border: none;
+    fill: #a9a9a9;
+    /* fill: #fff; */
+  }
+  .social-media {
+    padding: 0;
+    margin: 0;
+    li {
+      background: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 5.5px;
+      margin-left: 5px;
+    }
   }
 `
 
@@ -174,6 +199,34 @@ const Footer = ({ data }) => {
         <FlagImage />
         <li>
           <h5>Stay Connected</h5>
+
+          <ul style={{ display: "flex" }} className="social-media">
+            <li>
+              <a>
+                <FaFacebookF />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FaInstagram />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a>
+                <FaYoutube />
+              </a>
+            </li>
+          </ul>
         </li>
       </div>
 
