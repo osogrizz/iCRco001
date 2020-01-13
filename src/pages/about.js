@@ -43,9 +43,9 @@ const AboutWrapper = styled("div")`
       background-color: #fff;
       background-image: linear-gradient(
         0deg,
-        rgba(95, 95, 95, 0) 0%,
-        rgba(95, 95, 95, 0) 50%,
-        rgba(95, 95, 95, 0.2) 51%
+        rgba(20, 20, 20, 0.2) 0%,
+        rgba(20, 20, 20, 0.075) 50%,
+        rgba(20, 20, 20, 0) 51%
       );
       transition: background 0.3s linear;
     }
