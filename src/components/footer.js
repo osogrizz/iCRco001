@@ -31,12 +31,27 @@ const Wrapper = styled("div")`
     text-align: left;
     font-weight: 400;
     text-transform: uppercase;
+
+    :hover {
+      color: #0069aa;
+      transition: color 0.35s linear;
+    }
+  }
+
+  li {
+    text-align: left;
+    list-style-type: none;
   }
 
   p {
     text-align: left;
     font-size: 0.675rem;
     margin: 0px;
+
+    :hover {
+      color: #fff;
+      transition: color 0.3s linear;
+    }
   }
 
   hr {
@@ -56,7 +71,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div>
-        <Link>
+        <li>
           <h5>solutions</h5>
           <Link>
             <p>Computed Tomography</p>
@@ -76,9 +91,9 @@ const Footer = () => {
           <Link>
             <p>Software & Hardware Solutions</p>
           </Link>
-        </Link>
+        </li>
 
-        <Link>
+        <li>
           <h5>specialties</h5>
           <Link>
             <p>Urgent Care</p>
@@ -98,9 +113,9 @@ const Footer = () => {
           <Link>
             <p>Veterinary</p>
           </Link>
-        </Link>
+        </li>
 
-        <Link>
+        <li>
           <h5>services & support</h5>
           <Link>
             <p>Sales Support</p>
@@ -117,9 +132,9 @@ const Footer = () => {
           <Link>
             <p>Dealer Assistance</p>
           </Link>
-        </Link>
+        </li>
 
-        <Link>
+        <li>
           <h5>quick links</h5>
           <Link>
             <p>About Us</p>
@@ -127,9 +142,9 @@ const Footer = () => {
           <Link>
             <p>News & Events</p>
           </Link>
-        </Link>
+        </li>
 
-        <Link>
+        <li>
           <h5>contact us</h5>
           <Link>
             <p>iCRco Headquarters</p>
@@ -143,8 +158,11 @@ const Footer = () => {
           <Link>
             <p>info@company.com</p>
           </Link>
-        </Link>
+        </li>
       </div>
+
+      <div></div>
+
       <hr />
       <div>
         <h6>© {new Date().getFullYear()}, iCRco. All rights reserved.</h6>
