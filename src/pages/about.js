@@ -47,7 +47,7 @@ const AboutWrapper = styled("div")`
         rgba(20, 20, 20, 0.075) 50%,
         rgba(20, 20, 20, 0) 51%
       );
-      transition: background 0.3s linear;
+      transition: background 0.5s linear;
     }
   }
 
