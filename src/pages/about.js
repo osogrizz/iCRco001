@@ -430,10 +430,12 @@ const AboutPage = ({ data }) => (
         </div>
         <article>
           <q>
-            When I think back on how this company started, our expansion into
-            the global market, securing contracts with the U.S. military, and
-            donating systems to countries and organizations designed to help
-            people in critical need, I am truly humbled by the journey.
+            <i>
+              When I think back on how this company started, our expansion into
+              the global market, securing contracts with the U.S. military, and
+              donating systems to countries and organizations designed to help
+              people in critical need, I am truly humbled by the journey.
+            </i>
           </q>
         </article>
         <div className="thirty-closing">
