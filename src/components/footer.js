@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
+
+import FlagImage from "../components/flag-image"
 
 const Wrapper = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -67,7 +71,7 @@ const Wrapper = styled("div")`
   }
 `
 
-const Footer = () => {
+const Footer = ({ data }) => {
   return (
     <Wrapper>
       <div>
@@ -161,7 +165,12 @@ const Footer = () => {
         </li>
       </div>
 
-      <div></div>
+      <div style={{ display: "flex", width: "960px", margin: "0 auto" }}>
+        <FlagImage />
+        <li>
+          <h5>Stay Connected</h5>
+        </li>
+      </div>
 
       <hr />
       <div>
@@ -177,3 +186,13 @@ const Footer = () => {
 }
 
 export default Footer
+
+export const query = graphql`
+  query FlagQuery {
+    flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`

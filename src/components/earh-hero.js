@@ -11,7 +11,7 @@ const ImageBackground = styled(BackgroundImage)`
   align-items: center;
   height: 400px;
   width: 100%;
-  background-image: url() ("../images/earth.png");
+  background-image: url("../images/earth.png");
   background-size: cover;
   color: #fff;
   text-align: center;
