@@ -9,7 +9,6 @@ const ImageBackground = styled(BackgroundImage)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100px; */
   width: 100%;
   background-image: url("../images/flag.png");
   background-size: cover;
@@ -22,7 +21,7 @@ const FlagImage = () => {
     query {
       image: file(relativePath: { eq: "flag.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -30,7 +29,7 @@ const FlagImage = () => {
     }
   `)
   return (
-    <div style={{ width: "300px", height: "200px" }}>
+    <div style={{ width: "200px", height: "146px" }}>
       <ImageBackground fluid={image.sharp.fluid} />
     </div>
   )

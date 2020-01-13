@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 
 import FlagImage from "../components/flag-image"
 
@@ -165,7 +164,13 @@ const Footer = ({ data }) => {
         </li>
       </div>
 
-      <div style={{ display: "flex", width: "960px", margin: "0 auto" }}>
+      <div
+        style={{
+          display: "flex",
+          width: "750px",
+          margin: "0 auto",
+        }}
+      >
         <FlagImage />
         <li>
           <h5>Stay Connected</h5>
@@ -187,12 +192,12 @@ const Footer = ({ data }) => {
 
 export default Footer
 
-export const query = graphql`
-  query FlagQuery {
-    flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
-      fluid(maxWidth: 400) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query FlagQuery {
+//     flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
+//       fluid(maxWidth: 400) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
