@@ -305,7 +305,7 @@ const Thirty = styled("section")`
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="About page" />
+    <SEO title="About" />
     <AboutWrapper>
       <WhoWeAre>
         <h1>Who We Are</h1>
