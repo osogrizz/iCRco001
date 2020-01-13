@@ -26,16 +26,28 @@ const AboutWrapper = styled("div")`
     height: 40px;
     border: rgba(24, 26, 28, 1) 0px solid;
     outline: transparent;
-    background-color: #0069aa;
-    color: #fff;
     border-radius: 5px;
     font-size: 0.845rem;
-    /* background-image: linear-gradient() */
+    background-color: #0069aa;
+    color: #fff;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.4) 51%
+    );
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.6);
 
     :hover {
       color: #444;
       background-color: #fff;
+      background-image: linear-gradient(
+        0deg,
+        rgba(95, 95, 95, 0) 0%,
+        rgba(95, 95, 95, 0) 50%,
+        rgba(95, 95, 95, 0.2) 51%
+      );
+      transition: background 0.3s linear;
     }
   }
 
