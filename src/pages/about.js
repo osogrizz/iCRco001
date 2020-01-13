@@ -22,6 +22,21 @@ const AboutWrapper = styled("div")`
 
   button {
     cursor: pointer;
+    width: 142px;
+    height: 40px;
+    border: rgba(24, 26, 28, 1) 0px solid;
+    outline: transparent;
+    background-color: #0069aa;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.845rem;
+    /* background-image: linear-gradient() */
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.6);
+
+    :hover {
+      color: #444;
+      background-color: #fff;
+    }
   }
 
   section {
@@ -214,9 +229,14 @@ const CEO = styled("section")`
   div {
     width: 400px;
   }
+  button {
+    margin: 40px 40px 40px 0;
+  }
 `
 
 const Thirty = styled("section")`
+  width: 960px;
+  margin: 0 auto;
   text-align: center;
   h2 {
     text-transform: uppercase;
@@ -224,12 +244,55 @@ const Thirty = styled("section")`
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: 3.5px;
+    i {
+      text-transform: lowercase;
+    }
+  }
+  h4 {
+    color: #636769;
+  }
+  div {
+    margin: 0 auto;
+    width: 960px;
+    :first-child {
+      width: 280px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    :nth-child(2) {
+      width: 750px;
+    }
+  }
+
+  q {
+    font-size: 1rem;
+    letter-spacing: 1.1px;
+    text-align: center;
+  }
+  cite {
+    color: #0069aa;
+    font-weight: 600;
+  }
+  button {
+  }
+  .thirty-closing {
+    display: flex;
+    flex-direction: column;
+
+    cite {
+      margin: 0 auto;
+      width: 500px;
+      text-align: right;
+    }
+    button {
+      text-align: center;
+      margin: 40px auto;
+    }
   }
 `
 
 const AboutPage = ({ data }) => (
   <Layout>
-    {console.log(data)}
     <SEO title="About page" />
     <AboutWrapper>
       <WhoWeAre>
@@ -345,15 +408,26 @@ const AboutPage = ({ data }) => (
       </CEO>
 
       <Thirty>
-        <h2>iCRCO APPROACHING 30 YEARS</h2>
+        <h2>
+          <i>i</i>CRCO APPROACHING 30 YEARS
+        </h2>
         <h4>Achieving Milestones in Innovation and Technology.</h4>
+        <div>
+          <Img fluid={data.innovation.fluid} />
+          <Img fluid={data.devices.fluid} />
+        </div>
         <article>
-          “When I think back on how this company started, our expansion into the
-          global market, securing contracts with the U.S. military, and donating
-          systems to countries and organizations designed to help people in
-          critical need, I am truly humbled by the journey.”
+          <q>
+            When I think back on how this company started, our expansion into
+            the global market, securing contracts with the U.S. military, and
+            donating systems to countries and organizations designed to help
+            people in critical need, I am truly humbled by the journey.
+          </q>
         </article>
-        <button>Read More</button>
+        <div className="thirty-closing">
+          <cite> - Stephen Neushel</cite>
+          <button>Read More</button>
+        </div>
       </Thirty>
     </AboutWrapper>
   </Layout>
@@ -379,6 +453,16 @@ export const query = graphql`
       }
     }
     ceo: imageSharp(fluid: { originalName: { eq: "ceo.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    innovation: imageSharp(fluid: { originalName: { eq: "innovation.png" } }) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+    devices: imageSharp(fluid: { originalName: { eq: "device-gallery.png" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
