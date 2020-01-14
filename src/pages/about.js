@@ -439,7 +439,7 @@ const AboutPage = ({ data }) => (
           </q>
         </article>
         <div className="thirty-closing">
-          <cite> - Stephen Neushel</cite>
+          <cite> - Stephen Neushul</cite>
           <button>Read More</button>
         </div>
       </Thirty>

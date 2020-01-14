@@ -79,7 +79,6 @@ const Wrapper = styled("div")`
   svg {
     border: none;
     fill: #a9a9a9;
-    /* fill: #fff; */
   }
   .social-media {
     padding: 0;
@@ -202,27 +201,52 @@ const Footer = ({ data }) => {
 
           <ul style={{ display: "flex" }} className="social-media">
             <li>
-              <a>
+              <a
+                href="https://www.facebook.com/icrcompany"
+                target="_blank"
+                rel="noopener"
+                noreferrer
+              >
                 <FaFacebookF />
               </a>
             </li>
             <li>
-              <a>
+              <a
+                href="https://www.instagram.com/icrcoinc/"
+                target="_blank"
+                rel="noopener"
+                noreferrer
+              >
                 <FaInstagram />
               </a>
             </li>
             <li>
-              <a>
+              <a
+                href="https://twitter.com/icrco"
+                target="_blank"
+                rel="noopener"
+                noreferrer
+              >
                 <FaTwitter />
               </a>
             </li>
             <li>
-              <a>
+              <a
+                href="https://www.linkedin.com/company/icrco/"
+                target="_blank"
+                rel="noopener"
+                noreferrer
+              >
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a>
+              <a
+                href="https://www.youtube.com/user/TheICRCompany"
+                target="_blank"
+                rel="noopener"
+                noreferrer
+              >
                 <FaYoutube />
               </a>
             </li>
