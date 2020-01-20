@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-// import Modal from "./modal"
 
 import styled from "@emotion/styled"
 
@@ -51,16 +50,13 @@ const DropDown = styled("div")`
 `
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+  const [news, setNews] = useState(false)
   const [solutions, setSolutions] = useState(false)
   const [specialties, setSpecialties] = useState(false)
   const [service, setService] = useState(false)
   const [about, setAbout] = useState(false)
   const [contact, setContact] = useState(false)
 
-  const handleOpen = () => {
-    setOpen(!open)
-  }
   const handleSolutions = () => {
     setSolutions(!solutions)
   }
@@ -70,6 +66,7 @@ const Navbar = () => {
   const handleService = () => {
     setService(!service)
   }
+
   const handleAbout = () => {
     setAbout(!about)
   }
@@ -79,29 +76,8 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <Link
-          activeStyle={activeStyles}
-          to="/"
-          onMouseEnter={handleOpen}
-          onMouseLeave={handleOpen}
-          name="home"
-        >
+        <Link activeStyle={activeStyles} to="/" name="home">
           Home
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              position: "relative",
-            }}
-          >
-            {open ? (
-              <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
-              </DropDown>
-            ) : null}
-          </div>
         </Link>
 
         <Link
@@ -115,9 +91,14 @@ const Navbar = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {solutions ? (
               <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
+                <Link to="computerd-tomogrphy">Computed Tomography</Link>
+                <Link to="computed-radiology">Computed Radiology</Link>
+                <Link to="digital-radiography">Digital Rdiography</Link>
+                <Link to="dicom-printers">DICOM Printers</Link>
+                <Link to="xray-rooms">X-Ray Room Solutions</Link>
+                <Link to="software-hardware-solutions">
+                  Software & Hardware Solutions
+                </Link>
               </DropDown>
             ) : null}
           </div>
@@ -139,9 +120,12 @@ const Navbar = () => {
           >
             {specialties ? (
               <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
+                <Link to="/urgent-care">Urgent Care</Link>
+                <Link to="/chiropractic">Chiropractic</Link>
+                <Link to="/orthopedic">Orthopedic</Link>
+                <Link to="podiatry">Podiatry</Link>
+                <Link to="general-radiology">General Radiology</Link>
+                <Link to="/veterinary">Veterinary</Link>
               </DropDown>
             ) : null}
           </div>
@@ -156,9 +140,28 @@ const Navbar = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {service ? (
               <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
+                <Link to="/sales-support">Sales Support</Link>
+                <Link to="technical-support">Technical Support</Link>
+                <Link to="product-registration">Product Registration</Link>
+                <Link to="parts">Parts</Link>
+              </DropDown>
+            ) : null}
+          </div>
+        </Link>
+        <Link activeStyle={activeStyles} to="/news/">
+          News & Events
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              margin: 0,
+              padding: 0,
+            }}
+          >
+            {news ? (
+              <DropDown>
+                <Link to="/CEO">CEO</Link>
+                <Link to="/technology">Technology</Link>
               </DropDown>
             ) : null}
           </div>
@@ -180,9 +183,8 @@ const Navbar = () => {
           >
             {about ? (
               <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
+                <Link to="/CEO">CEO</Link>
+                <Link to="/technology">Technology</Link>
               </DropDown>
             ) : null}
           </div>
@@ -197,9 +199,7 @@ const Navbar = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {contact ? (
               <DropDown>
-                <Link>test1</Link>
-                <Link>test2</Link>
-                <Link>test3</Link>
+                <Link to="/quote">Request a Quote</Link>
               </DropDown>
             ) : null}
           </div>
