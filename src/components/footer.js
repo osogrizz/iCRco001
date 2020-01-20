@@ -79,6 +79,8 @@ const Wrapper = styled("div")`
   svg {
     border: none;
     fill: #a9a9a9;
+    stroke-width: 2;
+    /* viewbox: 0 0 408 512; */
   }
   .social-media {
     padding: 0;
@@ -204,50 +206,45 @@ const Footer = ({ data }) => {
               <a
                 href="https://www.facebook.com/icrcompany"
                 target="_blank"
-                rel="noopener"
-                noreferrer
+                rel="noopener noreferrer"
               >
-                <FaFacebookF />
+                <FaFacebookF viewBox="0 0 300 490" />
               </a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/icrcoinc/"
                 target="_blank"
-                rel="noopener"
-                noreferrer
+                rel="noopener noreferrer"
               >
-                <FaInstagram />
+                <FaInstagram viewBox="0 0 440 490" />
               </a>
             </li>
             <li>
               <a
                 href="https://twitter.com/icrco"
                 target="_blank"
-                rel="noopener"
-                noreferrer
+                rel="noopener noreferrer"
               >
-                <FaTwitter />
+                <FaTwitter viewBox="0 0 525 540" />
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/company/icrco/"
                 target="_blank"
-                rel="noopener"
-                noreferrer
+                rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn viewBox="0 0 420 540" />
               </a>
             </li>
             <li>
               <a
                 href="https://www.youtube.com/user/TheICRCompany"
                 target="_blank"
-                rel="noopener"
-                noreferrer
+                rel="noopener noreferrer"
               >
-                <FaYoutube />
+                <FaYoutube viewBox="0 0 600 600 " />
               </a>
             </li>
           </ul>

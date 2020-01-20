@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import styled from "@emotion/styled"
@@ -37,26 +37,200 @@ const activeStyles = {
 }
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
+  const [solutions, setSolutions] = useState(false)
+  const [specialties, setSpecialties] = useState(false)
+  const [service, setService] = useState(false)
+  const [about, setAbout] = useState(false)
+  const [contact, setContact] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(!open)
+  }
+  const handleSolutions = () => {
+    setSolutions(!solutions)
+  }
+  const handleSpecialties = () => {
+    setSpecialties(!specialties)
+  }
+  const handleService = () => {
+    setService(!service)
+  }
+  const handleAbout = () => {
+    setAbout(!about)
+  }
+  const handleContact = () => {
+    setContact(!contact)
+  }
   return (
     <NavWrapper>
       <NavContainer>
-        <Link activeStyle={activeStyles} to="/">
+        <Link
+          activeStyle={activeStyles}
+          to="/"
+          onMouseEnter={handleOpen}
+          onMouseLeave={handleOpen}
+          name="home"
+        >
           Home
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              overflow: "visible",
+            }}
+          >
+            {open ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/solutions/">
+
+        <Link
+          activeStyle={activeStyles}
+          to="/solutions/"
+          name="solutions"
+          onMouseEnter={handleSolutions}
+          onMouseLeave={handleSolutions}
+        >
           Solutions
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {solutions ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/specialties/">
+
+        <Link
+          activeStyle={activeStyles}
+          to="/specialties/"
+          onMouseEnter={handleSpecialties}
+          onMouseLeave={handleSpecialties}
+        >
           Specialties
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {specialties ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/services/">
+        <Link
+          activeStyle={activeStyles}
+          to="/services/"
+          onMouseEnter={handleService}
+          onMouseLeave={handleService}
+        >
           Services & Support
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {service ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/about/">
+        <Link
+          activeStyle={activeStyles}
+          to="/about/"
+          onMouseEnter={handleAbout}
+          onMouseLeave={handleAbout}
+        >
           About
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              margin: 0,
+              padding: 0,
+            }}
+          >
+            {about ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/contact/">
+        <Link
+          activeStyle={activeStyles}
+          to="/contact/"
+          onMouseEnter={handleContact}
+          onMouseLeave={handleContact}
+        >
           Contact Us
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {contact ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                  fontSize: "0.65rem",
+                  border: "2px solid #333",
+                }}
+              >
+                <Link>test1</Link>
+                <Link>test2</Link>
+                <Link>test3</Link>
+              </div>
+            ) : null}
+          </div>
         </Link>
       </NavContainer>
     </NavWrapper>
