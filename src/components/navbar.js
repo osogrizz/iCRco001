@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+// import Modal from "./modal"
 
 import styled from "@emotion/styled"
 
@@ -35,6 +36,19 @@ const NavContainer = styled("div")`
 const activeStyles = {
   color: "#5290c0",
 }
+
+const DropDown = styled("div")`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 5px;
+  font-size: 0.65rem;
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+  min-width: 120px;
+`
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -77,23 +91,15 @@ const Navbar = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              overflow: "visible",
+              position: "relative",
             }}
           >
             {open ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
@@ -108,19 +114,11 @@ const Navbar = () => {
           Solutions
           <div style={{ display: "flex", flexDirection: "column" }}>
             {solutions ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
@@ -132,21 +130,19 @@ const Navbar = () => {
           onMouseLeave={handleSpecialties}
         >
           Specialties
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "relative",
+            }}
+          >
             {specialties ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
@@ -159,19 +155,11 @@ const Navbar = () => {
           Services & Support
           <div style={{ display: "flex", flexDirection: "column" }}>
             {service ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
@@ -191,19 +179,11 @@ const Navbar = () => {
             }}
           >
             {about ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
@@ -216,19 +196,11 @@ const Navbar = () => {
           Contact Us
           <div style={{ display: "flex", flexDirection: "column" }}>
             {contact ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  textAlign: "center",
-                  fontSize: "0.65rem",
-                  border: "2px solid #333",
-                }}
-              >
+              <DropDown>
                 <Link>test1</Link>
                 <Link>test2</Link>
                 <Link>test3</Link>
-              </div>
+              </DropDown>
             ) : null}
           </div>
         </Link>
