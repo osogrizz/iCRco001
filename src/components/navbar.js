@@ -11,7 +11,6 @@ const NavWrapper = styled("nav")`
   width: 100%;
   background: #fff;
   border-bottom: 2px solid #555;
-  padding: 0.3rem;
   box-shadow: 0 0 12px #666;
 `
 
@@ -24,6 +23,10 @@ const NavContainer = styled("div")`
   font-size: 0.775rem;
   font-weight: 700;
   letter-spacing: 1px;
+
+  .top-nav {
+    padding: 0.3rem 0;
+  }
 
   a {
     :hover {
@@ -42,8 +45,10 @@ const DropDown = styled("div")`
   flex-direction: column;
   text-align: left;
   padding: 0 5px;
+  margin-top: 6px;
   font-size: 0.65rem;
-  border: 2px solid #333;
+  border-top: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   background: #fff;
   color: #333;
   min-width: 120px;
@@ -76,11 +81,12 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <Link activeStyle={activeStyles} to="/" name="home">
+        <Link activeStyle={activeStyles} to="/" name="home" className="top-nav">
           Home
         </Link>
 
         <Link
+          className="top-nav"
           activeStyle={activeStyles}
           to="/solutions/"
           name="solutions"
@@ -105,6 +111,7 @@ const Navbar = () => {
         </Link>
 
         <Link
+          className="top-nav"
           activeStyle={activeStyles}
           to="/specialties/"
           onMouseEnter={handleSpecialties}
@@ -131,6 +138,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link
+          className="top-nav"
           activeStyle={activeStyles}
           to="/services/"
           onMouseEnter={handleService}
@@ -148,7 +156,7 @@ const Navbar = () => {
             ) : null}
           </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/news/">
+        <Link activeStyle={activeStyles} to="/news/" className="top-nav">
           News & Events
           <div
             style={{
@@ -167,6 +175,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link
+          className="top-nav"
           activeStyle={activeStyles}
           to="/about/"
           onMouseEnter={handleAbout}
@@ -190,6 +199,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link
+          className="top-nav"
           activeStyle={activeStyles}
           to="/contact/"
           onMouseEnter={handleContact}
