@@ -122,7 +122,6 @@ const Navbar = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              position: "relative",
             }}
           >
             {specialties ? (
