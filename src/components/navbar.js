@@ -10,7 +10,7 @@ const NavWrapper = styled("nav")`
   margin-bottom: 1.45rem;
   width: 100%;
   /* background: #fff; */
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   /* backdrop-filter: grayscale(90%); */
   /* border-bottom: 2px solid #555; */
   box-shadow: 0 0 12px #666;
