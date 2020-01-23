@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+// import Image from "./image"
 
 import styled from "@emotion/styled"
 
@@ -9,11 +10,11 @@ const NavWrapper = styled("nav")`
   margin: 0;
   margin-bottom: 1.45rem;
   width: 100%;
-  /* background: #fff; */
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: transparent;
   /* backdrop-filter: grayscale(90%); */
   /* border-bottom: 2px solid #555; */
-  box-shadow: 0 0 12px #666;
+  /* box-shadow: 0 0 12px #666; */
 `
 
 const NavContainer = styled("div")`
@@ -37,6 +38,19 @@ const NavContainer = styled("div")`
   }
 `
 
+// const LogoContainer = styled("div")`
+//   display: flex;
+//   align-items: center;
+//   /* height: -webkit-fill-available; */
+//   /* height: 200px; */
+//   width: 200px;
+//   /* background: #333; */
+
+//   img {
+//     z-index: 1000;
+//   }
+// `
+
 const activeStyles = {
   color: "#5290c0",
 }
@@ -54,7 +68,7 @@ const DropDown = styled("div")`
   backdrop-filter: blur(10px);
   background: rgba(250, 250, 250, 0.6);
   color: #333;
- 
+
   min-width: 150px;
 
   a {

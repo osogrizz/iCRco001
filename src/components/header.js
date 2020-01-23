@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Image from "./image"
 import Navbar from "./navbar"
-import { FaUserCircle } from "react-icons/fa"
-import { FaPhone } from "react-icons/fa"
+// import { FaUserCircle } from "react-icons/fa"
+// import { FaPhone } from "react-icons/fa"
 
 import styled from "@emotion/styled"
 
@@ -19,11 +19,12 @@ const HeaderWrapper = styled("div")`
 
 const HeaderMain = styled("header")`
   width: 100%;
-  height: 180px;
-  background: linear-gradient(#5290c0, #2074b0);
+  /* height: 180px; */
+  /* background: linear-gradient(#5290c0, #2074b0); */
+  background: transparent;
   justify-content: space-evenly;
   align-items: center;
-  color: #fff;
+  /* color: #fff; */
 `
 
 const HeaderContainer = styled("div")`
@@ -133,6 +134,9 @@ const Header = ({ siteTitle }) => (
         </InfoContainer>
       </HeaderContainer>
     </HeaderMain> */}
+    {/* <LogoContainer>
+      <Image />
+    </LogoContainer> */}
     <Navbar />
   </HeaderWrapper>
 )
