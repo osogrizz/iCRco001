@@ -52,13 +52,15 @@ const DropDown = styled("div")`
   border-top: 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(250, 250, 250, 0.6);
   color: #333;
-  text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5),
-    1px 1px 2px rgba(230, 236, 245, 0.5);
+ 
   min-width: 150px;
 
   a {
+    color: #000;
+    // text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5),
+    // 1px 1px 1px rgba(230, 236, 245, 0.5);
     padding-top: 10px;
     :hover {
       /* color: #222; */
