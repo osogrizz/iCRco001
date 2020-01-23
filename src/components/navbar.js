@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+// import Image from "./image"
 
 import styled from "@emotion/styled"
 
@@ -9,9 +10,11 @@ const NavWrapper = styled("nav")`
   margin: 0;
   margin-bottom: 1.45rem;
   width: 100%;
-  background: #fff;
-  border-bottom: 2px solid #555;
-  box-shadow: 0 0 12px #666;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: transparent;
+  /* backdrop-filter: grayscale(90%); */
+  /* border-bottom: 2px solid #555; */
+  /* box-shadow: 0 0 12px #666; */
 `
 
 const NavContainer = styled("div")`
@@ -35,6 +38,19 @@ const NavContainer = styled("div")`
   }
 `
 
+// const LogoContainer = styled("div")`
+//   display: flex;
+//   align-items: center;
+//   /* height: -webkit-fill-available; */
+//   /* height: 200px; */
+//   width: 200px;
+//   /* background: #333; */
+
+//   img {
+//     z-index: 1000;
+//   }
+// `
+
 const activeStyles = {
   color: "#5290c0",
 }
@@ -44,18 +60,36 @@ const DropDown = styled("div")`
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 0 5px;
+  padding: 0 15px 5px;
   margin-top: 6px;
   font-size: 0.65rem;
   border-top: 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background: #fff;
+  backdrop-filter: blur(10px);
+  background: rgba(250, 250, 250, 0.6);
   color: #333;
-  min-width: 120px;
+
+  min-width: 150px;
+
+  a {
+    color: #000;
+    // text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5),
+    // 1px 1px 1px rgba(230, 236, 245, 0.5);
+    padding-top: 10px;
+    :hover {
+      /* color: #222; */
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
+        1px 1px 3px rgba(0, 0, 0, 0.4);
+      margin: 0 12px;
+      /* font-size: 0.775rem; */
+      transform: scale(1.1, 1.2);
+      transition: all 0.285s ease-in-out;
+    }
+  }
 `
 
 const Navbar = () => {
-  const [news, setNews] = useState(false)
   const [solutions, setSolutions] = useState(false)
   const [specialties, setSpecialties] = useState(false)
   const [service, setService] = useState(false)
@@ -157,21 +191,6 @@ const Navbar = () => {
         </Link>
         <Link activeStyle={activeStyles} to="/news/" className="top-nav">
           News & Events
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              margin: 0,
-              padding: 0,
-            }}
-          >
-            {news ? (
-              <DropDown>
-                <Link to="/CEO">CEO</Link>
-                <Link to="/technology">Technology</Link>
-              </DropDown>
-            ) : null}
-          </div>
         </Link>
         <Link
           className="top-nav"
