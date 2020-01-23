@@ -99,7 +99,7 @@ const LogIn = styled("button")`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    <HeaderMain>
+    {/* <HeaderMain>
       <HeaderContainer>
         <LogoContainer>
           <Link to="/">
@@ -132,7 +132,7 @@ const Header = ({ siteTitle }) => (
           />
         </InfoContainer>
       </HeaderContainer>
-    </HeaderMain>
+    </HeaderMain> */}
     <Navbar />
   </HeaderWrapper>
 )
