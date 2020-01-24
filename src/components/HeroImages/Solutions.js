@@ -7,6 +7,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   height: -webkit-fill-available;
   width: 100%;
   background-image: linear-gradient(
@@ -18,8 +19,8 @@ const ImageBackground = styled(BackgroundImage)`
 
   h2 {
     color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 500;
     letter-spacing: 0.5rem;
     /* border: 4px solid black; */
     text-align: center;

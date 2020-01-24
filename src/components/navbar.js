@@ -9,7 +9,7 @@ const NavWrapper = styled("nav")`
   margin: 0;
   /* margin-bottom: 1.45rem; */
   width: 100%;
-  background: rgba(0, 0, 0, 0.05);
+  /* background: rgba(0, 0, 0, 0.05); */
   /* background: transparent; */
   /* backdrop-filter: grayscale(90%); */
   /* border-bottom: 2px solid #555; */
@@ -67,6 +67,7 @@ const DropDown = styled("div")`
   border-top: 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
+  -moz-webkit-backdrop-filter: blur(10px);
   /* background: rgba(0, 0, 0, 0.2); */
   background: transparent;
   min-width: 150px;

@@ -13,6 +13,8 @@ const HeaderWrapper = styled("div")`
   top: 0;
   left: 0;
   width: 100%;
+  background: rgba(250, 250, 250, 0.5);
+  /* backdrop-filter: blur(10px); */
   /* margin-bottom: 2.45rem; */
   z-index: 100;
 `
