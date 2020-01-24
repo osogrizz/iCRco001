@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import HomeOne from "../components/HeroImages/Home-One"
+import Solutions from "../components/HeroImages/Solutions"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,17 +18,9 @@ const IndexPage = () => (
       <section>
         <HomeOne />
       </section>
+
       <section>
-        <h2>Claris XT</h2>
-      </section>
-      <section>
-        <h2>Solutions</h2>
-        <Link></Link>
-        <Link></Link>
-        <Link></Link>
-        <Link></Link>
-        <Link></Link>
-        <Link></Link>
+        <Solutions />
       </section>
       <section>
         <h2>Specialties</h2>
