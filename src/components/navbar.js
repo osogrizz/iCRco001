@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-// import Image from "./image"
 
 import styled from "@emotion/styled"
 
@@ -10,8 +9,8 @@ const NavWrapper = styled("nav")`
   margin: 0;
   /* margin-bottom: 1.45rem; */
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  background: transparent;
+  background: rgba(0, 0, 0, 0.05);
+  /* background: transparent; */
   /* backdrop-filter: grayscale(90%); */
   /* border-bottom: 2px solid #555; */
   /* box-shadow: 0 0 12px #666; */
@@ -21,9 +20,11 @@ const NavContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 960px;
+  padding: 10px 20px;
+  max-width: 60%;
   text-transform: uppercase;
-  font-size: 0.775rem;
+  /* font-size: 0.775rem; */
+  font-size: 1.5vmin;
   font-weight: 700;
   letter-spacing: 1px;
 
@@ -68,8 +69,6 @@ const DropDown = styled("div")`
   backdrop-filter: blur(10px);
   /* background: rgba(0, 0, 0, 0.2); */
   background: transparent;
-  color: #333;
-
   min-width: 150px;
 
   a {
@@ -77,8 +76,7 @@ const DropDown = styled("div")`
     // text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5),
     // 1px 1px 1px rgba(230, 236, 245, 0.5);
     padding-top: 10px;
-    :hover {
-      /* color: #222; */
+    &:hover {
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
         1px 1px 3px rgba(0, 0, 0, 0.4);
