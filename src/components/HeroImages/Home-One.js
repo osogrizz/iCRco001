@@ -7,7 +7,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: -webkit-fill-available;
   width: 100%;
   background-image: linear-gradient(
       rgba(150, 150, 150, 0.4),
