@@ -13,7 +13,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Wrapper>
-      <section>Carousel</section>
+      <section></section>
       <section>
         <h2>Claris XT</h2>
       </section>

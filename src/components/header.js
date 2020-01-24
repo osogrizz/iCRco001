@@ -13,8 +13,8 @@ const HeaderWrapper = styled("div")`
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: 2.45rem;
-  z-index: 100;
+  /* margin-bottom: 2.45rem; */
+  /* z-index: 100; */
 `
 
 const HeaderMain = styled("header")`
