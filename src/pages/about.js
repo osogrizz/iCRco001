@@ -3,8 +3,8 @@ import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import AboutHero from "../components/about-hero"
-import EarthHero from "../components/earth-hero"
+import AboutHero from "../components/HeroImages/about-hero"
+import EarthHero from "../components/HeroImages/earth-hero"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Image from "./image"
+import Image from "./HeroImages/image"
 import Navbar from "./navbar"
 // import { FaUserCircle } from "react-icons/fa"
 // import { FaPhone } from "react-icons/fa"
