@@ -14,14 +14,19 @@ const NavWrapper = styled("nav")`
   /* backdrop-filter: grayscale(90%); */
   /* border-bottom: 2px solid #555; */
   /* box-shadow: 0 0 12px #666; */
+  a {
+    color: #fff;
+    font-weight: 500;
+  }
 `
 
 const NavContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 10px 20px;
-  max-width: 60%;
+  padding: 10px 40px;
+  /* max-width: 60%; */
+  width: 100%;
   text-transform: uppercase;
   /* font-size: 0.775rem; */
   font-size: 1.5vmin;

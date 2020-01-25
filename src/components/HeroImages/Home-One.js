@@ -15,7 +15,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(150, 150, 150, 0.4),
       rgba(150, 150, 150, 0.4)
     ),
-    url("../images/national-cancer-institute.jpg");
+    url("../images/ClarisXT.png");
   background-size: cover;
 
   h2 {
@@ -34,7 +34,7 @@ const ImageBackground = styled(BackgroundImage)`
 const HomeOne = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "national-cancer-institute.jpg" }) {
+      image: file(relativePath: { eq: "ClarisXT.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1120) {
             ...GatsbyImageSharpFluid
@@ -49,7 +49,7 @@ const HomeOne = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <h2>Claris XT</h2>
+      {/* <h2>Claris XT</h2> */}
     </ImageBackground>
   )
 }
