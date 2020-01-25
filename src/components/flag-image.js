@@ -21,7 +21,7 @@ const FlagImage = () => {
     query {
       image: file(relativePath: { eq: "flag.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,7 +29,14 @@ const FlagImage = () => {
     }
   `)
   return (
-    <div style={{ width: "200px", height: "146px" }}>
+    <div
+      style={{
+        width: "200px",
+        height: "126px",
+        display: "flex",
+        margin: "0 40px 80px",
+      }}
+    >
       <ImageBackground fluid={image.sharp.fluid} />
     </div>
   )

@@ -31,9 +31,12 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           paddingTop: 0,
+          overflow: "hidden",
         }}
       >
-        <main style={{ minHeight: "65vh" }}>{children}</main>
+        <main style={{ minHeight: "65vh", padding: "0 20px;" }}>
+          {children}
+        </main>
         <Footer />
       </div>
     </>

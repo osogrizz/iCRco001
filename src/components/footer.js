@@ -15,26 +15,31 @@ import FlagImage from "../components/flag-image"
 const Wrapper = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #a9a9a9;
+  /* background: #a9a9a9; */
+  background: rgb(39, 44, 53);
   min-height: 40vh;
   text-align: center;
   padding-top: 60px;
+  color: #777;
+  display: flex;
+  flex-direction: column;
 
-  div:first-of-type {
+  .top-footer {
     display: flex;
     justify-content: space-evenly;
-    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 5%;
   }
-  div:last-of-type {
-    bottom: 0;
-    left: 0;
+  .bottom-footer {
+    /* bottom: 0; */
+    /* left: 0; */
     display: flex;
-    justify-content: space-between;
-    max-width: 960px;
-    margin: 0 auto;
-    padding-bottom: 2rem;
+    justify-content: space-evenly;
+    /* width: 960px; */
+    /* margin: 20px auto; */
+    margin-top: 20px;
+    padding-bottom: 8rem;
   }
 
   h5 {
@@ -54,9 +59,10 @@ const Wrapper = styled("div")`
   }
 
   p {
-    text-align: left;
+    /* text-align: left; */
     font-size: 0.675rem;
     margin: 0px;
+    color: #7a7a7a;
 
     :hover {
       color: #fff;
@@ -65,9 +71,9 @@ const Wrapper = styled("div")`
   }
 
   hr {
-    max-width: 960px;
-    margin: 0 auto;
-    background: lightgray;
+    margin: 0 5%;
+    background: #777;
+    /* background: lightgray; */
   }
 
   h6 {
@@ -99,7 +105,7 @@ const Wrapper = styled("div")`
 const Footer = ({ data }) => {
   return (
     <Wrapper>
-      <div>
+      <div className="top-footer">
         <li>
           <h5>solutions</h5>
           <Link>
@@ -193,7 +199,8 @@ const Footer = ({ data }) => {
       <div
         style={{
           display: "flex",
-          width: "750px",
+          justifyContent: "space-around",
+          maxWidth: "1120px",
           margin: "0 auto",
         }}
       >
@@ -252,13 +259,13 @@ const Footer = ({ data }) => {
       </div>
 
       <hr />
-      <div>
+      <div className="bottom-footer">
         <h6>© {new Date().getFullYear()}, iCRco. All rights reserved.</h6>
 
-        <div style={{ margin: 0 }}>
-          <h6>Terms & Conditions</h6>
-          <h6>Privacy Policy</h6>
-        </div>
+        {/* <div style={{ margin: 0 }}> */}
+        <h6>Terms & Conditions</h6>
+        <h6>Privacy Policy</h6>
+        {/* </div> */}
       </div>
     </Wrapper>
   )
@@ -269,7 +276,7 @@ export default Footer
 // export const query = graphql`
 //   query FlagQuery {
 //     flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
-//       fluid(maxWidth: 400) {
+//       fluid(maxWidth: 800) {
 //         ...GatsbyImageSharpFluid
 //       }
 //     }
