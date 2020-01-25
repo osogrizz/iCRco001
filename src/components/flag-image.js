@@ -31,7 +31,7 @@ const FlagImage = () => {
   return (
     <div
       style={{
-        width: "200px",
+        width: "230px",
         height: "126px",
         display: "flex",
         margin: "0 40px 80px",
