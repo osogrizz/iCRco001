@@ -105,7 +105,7 @@ const Wrapper = styled("div")`
 const Footer = ({ data }) => {
   return (
     <Wrapper>
-      <div className="top-footer">
+      {/* <div className="top-footer">
         <li>
           <h5>solutions</h5>
           <Link>
@@ -194,7 +194,7 @@ const Footer = ({ data }) => {
             <p>info@company.com</p>
           </Link>
         </li>
-      </div>
+      </div> */}
 
       <div
         style={{

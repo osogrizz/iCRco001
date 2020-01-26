@@ -8,7 +8,7 @@ const NavWrapper = styled("nav")`
   left: 0;
   margin: 0;
   /* margin-bottom: 1.45rem; */
-  width: 100%;
+  width: 960px;
   /* background: rgba(0, 0, 0, 0.05); */
   /* background: transparent; */
   /* backdrop-filter: grayscale(90%); */

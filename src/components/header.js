@@ -20,6 +20,7 @@ const HeaderWrapper = styled("div")`
 `
 
 const HeaderMain = styled("header")`
+  margin: 20px auto;
   width: 100%;
   /* height: 180px; */
   /* background: linear-gradient(#5290c0, #2074b0); */
@@ -32,9 +33,9 @@ const HeaderMain = styled("header")`
 const HeaderContainer = styled("div")`
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: 960px;
+  /* max-width: 960px; */
   font-size: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -56,17 +57,8 @@ const InfoContainer = styled("div")`
 `
 
 const LogoContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  height: -webkit-fill-available;
-
-  a {
-    width: 150px;
-  }
-
-  p {
-    margin: 0 0 0 10px;
-  }
+  width: 120px;
+  color: #fff;
 `
 
 const PhoneContainer = styled("div")`
@@ -102,44 +94,52 @@ const LogIn = styled("button")`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
-    {/* <HeaderMain>
+    <HeaderMain>
       <HeaderContainer>
-        <LogoContainer>
-          <Link to="/">
-            <Image />
-          </Link>
-          <div>
-            <p> | Image Capture Review</p>
-          </div>
-        </LogoContainer>
-
-        <InfoContainer>
-          <PhoneContainer>
-            <PhoneImage>
-              <FaPhone />
-            </PhoneImage>
-            <PhoneText>
-              <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
-              <p style={{ fontSize: "0.85rem" }}>1-310-921-9559</p>
-            </PhoneText>
-          </PhoneContainer>
-
-          <LogIn>
-            <FaUserCircle /> Log In
-          </LogIn>
-
-          <input
-            type="search"
-            placeholder="search site"
-            style={{ borderRadius: "4px" }}
-          />
-        </InfoContainer>
+        {/* <HeaderMain>
+      <HeaderContainer>
+      <LogoContainer>
+      <Link to="/">
+      <Image />
+      </Link>
+      <div>
+      <p> | Image Capture Review</p>
+      </div>
+      </LogoContainer>
+      
+      <InfoContainer>
+      <PhoneContainer>
+      <PhoneImage>
+      <FaPhone />
+      </PhoneImage>
+      <PhoneText>
+      <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
+      <p style={{ fontSize: "0.85rem" }}>1-310-921-9559</p>
+      </PhoneText>
+      </PhoneContainer>
+      
+      <LogIn>
+      <FaUserCircle /> Log In
+      </LogIn>
+      
+      <input
+      type="search"
+      placeholder="search site"
+      style={{ borderRadius: "4px" }}
+      />
+      </InfoContainer>
       </HeaderContainer>
     </HeaderMain> */}
-    {/* <LogoContainer>
-      <Image />
-    </LogoContainer> */}
-    <Navbar />
+        <LogoContainer>
+          <Image />
+        </LogoContainer>
+
+        <Navbar />
+        <div>
+          <input type="search" />
+        </div>
+      </HeaderContainer>
+    </HeaderMain>
   </HeaderWrapper>
 )
 

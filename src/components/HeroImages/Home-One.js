@@ -16,7 +16,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(150, 150, 150, 0.4)
     ),
     url("../images/ClarisXT.png");
-  background-size: cover;
+  background-size: cover cover;
 
   h2 {
     color: #fff;
@@ -47,9 +47,7 @@ const HomeOne = () => {
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
-    >
-      {/* <h2>Claris XT</h2> */}
-    </ImageBackground>
+    ></ImageBackground>
   )
 }
 
