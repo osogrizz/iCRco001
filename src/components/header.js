@@ -48,7 +48,7 @@ const LogoContainer = styled("div")`
   margin: 0 20px;
   width: 120px;
   color: #fff;
-  background: rgba(20, 20, 20, 0.3);
+  background: rgba(20, 20, 20, 0.4);
   border-radius: 50%;
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 10px #3a3a3a55;
