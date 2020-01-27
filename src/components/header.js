@@ -3,9 +3,12 @@ import PropTypes from "prop-types"
 import React from "react"
 import Image from "./HeroImages/image"
 import Navbar from "./navbar"
-// import { FaUserCircle } from "react-icons/fa"
-// import { FaPhone } from "react-icons/fa"
+import TextField from "@material-ui/core/TextField"
+import IconButton from "@material-ui/core/IconButton"
+import InputAdornment from "@material-ui/core/InputAdornment"
+import SearchIcon from "@material-ui/icons/Search"
 
+import { makeStyles } from "@material-ui/core/styles"
 import styled from "@emotion/styled"
 
 const HeaderWrapper = styled("div")`
@@ -41,107 +44,68 @@ const HeaderContainer = styled("div")`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `
 
-const InfoContainer = styled("div")`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  input {
-    width: 150px;
-    font-size: 0.785rem;
-    letter-spacing: 1.2px;
-    padding: 2px 0.5rem;
-    border: none;
-    outline-color: #f58814;
-  }
-`
-
 const LogoContainer = styled("div")`
   width: 120px;
   color: #fff;
 `
 
-const PhoneContainer = styled("div")`
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-`
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: {
+      margin: theme.spacing(1),
+    },
+    "& label.Mui-focused": {
+      color: "black",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "black",
+      color: "#fff",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        // borderColor: "",
+      },
+      "&:hover fieldset": {
+        borderColor: "black",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "black",
+      },
+    },
+    "& > *": {
+      margin: theme.spacing(1),
+      backdropFilter: "blur(10px)",
+    },
+  },
+}))
 
-const PhoneText = styled("div")`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+const Header = ({ siteTitle }) => {
+  const classes = useStyles()
 
-const PhoneImage = styled("div")`
-  transform: scaleX(-1) rotate(-13deg);
-  /* transform: rotate(-23deg); */
-  margin: 0.685rem 0.745rem 0;
-  padding: 0;
-  font-size: 1.375rem;
-`
+  return (
+    <HeaderWrapper>
+      <HeaderMain>
+        <HeaderContainer>
+          <LogoContainer>
+            <Image />
+          </LogoContainer>
 
-const LogIn = styled("button")`
-  background: transparent;
-  color: #fff;
-  border: none;
-  margin: 0 2rem;
+          <Navbar />
 
-  :hover {
-    color: #999;
-  }
-`
-
-const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <HeaderMain>
-      <HeaderContainer>
-        {/* <HeaderMain>
-      <HeaderContainer>
-      <LogoContainer>
-      <Link to="/">
-      <Image />
-      </Link>
-      <div>
-      <p> | Image Capture Review</p>
-      </div>
-      </LogoContainer>
-      
-      <InfoContainer>
-      <PhoneContainer>
-      <PhoneImage>
-      <FaPhone />
-      </PhoneImage>
-      <PhoneText>
-      <p style={{ margin: 0, paddinbg: 0 }}>Call Us Today</p>
-      <p style={{ fontSize: "0.85rem" }}>1-310-921-9559</p>
-      </PhoneText>
-      </PhoneContainer>
-      
-      <LogIn>
-      <FaUserCircle /> Log In
-      </LogIn>
-      
-      <input
-      type="search"
-      placeholder="search site"
-      style={{ borderRadius: "4px" }}
-      />
-      </InfoContainer>
-      </HeaderContainer>
-    </HeaderMain> */}
-        <LogoContainer>
-          <Image />
-        </LogoContainer>
-
-        <Navbar />
-        <div>
-          <input type="search" />
-        </div>
-      </HeaderContainer>
-    </HeaderMain>
-  </HeaderWrapper>
-)
+          <form>
+            <TextField
+              className={classes.root}
+              type="search"
+              id="custom-css-outlined-input"
+              label="Search..."
+              variant="outlined"
+            />
+          </form>
+        </HeaderContainer>
+      </HeaderMain>
+    </HeaderWrapper>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
