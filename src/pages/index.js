@@ -34,6 +34,7 @@ const FormContainer = styled("div")`
   }
   button {
     width: 200px;
+    margin: 40px;
     padding: 10px 20px;
   }
 `
@@ -93,7 +94,6 @@ const IndexPage = () => (
           </FormContainer>
         </form>
       </section>
-      <Link to="/about/">Go to About page 2</Link>
     </Wrapper>
   </Layout>
 )
