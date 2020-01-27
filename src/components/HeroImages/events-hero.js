@@ -25,12 +25,11 @@ const ImageBackground = styled(BackgroundImage)`
     /* border: 4px solid black; */
     text-align: center;
     padding: 1rem 1.875rem;
-    max-width: 800px;
     margin: 0 auto;
   }
 `
 
-const HomeOne = () => {
+const EventsHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "solutions.jpg" }) {
@@ -48,9 +47,9 @@ const HomeOne = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <h2>Solutions</h2>
+      <h2>Upcming Events</h2>
     </ImageBackground>
   )
 }
 
-export default HomeOne
+export default EventsHero
