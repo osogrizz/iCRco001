@@ -45,6 +45,7 @@ const HeaderContainer = styled("div")`
 `
 
 const LogoContainer = styled("div")`
+  margin: 0 20px;
   width: 120px;
   color: #fff;
   background: rgba(20, 20, 20, 0.3);
