@@ -47,7 +47,7 @@ const EventsHero = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <h2>Upcming Events</h2>
+      <h2>Upcoming Events</h2>
     </ImageBackground>
   )
 }
