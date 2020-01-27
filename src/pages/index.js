@@ -26,6 +26,9 @@ const Wrapper = styled("div")`
       margin: 10px 10px;
       padding: 10px;
     }
+    textarea {
+      padding: 10px;
+    }
     button {
       width: 200px;
       padding: 10px 20px;
@@ -76,7 +79,7 @@ const IndexPage = () => (
             <textarea
               name="questions"
               id=""
-              cols="30"
+              cols="54"
               rows="10"
               placeholder="Questions"
             ></textarea>
