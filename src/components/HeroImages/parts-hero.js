@@ -15,7 +15,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(150, 150, 150, 0.4),
       rgba(150, 150, 150, 0.4)
     ),
-    url("../images/parts.png");
+    url("../images/parts-2.jpg");
   background-size: cover cover;
 
   h2 {
@@ -38,9 +38,9 @@ const ImageBackground = styled(BackgroundImage)`
 const PartsHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "parts.png" }) {
+      image: file(relativePath: { eq: "parts-2.jpg" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1120) {
             ...GatsbyImageSharpFluid
           }
         }
