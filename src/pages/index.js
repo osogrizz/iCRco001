@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import HomeOne from "../components/HeroImages/Home-One"
 import Solutions from "../components/HeroImages/Solutions"
+import PartsHero from "../components/HeroImages/parts-hero"
+import TechnologyHero from "../components/HeroImages/technology-hero"
+import NewsHero from "../components/HeroImages/news-hero"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -26,13 +29,13 @@ const IndexPage = () => (
         <h2>Specialties</h2>
       </section>
       <section>
-        <h2>Parts</h2>
+        <PartsHero />
       </section>
       <section>
-        <h2>Technology</h2>
+        <TechnologyHero />
       </section>
       <section>
-        <h2>News</h2>
+        <NewsHero />
       </section>
       <section>
         <h2>Upcoming Events</h2>
