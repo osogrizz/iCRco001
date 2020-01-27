@@ -47,6 +47,10 @@ const HeaderContainer = styled("div")`
 const LogoContainer = styled("div")`
   width: 120px;
   color: #fff;
+  background: rgba(20, 20, 20, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 10px #3a3a3a55;
 `
 
 const useStyles = makeStyles(theme => ({
@@ -87,7 +91,9 @@ const Header = ({ siteTitle }) => {
       <HeaderMain>
         <HeaderContainer>
           <LogoContainer>
-            <Image />
+            <Link to="/">
+              <Image />
+            </Link>
           </LogoContainer>
 
           <Navbar />
