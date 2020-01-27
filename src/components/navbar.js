@@ -137,7 +137,7 @@ const Navbar = () => {
             {solutions ? (
               <DropDown>
                 <Link to="computerd-tomogrphy">Computed Tomography</Link>
-                <Link to="computed-radiology">Computed Radiology</Link>
+                <Link to="computed-radiology">Computed Radiography</Link>
                 <Link to="digital-radiography">Digital Radiography</Link>
                 <Link to="dicom-printers">DICOM Printers</Link>
                 <Link to="xray-rooms">X-Ray Room Solutions</Link>
