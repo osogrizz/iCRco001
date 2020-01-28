@@ -54,7 +54,7 @@ const Wrapper = styled("div")`
   }
 
   li {
-    text-align: left;
+    /* text-align: left; */
     list-style-type: none;
   }
 
@@ -86,18 +86,22 @@ const Wrapper = styled("div")`
     border: none;
     fill: #a9a9a9;
     stroke-width: 2;
-    /* viewbox: 0 0 408 512; */
+    margin: 20px 30px 0 0;
+    font-size: 1.6rem;
   }
   .social-media {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     padding: 0;
     margin: 0;
-    li {
-      background: #fff;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      padding: 5.5px;
-      margin-left: 5px;
+
+    ul {
+      li {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
     }
   }
 `
@@ -215,7 +219,7 @@ const Footer = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF viewBox="0 0 300 490" />
+                <FaFacebookF id="facbook" />
               </a>
             </li>
             <li>
@@ -224,7 +228,7 @@ const Footer = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram viewBox="0 0 440 490" />
+                <FaInstagram id="instagram" />
               </a>
             </li>
             <li>
@@ -233,7 +237,7 @@ const Footer = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTwitter viewBox="0 0 525 540" />
+                <FaTwitter id="twitter" />
               </a>
             </li>
             <li>
@@ -242,7 +246,7 @@ const Footer = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn viewBox="0 0 420 540" />
+                <FaLinkedinIn id="linkedin" />
               </a>
             </li>
             <li>
@@ -251,7 +255,7 @@ const Footer = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaYoutube viewBox="0 0 600 600 " />
+                <FaYoutube id="youtube" />
               </a>
             </li>
           </ul>
@@ -262,10 +266,10 @@ const Footer = ({ data }) => {
       <div className="bottom-footer">
         <h6>© {new Date().getFullYear()}, iCRco. All rights reserved.</h6>
 
-        {/* <div style={{ margin: 0 }}> */}
-        <h6>Terms & Conditions</h6>
-        <h6>Privacy Policy</h6>
-        {/* </div> */}
+        <div style={{ margin: 0, display: "flex" }}>
+          <h6>Terms & Conditions</h6>
+          <h6>Privacy Policy</h6>
+        </div>
       </div>
     </Wrapper>
   )

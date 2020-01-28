@@ -5,6 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -23,10 +24,14 @@ const ImageBackground = styled(BackgroundImage)`
     font-size: 5rem;
     font-weight: 500;
     letter-spacing: 0.5rem;
-    text-align: center;
+    text-align: left;
     padding: 1rem 1.875rem;
     max-width: 800px;
     margin: 0 auto;
+  }
+  h3 {
+    color: #fff;
+    font-size: 4rem;
   }
 `
 
@@ -47,7 +52,12 @@ const HomeOne = () => {
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
-    ></ImageBackground>
+    >
+      {/* <h2>
+        Claris <span>XT</span>
+      </h2>
+      <h3>The Next Dimension of 3D Imaging</h3> */}
+    </ImageBackground>
   )
 }
 

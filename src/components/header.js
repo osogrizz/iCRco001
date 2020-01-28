@@ -13,9 +13,8 @@ const HeaderWrapper = styled("div")`
   top: 0;
   left: 0;
   width: 100%;
-  /* background: rgba(250, 250, 250, 0.5); */
+  /* background: rgba(20, 20, 20, 0.5); */
   /* backdrop-filter: blur(10px); */
-  /* margin-bottom: 2.45rem; */
   z-index: 100;
 `
 
@@ -49,6 +48,11 @@ const LogoContainer = styled("div")`
   border-radius: 50%;
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 10px #3a3a3a55;
+  outline: transparent;
+
+  :hover {
+    background: #0069aa99;
+  }
 `
 
 const useStyles = makeStyles(theme => ({

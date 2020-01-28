@@ -12,6 +12,12 @@ import SEO from "../components/seo"
 
 const Wrapper = styled("div")`
   text-align: center;
+
+  form {
+    background: #545351;
+    margin: 0;
+    padding-bottom: 1.45rem;
+  }
 `
 
 const FormContainer = styled("div")`
@@ -20,7 +26,7 @@ const FormContainer = styled("div")`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 40px;
+  padding-top: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
@@ -28,74 +34,94 @@ const FormContainer = styled("div")`
     width: 250px;
     margin: 10px 10px;
     padding: 10px;
+    outline-color: orange;
   }
   textarea {
     padding: 10px;
+    outline-color: orange;
   }
   button {
     width: 200px;
     margin: 40px;
     padding: 10px 20px;
+    background: #0069aa;
+    color: #fff;
+    border: none;
+    outline: orange;
+    cursor: pointer;
+    border-radius: 5px;
   }
 `
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Wrapper>
-      <section>
-        <HomeOne />
-      </section>
+const IndexPage = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
+  }
 
-      <section>
-        <h2>Solutions</h2>
-      </section>
-      <section>
-        <h2>Specialties</h2>
-      </section>
-      <section>
-        <PartsHero />
-      </section>
-      <section>
-        <TechnologyHero />
-      </section>
-      <section>
-        <NewsHero />
-      </section>
-      <section>
-        <EventsHero />
-      </section>
-      <section>
-        <form action="">
-          <FormContainer>
-            <div>
-              <input type="text" name="fName" placeholder="First Name" />
-              <input type="text" name="lName" placeholder="Last Name" />
-            </div>
-            <div>
-              <input type="email" name="email" placeholder="Email" />
-              <input type="tel" name="phone" placeholder="Phone" />
-            </div>
-            <div>
-              <input type="text" name="company" placeholder="Company" />
-            </div>
-            <div>
-              <textarea
-                name="questions"
-                id=""
-                cols="54"
-                rows="10"
-                placeholder="Questions"
-              ></textarea>
-            </div>
-            <div>
-              <button>Send</button>
-            </div>
-          </FormContainer>
-        </form>
-      </section>
-    </Wrapper>
-  </Layout>
-)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Wrapper>
+        <section>
+          <HomeOne />
+        </section>
+
+        <section style={{ background: "darkgray" }}>
+          <h2>Solutions</h2>
+        </section>
+
+        <section style={{ background: "darkgray" }}>
+          <h2>Specialties</h2>
+        </section>
+
+        <section>
+          <PartsHero />
+        </section>
+
+        <section>
+          <TechnologyHero />
+        </section>
+
+        <section>
+          <NewsHero />
+        </section>
+
+        <section>
+          <EventsHero />
+        </section>
+
+        <section>
+          <form onSubmit={handleSubmit}>
+            <FormContainer>
+              <div>
+                <input type="text" name="fName" placeholder="First Name" />
+                <input type="text" name="lName" placeholder="Last Name" />
+              </div>
+              <div>
+                <input type="email" name="email" placeholder="Email" />
+                <input type="tel" name="phone" placeholder="Phone" />
+              </div>
+              <div>
+                <input type="text" name="company" placeholder="Company" />
+              </div>
+              <div>
+                <textarea
+                  name="questions"
+                  id=""
+                  cols="54"
+                  rows="10"
+                  placeholder="Questions"
+                ></textarea>
+              </div>
+              <div>
+                <button>Send</button>
+              </div>
+            </FormContainer>
+          </form>
+        </section>
+      </Wrapper>
+    </Layout>
+  )
+}
 
 export default IndexPage
