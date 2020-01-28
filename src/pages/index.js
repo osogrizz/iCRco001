@@ -66,14 +66,6 @@ const IndexPage = () => {
           <HomeOne />
         </section>
 
-        <section style={{ background: "darkgray" }}>
-          <h2>Solutions</h2>
-        </section>
-
-        <section style={{ background: "darkgray" }}>
-          <h2>Specialties</h2>
-        </section>
-
         <section>
           <PartsHero />
         </section>
@@ -82,15 +74,15 @@ const IndexPage = () => {
           <TechnologyHero />
         </section>
 
-        <section>
+        {/* <section>
           <NewsHero />
         </section>
 
         <section>
           <EventsHero />
-        </section>
+        </section> */}
 
-        <section>
+        {/* <section>
           <form onSubmit={handleSubmit}>
             <FormContainer>
               <div>
@@ -118,7 +110,7 @@ const IndexPage = () => {
               </div>
             </FormContainer>
           </form>
-        </section>
+        </section> */}
       </Wrapper>
     </Layout>
   )

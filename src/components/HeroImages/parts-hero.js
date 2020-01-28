@@ -54,8 +54,8 @@ const PartsHero = () => {
       preserveStackingContext
     >
       <div>
-        <h2>Parts</h2>
-        <h5>Available for CR and DR</h5>
+        <h2>CR Solutions</h2>
+        {/* <h5>Available for CR and DR</h5> */}
       </div>
     </ImageBackground>
   )

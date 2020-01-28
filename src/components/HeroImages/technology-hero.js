@@ -54,8 +54,8 @@ const TechnologyHero = () => {
       preserveStackingContext
     >
       <div>
-        <h2>Technology</h2>
-        <h5>Patented Inventions That Drive Our Innovation.</h5>
+        <h2>CT Solutions</h2>
+        {/* <h5>Patented Inventions That Drive Our Innovation.</h5> */}
       </div>
     </ImageBackground>
   )

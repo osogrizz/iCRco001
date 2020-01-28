@@ -13,13 +13,12 @@ const HeaderWrapper = styled("div")`
   top: 0;
   left: 0;
   width: 100%;
-  /* background: rgba(20, 20, 20, 0.5); */
-  /* backdrop-filter: blur(10px); */
+  background: rgba(20, 20, 20, 0.8);
   z-index: 100;
 `
 
 const HeaderMain = styled("header")`
-  margin: 20px auto;
+  /* margin: 20px auto; */
   width: 100%;
   /* height: 180px; */
   /* background: linear-gradient(#5290c0, #2074b0); */
@@ -38,11 +37,15 @@ const HeaderContainer = styled("div")`
   font-size: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  form {
+    margin: 0;
+  }
 `
 
 const LogoContainer = styled("div")`
   margin: 0 20px;
-  width: 120px;
+  width: 90px;
   color: #fff;
   background: rgba(20, 20, 20, 0.4);
   border-radius: 50%;
@@ -61,21 +64,21 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(1),
     },
     "& label.Mui-focused": {
-      color: "black",
+      color: "#fff",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "black",
+      borderBottomColor: "#fff",
       color: "#fff",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        // borderColor: "",
+        borderColor: "#fff",
       },
       "&:hover fieldset": {
-        borderColor: "black",
+        borderColor: "#fff",
       },
       "&.Mui-focused fieldset": {
-        borderColor: "black",
+        borderColor: "#fff",
       },
     },
     "& > *": {
@@ -106,7 +109,7 @@ const Header = ({ siteTitle }) => {
               type="search"
               id="custom-css-outlined-input"
               label="Search..."
-              variant="outlined"
+              // variant="outlined"
             />
           </form>
         </HeaderContainer>
