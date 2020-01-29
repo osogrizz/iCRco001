@@ -88,6 +88,10 @@ const Wrapper = styled("div")`
     stroke-width: 2;
     margin: 20px 30px 0 0;
     font-size: 1.6rem;
+    :hover {
+      fill: #fff;
+      transition: fill 0.2s linear;
+    }
   }
   .social-media {
     display: flex;

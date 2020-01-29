@@ -24,7 +24,7 @@ const ImageBackground = styled(BackgroundImage)`
     font-size: 5rem;
     font-weight: 500;
     letter-spacing: 0.5rem;
-    text-align: left;
+    text-align: center;
     padding: 1rem 1.875rem;
     max-width: 800px;
     margin: 0 auto;
