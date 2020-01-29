@@ -75,6 +75,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     margin: {
       margin: theme.spacing(1),
+      color: "#fff",
     },
     "& label.Mui-focused": {
       color: "#fff",
@@ -92,11 +93,12 @@ const useStyles = makeStyles(theme => ({
       },
       "&.Mui-focused fieldset": {
         borderColor: "#fff",
+        color: "#fff",
       },
     },
     "& > *": {
       margin: theme.spacing(1),
-      backdropFilter: "blur(10px)",
+      color: "#fff",
     },
   },
 }))
@@ -122,7 +124,7 @@ const Header = ({ siteTitle }) => {
               className={classes.root}
               type="search"
               id="custom-css-outlined-input"
-              label="Search..."
+              // label="Search..."
               // variant="outlined"
             />
           </form>

@@ -20,8 +20,7 @@ const NavWrapper = styled("nav")`
 const NavContainer = styled("div")`
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
-  /* padding: 0 50px; */
+
   /* max-width: 70%; */
   width: 100%;
   height: fit-content;

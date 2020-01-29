@@ -29,7 +29,7 @@ const Image = () => {
   return (
     <Img
       fluid={data.logo.childImageSharp.fluid}
-      style={{ position: "relative", width: "90px", margin: "0 10px" }}
+      style={{ position: "relative", width: "80px", margin: "0 10px" }}
     />
   )
 }
