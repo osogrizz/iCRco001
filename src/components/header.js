@@ -66,6 +66,8 @@ const LogoContainer = styled("div")`
 
   h4 {
     margin: 5px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
   }
 `
 
