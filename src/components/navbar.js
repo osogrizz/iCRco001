@@ -35,7 +35,7 @@ const NavContainer = styled("div")`
   }
 
   a {
-    margin-top: -5px;
+    /* margin-top: -10px; */
     :hover {
       color: #fff;
       /* color: #999; */
@@ -66,7 +66,7 @@ const DropDown = styled("div")`
   flex-direction: column;
   text-align: left;
   padding: 0 15px 5px;
-  margin-top: 6px;
+  margin-top: 1px;
   font-size: 0.65rem;
   border-top: 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
