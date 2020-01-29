@@ -19,24 +19,27 @@ const NavWrapper = styled("nav")`
 
 const NavContainer = styled("div")`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
-  padding: 10px 40px;
-  /* max-width: 60%; */
+  /* padding: 0 50px; */
+  /* max-width: 70%; */
   width: 100%;
+  height: fit-content;
   text-transform: uppercase;
-  /* font-size: 0.775rem; */
-  font-size: 1.5vmin;
+  font-size: 0.675rem;
+  /* font-size: 1.5vmin; */
   font-weight: 700;
   letter-spacing: 1px;
 
   .top-nav {
-    padding: 0.3rem 0;
+    /* padding: 0.3rem 0; */
   }
 
   a {
+    margin-top: -5px;
     :hover {
-      color: #999;
+      color: #fff;
+      /* color: #999; */
     }
   }
 `
@@ -117,10 +120,6 @@ const Navbar = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <Link activeStyle={activeStyles} to="/" name="home" className="top-nav">
-          Home
-        </Link>
-
         <Link
           className="top-nav"
           activeStyle={activeStyles}

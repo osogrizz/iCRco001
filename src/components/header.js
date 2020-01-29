@@ -37,6 +37,7 @@ const HeaderContainer = styled("div")`
   font-size: 1.1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* z-index: 100; */
 
   form {
     margin: 0;
@@ -45,16 +46,26 @@ const HeaderContainer = styled("div")`
 
 const LogoContainer = styled("div")`
   margin: 0 20px;
-  width: 90px;
+  width: fit-content;
   color: #fff;
-  background: rgba(20, 20, 20, 0.4);
-  border-radius: 50%;
-  backdrop-filter: blur(10px);
-  box-shadow: 2px 2px 10px #3a3a3a55;
   outline: transparent;
+  display: flex;
+  justify-content: space-between;
+  /* width: fit-content; */
+  align-items: center;
 
-  :hover {
-    background: #0069aa99;
+  img {
+    :hover {
+      background: #0069aa99;
+      background: rgba(20, 20, 20, 0.4);
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
+      box-shadow: 2px 2px 10px #3a3a3a55;
+    }
+  }
+
+  h4 {
+    margin: 5px;
   }
 `
 
@@ -99,6 +110,7 @@ const Header = ({ siteTitle }) => {
             <Link to="/">
               <Image />
             </Link>
+            <h4>| Image Capture Review</h4>
           </LogoContainer>
 
           <Navbar />

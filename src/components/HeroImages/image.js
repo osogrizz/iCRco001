@@ -18,7 +18,7 @@ const Image = () => {
     query {
       logo: file(relativePath: { eq: "iCRco-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +26,12 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.logo.childImageSharp.fluid} />
+  return (
+    <Img
+      fluid={data.logo.childImageSharp.fluid}
+      style={{ position: "relative", width: "90px", margin: "0 10px" }}
+    />
+  )
 }
 
 export default Image
