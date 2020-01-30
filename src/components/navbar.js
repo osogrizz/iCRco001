@@ -25,7 +25,7 @@ const NavContainer = styled("div")`
   width: 100%;
   /* padding: 20px; */
   text-transform: uppercase;
-  font-size: 0.675rem;
+  font-size: 0.575rem;
   /* font-size: 1.5vmin; */
   font-weight: 700;
   letter-spacing: 1px;
