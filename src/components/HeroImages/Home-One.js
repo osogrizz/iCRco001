@@ -53,7 +53,7 @@ const HomeOne = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <h2>DR Solutions</h2>
+      {/* <h2>DR Solutions</h2> */}
     </ImageBackground>
   )
 }
