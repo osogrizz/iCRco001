@@ -45,7 +45,7 @@ const HeaderContainer = styled("div")`
 `
 
 const LogoContainer = styled("div")`
-  margin: 0 20px;
+  /* margin: 0 20px; */
   width: fit-content;
   color: #fff;
   outline: transparent;
@@ -61,11 +61,13 @@ const LogoContainer = styled("div")`
       border-radius: 50%;
       backdrop-filter: blur(10px);
       box-shadow: 2px 2px 10px #3a3a3a55;
+      margin: 0;
     }
   }
 
   h4 {
     margin: 5px;
+    font-size: 0.8rem;
     letter-spacing: 1.2px;
     font-weight: 400;
   }
@@ -119,15 +121,17 @@ const Header = ({ siteTitle }) => {
 
           <Navbar />
 
-          <form>
-            <TextField
-              className={classes.root}
-              type="search"
-              id="custom-css-outlined-input"
-              // label="Search..."
-              // variant="outlined"
-            />
-          </form>
+          <div>
+            <form>
+              <TextField
+                className={classes.root}
+                type="search"
+                id="custom-css-outlined-input"
+                // label="Search..."
+                // variant="outlined"
+              />
+            </form>
+          </div>
         </HeaderContainer>
       </HeaderMain>
     </HeaderWrapper>
