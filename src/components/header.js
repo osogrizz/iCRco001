@@ -121,7 +121,7 @@ const Header = ({ siteTitle }) => {
 
           <Navbar />
 
-          <div>
+          <div style={{ margin: "0 20px" }}>
             <form>
               <TextField
                 className={classes.root}
