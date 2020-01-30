@@ -6,6 +6,7 @@ import EventsHero from "../components/HeroImages/events-hero"
 import PartsHero from "../components/HeroImages/parts-hero"
 import TechnologyHero from "../components/HeroImages/technology-hero"
 import NewsHero from "../components/HeroImages/news-hero"
+import ShortVideo from "../images/ClarityPACS.mp4"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -53,7 +54,8 @@ const FormContainer = styled("div")`
   }
 `
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log("data", data)
   const handleSubmit = e => {
     e.preventDefault()
   }
@@ -74,11 +76,25 @@ const IndexPage = () => {
           <TechnologyHero />
         </section>
 
-        {/* <section>
-          <NewsHero />
+        <section>
+          <video
+            style={{ display: "flex" }}
+            className="video-player"
+            height="100%"
+            width="100%"
+            loop
+            muted
+            autoPlay
+          >
+            <source src={ShortVideo} type="video/mp4" />
+          </video>
         </section>
 
-        <section>
+        {/* <section>
+          <NewsHero />
+        </section> */}
+
+        {/* <section>
           <EventsHero />
         </section> */}
 
