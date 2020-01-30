@@ -31,7 +31,7 @@ const HeaderMain = styled("header")`
 const HeaderContainer = styled("div")`
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   /* max-width: 960px; */
   font-size: 1.1rem;

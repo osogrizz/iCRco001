@@ -7,9 +7,8 @@ const NavWrapper = styled("nav")`
   z-index: 1000;
   left: 0;
   margin: 0;
-  /* margin-bottom: 1.45rem; */
-  width: 960px;
-  /* background: rgba(20, 20, 20, 0.7); */
+  width: 760px;
+  height: 48px;
 
   a {
     color: #fff;
@@ -20,18 +19,20 @@ const NavWrapper = styled("nav")`
 const NavContainer = styled("div")`
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   /* max-width: 70%; */
   width: 100%;
-  height: fit-content;
+  /* padding: 20px; */
   text-transform: uppercase;
   font-size: 0.675rem;
   /* font-size: 1.5vmin; */
   font-weight: 700;
   letter-spacing: 1px;
+  height: 52px;
 
   .top-nav {
-    /* padding: 0.3rem 0; */
+    padding: 10px 0;
   }
 
   a {
@@ -43,19 +44,6 @@ const NavContainer = styled("div")`
   }
 `
 
-// const LogoContainer = styled("div")`
-//   display: flex;
-//   align-items: center;
-//   /* height: -webkit-fill-available; */
-//   /* height: 200px; */
-//   width: 200px;
-//   /* background: #333; */
-
-//   img {
-//     z-index: 1000;
-//   }
-// `
-
 const activeStyles = {
   color: "#5290c0",
 }
@@ -66,14 +54,13 @@ const DropDown = styled("div")`
   flex-direction: column;
   text-align: left;
   padding: 0 15px 5px;
-  margin-top: 1px;
+  margin-top: 10px;
   font-size: 0.65rem;
   border-top: 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  /* -webkit-backdrop-filter: blur(10px); */
-  /* background: rgba(0, 0, 0, 0.2); */
-  background: transparent;
+  /* background: transparent; */
   min-width: 150px;
 
   a {
