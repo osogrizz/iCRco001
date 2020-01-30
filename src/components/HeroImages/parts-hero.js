@@ -12,10 +12,10 @@ const ImageBackground = styled(BackgroundImage)`
 
   width: 100%;
   background-image: linear-gradient(
-      rgba(150, 150, 150, 0.4),
-      rgba(150, 150, 150, 0.4)
+      rgba(80, 80, 80, 0.2),
+      rgba(80, 80, 80, 0.2)
     ),
-    url("../images/parts-2.jpg");
+    url("../images/3600LF.png");
   background-size: cover cover;
 
   h2 {
@@ -38,9 +38,9 @@ const ImageBackground = styled(BackgroundImage)`
 const PartsHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "parts-2.jpg" }) {
+      image: file(relativePath: { eq: "3600LF.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -54,7 +54,7 @@ const PartsHero = () => {
       preserveStackingContext
     >
       <div>
-        <h2>CR Solutions</h2>
+        {/* <h2>CR Solutions</h2> */}
         {/* <h5>Available for CR and DR</h5> */}
       </div>
     </ImageBackground>

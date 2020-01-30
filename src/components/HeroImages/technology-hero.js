@@ -12,10 +12,10 @@ const ImageBackground = styled(BackgroundImage)`
 
   width: 100%;
   background-image: linear-gradient(
-      rgba(150, 150, 150, 0.4),
-      rgba(150, 150, 150, 0.4)
+      rgba(80, 80, 80, 0.2),
+      rgba(80, 80, 80, 0.2)
     ),
-    url("../images/technology.jpg");
+    url("../images/ClarisXTMain.png");
   background-size: cover cover;
 
   h2 {
@@ -38,9 +38,9 @@ const ImageBackground = styled(BackgroundImage)`
 const TechnologyHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "technology.jpg" }) {
+      image: file(relativePath: { eq: "ClarisXTMain.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -52,9 +52,10 @@ const TechnologyHero = () => {
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
+      style={{ padding: "0 0 40px" }}
     >
       <div>
-        <h2>CT Solutions</h2>
+        {/* <h2>CT Solutions</h2> */}
         {/* <h5>Patented Inventions That Drive Our Innovation.</h5> */}
       </div>
     </ImageBackground>
