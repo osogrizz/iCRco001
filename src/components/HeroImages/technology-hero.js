@@ -15,7 +15,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(80, 80, 80, 0.2),
       rgba(80, 80, 80, 0.2)
     ),
-    url("../images/ClarisXTMain.png");
+    url("../images/ClarisXT.png");
   background-size: cover cover;
 
   h2 {
@@ -38,7 +38,7 @@ const ImageBackground = styled(BackgroundImage)`
 const TechnologyHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "ClarisXTMain.png" }) {
+      image: file(relativePath: { eq: "ClarisXT.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
