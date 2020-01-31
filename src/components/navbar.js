@@ -59,6 +59,7 @@ const DropDown = styled("div")`
   /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
   backdrop-filter: blur(10px);
   background: rgba(250, 250, 250, 0.3);
+  border-radius: 0 0 3px 3px;
   min-width: 150px;
 
   a {
