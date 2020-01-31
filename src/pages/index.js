@@ -54,6 +54,33 @@ const FormContainer = styled("div")`
   }
 `
 
+const SideNav = styled("ul")`
+  display: block;
+  top: 50%;
+  left: 0%;
+  margin-top: -78px;
+  position: fixed;
+  color: #fff;
+  list-style-type: none;
+
+  li {
+    display: flex;
+    div:first-of-type {
+      width: 1px;
+      background: #9a9a9a;
+      height: 26px;
+      margin-right: 10px;
+    }
+    div:last-of-type {
+      opacity: 0;
+      &:hover {
+        cursor: pointer;
+        opacity: 100%;
+      }
+    }
+  }
+`
+
 const IndexPage = ({ data }) => {
   console.log("data", data)
   const handleSubmit = e => {
@@ -64,19 +91,19 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Wrapper>
-        <section>
+        <section id="home-1">
           <HomeOne />
         </section>
 
-        <section>
+        <section id="home-2">
           <PartsHero />
         </section>
 
-        <section>
+        <section id="home-3">
           <TechnologyHero />
         </section>
 
-        <section>
+        <section id="home-4">
           <video
             style={{ display: "flex" }}
             className="video-player"
@@ -89,6 +116,33 @@ const IndexPage = ({ data }) => {
             <source src={ShortVideo} type="video/mp4" />
           </video>
         </section>
+
+        <SideNav>
+          {/* display: block;
+    left: 0;
+    margin-top: -78px;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 5; */}
+          <li>
+            <div></div>
+            <div htmlFor="home-1">Home-1</div>
+          </li>
+          <li>
+            <div></div>
+            <div htmlFor="home-1">Home-2</div>
+          </li>
+          <li>
+            <div></div>
+            <div htmlFor="home-1">Home-3</div>
+          </li>
+          <li>
+            <div></div>
+            <div htmlFor="home-1">Home-4</div>
+          </li>
+        </SideNav>
 
         {/* <section>
           <NewsHero />
