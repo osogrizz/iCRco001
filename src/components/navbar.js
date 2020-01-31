@@ -9,11 +9,6 @@ const NavWrapper = styled("nav")`
   margin: 0;
   width: 760px;
   height: 48px;
-
-  a {
-    color: #fff;
-    font-weight: 500;
-  }
 `
 
 const NavContainer = styled("div")`
@@ -33,10 +28,13 @@ const NavContainer = styled("div")`
 
   .top-nav {
     padding: 10px 0;
+    color: #fff;
+    font-weight: 500;
   }
 
   a {
     /* margin-top: -10px; */
+    /* color: #888; */
     :hover {
       color: #fff;
       /* color: #999; */
@@ -58,9 +56,9 @@ const DropDown = styled("div")`
   font-size: 0.65rem;
   border-top: 0;
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
   backdrop-filter: blur(10px);
-  /* background: transparent; */
+  background: rgba(250, 250, 250, 0.3);
   min-width: 150px;
 
   a {
