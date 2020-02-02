@@ -62,6 +62,7 @@ const SideNav = styled("ul")`
   position: fixed;
   color: #fff;
   list-style-type: none;
+  z-index: 5;
 
   li {
     a {
@@ -77,9 +78,13 @@ const SideNav = styled("ul")`
       div:last-of-type {
         opacity: 0;
         color: #fff;
+        -webkit-transform: translateX(-10%);
+        transform: translateX(-10%);
         &:hover {
           cursor: pointer;
           opacity: 100%;
+          transform: translateY(0%);
+          transition: transform 0.6s;
         }
       }
     }
@@ -111,10 +116,7 @@ const IndexPage = ({ data }) => {
           <TechnologyHero />
         </section>
 
-        <section
-          id="home-4"
-          style={{ paddingTop: "50px", background: " rgb(39, 44, 53)" }}
-        >
+        <section id="home-4" style={{ padding: "50px 0", background: "black" }}>
           <video
             style={{ display: "flex" }}
             className="video-player"
