@@ -104,19 +104,22 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Wrapper>
-        <section id="home-1">
+        <section id="AirDR">
           <HomeOne />
         </section>
 
-        <section id="home-2">
+        <section id="3600">
           <PartsHero />
         </section>
 
-        <section id="home-3">
+        <section id="ClarisXT">
           <TechnologyHero />
         </section>
 
-        <section id="home-4" style={{ padding: "50px 0", background: "black" }}>
+        <section
+          id="ClarityPACS"
+          style={{ padding: "50px 0", background: "black" }}
+        >
           <video
             style={{ display: "flex" }}
             className="video-player"
@@ -140,25 +143,25 @@ const IndexPage = ({ data }) => {
     transform: translateY(-50%);
     z-index: 5; */}
           <li>
-            <Link to="#home-1" activeStyle={activeStyles}>
+            <Link to="#AirDR" activeStyle={activeStyles}>
               <div></div>
               <div>Air DR</div>
             </Link>
           </li>
           <li>
-            <Link to="#home-2" activeStyle={activeStyles}>
+            <Link to="#3600" activeStyle={activeStyles}>
               <div></div>
               <div>3600</div>
             </Link>
           </li>
           <li>
-            <Link to="#home-3" activeStyle={activeStyles}>
+            <Link to="#ClarisXT" activeStyle={activeStyles}>
               <div></div>
               <div>Claris XT</div>
             </Link>
           </li>
           <li>
-            <Link to="#home-4" activeStyle={activeStyles}>
+            <Link to="#ClarityPACS" activeStyle={activeStyles}>
               <div></div>
               <div>Clarity PACS</div>
             </Link>
