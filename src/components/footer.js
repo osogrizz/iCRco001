@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 // import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import {
   FaFacebookF,
   FaInstagram,
@@ -111,6 +112,7 @@ const Wrapper = styled("div")`
 `
 
 const Footer = ({ data }) => {
+  console.log("data", data)
   return (
     <Wrapper>
       {/* <div className="top-footer">
@@ -281,12 +283,12 @@ const Footer = ({ data }) => {
 
 export default Footer
 
-// export const query = graphql`
-//   query FlagQuery {
-//     flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
-//       fluid(maxWidth: 800) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query FlagQuery {
+    flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`

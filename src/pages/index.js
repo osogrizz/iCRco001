@@ -64,22 +64,30 @@ const SideNav = styled("ul")`
   list-style-type: none;
 
   li {
-    display: flex;
-    div:first-of-type {
-      width: 1px;
-      background: #9a9a9a;
-      height: 26px;
-      margin-right: 10px;
-    }
-    div:last-of-type {
-      opacity: 0;
-      &:hover {
-        cursor: pointer;
-        opacity: 100%;
+    a {
+      margin: 0;
+      color: #9a9a9a;
+      display: flex;
+      div:first-of-type {
+        width: 1px;
+        background: #9a9a9a;
+        height: 26px;
+        margin-right: 10px;
+      }
+      div:last-of-type {
+        opacity: 0;
+        color: #fff;
+        &:hover {
+          cursor: pointer;
+          opacity: 100%;
+        }
       }
     }
   }
 `
+const activeStyles = {
+  color: "#fff",
+}
 
 const IndexPage = ({ data }) => {
   console.log("data", data)
@@ -103,7 +111,10 @@ const IndexPage = ({ data }) => {
           <TechnologyHero />
         </section>
 
-        <section id="home-4">
+        <section
+          id="home-4"
+          style={{ paddingTop: "50px", background: " rgb(39, 44, 53)" }}
+        >
           <video
             style={{ display: "flex" }}
             className="video-player"
@@ -127,20 +138,28 @@ const IndexPage = ({ data }) => {
     transform: translateY(-50%);
     z-index: 5; */}
           <li>
-            <div></div>
-            <div htmlFor="home-1">Home-1</div>
+            <Link to="#home-1" activeStyle={activeStyles}>
+              <div></div>
+              <div>Air DR</div>
+            </Link>
           </li>
           <li>
-            <div></div>
-            <div htmlFor="home-1">Home-2</div>
+            <Link to="#home-2" activeStyle={activeStyles}>
+              <div></div>
+              <div>3600</div>
+            </Link>
           </li>
           <li>
-            <div></div>
-            <div htmlFor="home-1">Home-3</div>
+            <Link to="#home-3" activeStyle={activeStyles}>
+              <div></div>
+              <div>Claris XT</div>
+            </Link>
           </li>
           <li>
-            <div></div>
-            <div htmlFor="home-1">Home-4</div>
+            <Link to="#home-4" activeStyle={activeStyles}>
+              <div></div>
+              <div>Clarity PACS</div>
+            </Link>
           </li>
         </SideNav>
 
