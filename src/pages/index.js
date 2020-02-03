@@ -70,14 +70,17 @@ const SideNav = styled("ul")`
       color: #9a9a9a;
       display: flex;
       div:first-of-type {
-        width: 1px;
+        width: 2px;
         background: #9a9a9a;
+        background: lightgray;
         height: 26px;
         margin-right: 10px;
       }
       div:last-of-type {
         opacity: 0;
         color: #fff;
+        font-weight: 600;
+        letter-spacing: 1.1px;
         -webkit-transform: translateX(-10%);
         transform: translateX(-10%);
         &:hover {
@@ -134,14 +137,6 @@ const IndexPage = ({ data }) => {
         </section>
 
         <SideNav>
-          {/* display: block;
-    left: 0;
-    margin-top: -78px;
-    position: fixed;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    z-index: 5; */}
           <li>
             <Link to="#AirDR" activeStyle={activeStyles}>
               <div></div>
