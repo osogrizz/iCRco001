@@ -99,6 +99,10 @@ const SideNav = styled("ul")`
       }
     }
   }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 const activeStyles = {
   color: "#fff",
