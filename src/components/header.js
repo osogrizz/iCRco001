@@ -26,6 +26,12 @@ const HeaderMain = styled("header")`
   justify-content: space-evenly;
   align-items: center;
   /* color: #fff; */
+
+  @media (max-width: 800px) {
+    Navbar {
+      display: none;
+    }
+  }
 `
 
 const HeaderContainer = styled("div")`
@@ -41,6 +47,10 @@ const HeaderContainer = styled("div")`
 
   form {
     margin: 0;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 `
 
@@ -70,6 +80,11 @@ const LogoContainer = styled("div")`
     font-size: 0.8rem;
     letter-spacing: 1.2px;
     font-weight: 400;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    justify-content: center;
   }
 `
 

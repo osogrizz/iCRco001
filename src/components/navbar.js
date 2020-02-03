@@ -9,6 +9,10 @@ const NavWrapper = styled("nav")`
   margin: 0;
   width: 760px;
   height: 48px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 const NavContainer = styled("div")`
