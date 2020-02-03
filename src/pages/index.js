@@ -138,10 +138,10 @@ const IndexPage = ({ data }) => {
             loop
             muted
             autoPlay
-            playsinline
-            src={ShortVideo}
-            type="video/mp4"
-          ></video>
+            playsInline
+          >
+            <source src={ShortVideo} type="video/mp4" />
+          </video>
         </section>
 
         <SideNav>
