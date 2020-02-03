@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import ClarisLogo from "../HeroImages/ClarisLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
@@ -35,6 +36,26 @@ const ImageBackground = styled(BackgroundImage)`
   }
 `
 
+const HeroBottom = styled("div")`
+  position: relative;
+  margin-top: 54vh;
+  width: 500px;
+
+  h2 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    padding: 1rem 1.875rem;
+    max-width: 800px;
+    /* margin: 0 auto; */
+  }
+
+  @media (max-width: 800px) {
+    width: 300px;
+  }
+`
+
 const TechnologyHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -54,10 +75,9 @@ const TechnologyHero = () => {
       preserveStackingContext
       style={{ padding: "0 0 40px" }}
     >
-      <div>
-        {/* <h2>CT Solutions</h2> */}
-        {/* <h5>Patented Inventions That Drive Our Innovation.</h5> */}
-      </div>
+      <HeroBottom>
+        <ClarisLogo />
+      </HeroBottom>
     </ImageBackground>
   )
 }

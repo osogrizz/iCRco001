@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import ThreeHunLogo from "../HeroImages/3600Logo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
@@ -35,6 +36,26 @@ const ImageBackground = styled(BackgroundImage)`
   }
 `
 
+const HeroBottom = styled("div")`
+  position: relative;
+  margin-top: 48vh;
+  width: 500px;
+
+  h2 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    padding: 1rem 1.875rem;
+    max-width: 800px;
+    /* margin: 0 auto; */
+  }
+
+  @media (max-width: 800px) {
+    width: 300px;
+  }
+`
+
 const PartsHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -53,10 +74,9 @@ const PartsHero = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <div>
-        {/* <h2>CR Solutions</h2> */}
-        {/* <h5>Available for CR and DR</h5> */}
-      </div>
+      <HeroBottom>
+        <ThreeHunLogo />
+      </HeroBottom>
     </ImageBackground>
   )
 }

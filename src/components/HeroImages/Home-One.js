@@ -2,11 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import AirLogo from "../HeroImages/AirLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
@@ -19,19 +20,28 @@ const ImageBackground = styled(BackgroundImage)`
     url("../images/AirDR.png");
   background-size: cover cover;
 
+  h3 {
+    color: #fff;
+    font-size: 4rem;
+  }
+`
+const HeroBottom = styled("div")`
+  position: relative;
+  margin-top: 72vh;
+  width: 500px;
+
   h2 {
     color: #fff;
     font-size: 5rem;
     font-weight: 500;
     letter-spacing: 0.5rem;
-    text-align: center;
     padding: 1rem 1.875rem;
     max-width: 800px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
-  h3 {
-    color: #fff;
-    font-size: 4rem;
+
+  @media (max-width: 800px) {
+    width: 300px;
   }
 `
 
@@ -53,7 +63,10 @@ const HomeOne = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      {/* <h2>DR Solutions</h2> */}
+      <HeroBottom>
+        {/* <h2></h2> */}
+        <AirLogo />
+      </HeroBottom>
     </ImageBackground>
   )
 }
