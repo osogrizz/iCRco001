@@ -82,6 +82,13 @@ const LogoContainer = styled("div")`
     font-weight: 400;
   }
 
+  @media (max-width: 1400px) {
+    h4 {
+      font-size: 0.6rem;
+      letter-spacing: 0;
+    }
+  }
+
   @media (max-width: 800px) {
     width: 100%;
     justify-content: center;
