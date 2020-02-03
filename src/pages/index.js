@@ -138,6 +138,7 @@ const IndexPage = ({ data }) => {
             loop
             muted
             autoPlay
+            playsInline
           >
             <source src={ShortVideo} type="video/mp4" />
           </video>
