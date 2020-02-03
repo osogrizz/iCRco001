@@ -11,7 +11,7 @@ import {
   FaYoutube,
 } from "react-icons/fa"
 
-import FlagImage from "../components/flag-image"
+import FlagImage from "./HeroImages/flag-image"
 
 const Wrapper = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -111,6 +111,23 @@ const Wrapper = styled("div")`
   }
 `
 
+const MidContainer = styled("div")`
+  display: flex;
+  justify-content: space-around;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    h5 {
+      text-align: center;
+    }
+  }
+`
+
 const Footer = ({ data }) => {
   console.log("data", data)
   return (
@@ -206,14 +223,7 @@ const Footer = ({ data }) => {
         </li>
       </div> */}
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          maxWidth: "1120px",
-          margin: "0 auto",
-        }}
-      >
+      <MidContainer>
         <FlagImage />
         <li>
           <h5>Stay Connected</h5>
@@ -266,7 +276,7 @@ const Footer = ({ data }) => {
             </li>
           </ul>
         </li>
-      </div>
+      </MidContainer>
 
       <hr />
       <div className="bottom-footer">
