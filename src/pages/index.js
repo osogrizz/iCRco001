@@ -23,6 +23,7 @@ const Wrapper = styled("div")`
   @media (max-width: 800px) {
     video {
       width: -webkit-fill-available;
+      padding: 20px 0;
     }
   }
 `
