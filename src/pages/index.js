@@ -19,6 +19,12 @@ const Wrapper = styled("div")`
     margin: 0;
     padding-bottom: 1.45rem;
   }
+
+  @media (max-width: 800px) {
+    video {
+      width: -webkit-fill-available;
+    }
+  }
 `
 
 const FormContainer = styled("div")`
