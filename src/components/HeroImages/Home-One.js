@@ -22,23 +22,15 @@ const ImageBackground = styled(BackgroundImage)`
 
   h3 {
     color: #fff;
-    font-size: 4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px auto 0;
   }
 `
 const HeroBottom = styled("div")`
   position: relative;
   margin-top: 72vh;
-  width: 500px;
-
-  h2 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
-    padding: 1rem 1.875rem;
-    max-width: 800px;
-    /* margin: 0 auto; */
-  }
+  width: 350px;
 
   @media (max-width: 800px) {
     width: 300px;
@@ -64,9 +56,9 @@ const HomeOne = () => {
       preserveStackingContext
     >
       <HeroBottom>
-        {/* <h2></h2> */}
         <AirLogo />
       </HeroBottom>
+      <h3>Digital Imaging Done Right.</h3>
     </ImageBackground>
   )
 }

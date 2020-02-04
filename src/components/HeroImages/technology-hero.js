@@ -6,7 +6,7 @@ import ClarisLogo from "../HeroImages/ClarisLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
@@ -34,21 +34,24 @@ const ImageBackground = styled(BackgroundImage)`
     text-align: center;
     letter-spacing: 2px;
   }
+  h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px auto 0;
+  }
 `
 
 const HeroBottom = styled("div")`
   position: relative;
-  margin-top: 54vh;
-  width: 500px;
-
-  h2 {
+  margin-top: 72vh;
+  width: 350px;
+  h3 {
     color: #fff;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
-    padding: 1rem 1.875rem;
-    max-width: 800px;
-    /* margin: 0 auto; */
+    font-size: 1.4rem;
+    font-weight: 400;
+    /* text-overflow: ; */
+    margin: 20px auto 0;
   }
 
   @media (max-width: 800px) {
@@ -78,6 +81,7 @@ const TechnologyHero = () => {
       <HeroBottom>
         <ClarisLogo />
       </HeroBottom>
+      <h3>The Next Dimension of 3D Imaging.</h3>
     </ImageBackground>
   )
 }

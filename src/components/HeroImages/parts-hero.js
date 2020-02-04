@@ -6,7 +6,8 @@ import ThreeHunLogo from "../HeroImages/3600Logo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
@@ -34,12 +35,18 @@ const ImageBackground = styled(BackgroundImage)`
     text-align: center;
     letter-spacing: 2px;
   }
+  h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px auto 0;
+  }
 `
 
 const HeroBottom = styled("div")`
   position: relative;
-  margin-top: 48vh;
-  width: 500px;
+  margin-top: 72vh;
+  width: 350px;
 
   h2 {
     color: #fff;
@@ -77,6 +84,7 @@ const PartsHero = () => {
       <HeroBottom>
         <ThreeHunLogo />
       </HeroBottom>
+      <h3>The Flagship CR.</h3>
     </ImageBackground>
   )
 }
