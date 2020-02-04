@@ -19,13 +19,9 @@ const NavContainer = styled("div")`
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  /* max-width: 70%; */
   width: 100%;
-  /* padding: 20px; */
   text-transform: uppercase;
   font-size: 0.675rem;
-  /* font-size: 1.5vmin; */
   font-weight: 700;
   letter-spacing: 1px;
   height: 52px;
@@ -37,11 +33,8 @@ const NavContainer = styled("div")`
   }
 
   a {
-    /* margin-top: -10px; */
-    /* color: #888; */
     :hover {
       color: #fff;
-      /* color: #999; */
     }
   }
 `
@@ -60,7 +53,6 @@ const DropDown = styled("div")`
   font-size: 0.65rem;
   border-top: 0;
   border: none;
-  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
   backdrop-filter: blur(10px);
   background: rgba(250, 250, 250, 0.3);
   border-radius: 0 0 3px 3px;
@@ -68,16 +60,12 @@ const DropDown = styled("div")`
 
   a {
     color: black;
-
-    /* text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5), */
-    /* 1px 1px 1px rgba(230, 236, 245, 0.5); */
     padding-top: 10px;
     &:hover {
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
         1px 1px 3px rgba(0, 0, 0, 0.4);
       margin: 0 12px;
-      /* font-size: 0.775rem; */
       transform: scale(1.1, 1.2);
       transition: all 0.285s ease-in-out;
     }

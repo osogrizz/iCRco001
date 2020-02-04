@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import HomeOne from "../components/HeroImages/Home-One"
 import EventsHero from "../components/HeroImages/events-hero"
 import PartsHero from "../components/HeroImages/parts-hero"
@@ -13,6 +14,10 @@ import SEO from "../components/seo"
 
 const Wrapper = styled("div")`
   text-align: center;
+
+  section {
+    scroll-behavior: smooth;
+  }
 
   form {
     background: #545351;
@@ -28,40 +33,9 @@ const Wrapper = styled("div")`
   }
 `
 
-const FormContainer = styled("div")`
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-top: 40px;
+const SideNav = styled("ul")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-  input {
-    width: 250px;
-    margin: 10px 10px;
-    padding: 10px;
-    outline-color: orange;
-  }
-  textarea {
-    padding: 10px;
-    outline-color: orange;
-  }
-  button {
-    width: 200px;
-    margin: 40px;
-    padding: 10px 20px;
-    background: #0069aa;
-    color: #fff;
-    border: none;
-    outline: orange;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-`
-
-const SideNav = styled("ul")`
   display: block;
   top: 50%;
   left: 0%;
@@ -72,18 +46,19 @@ const SideNav = styled("ul")`
   z-index: 5;
 
   li {
-    a {
+    div {
       margin: 0;
       color: #9a9a9a;
       display: flex;
-      div:first-of-type {
+
+      .nav-indicator {
         width: 2px;
         background: #9a9a9a;
         background: lightgray;
         height: 26px;
         margin-right: 10px;
       }
-      div:last-of-type {
+      .nav-label {
         opacity: 0;
         color: #fff;
         font-size: 0.845rem;
@@ -105,9 +80,6 @@ const SideNav = styled("ul")`
     display: none;
   }
 `
-const activeStyles = {
-  color: "#fff",
-}
 
 const IndexPage = ({ data }) => {
   console.log("data", data)
@@ -123,7 +95,7 @@ const IndexPage = ({ data }) => {
           <HomeOne />
         </section>
 
-        <section id="3600">
+        <section id="threeSix">
           <PartsHero />
         </section>
 
@@ -150,69 +122,31 @@ const IndexPage = ({ data }) => {
         </section>
 
         <SideNav>
-          <li>
-            <Link to="#AirDR" activeStyle={activeStyles}>
-              <div></div>
-              <div>Air DR</div>
-            </Link>
+          <li onClick={() => scrollTo("#AirDR")}>
+            <div>
+              <div className="nav-indicator"></div>
+              <div className="nav-label">Air DR</div>
+            </div>
           </li>
-          <li>
-            <Link to="#3600" activeStyle={activeStyles}>
-              <div></div>
-              <div>3600</div>
-            </Link>
+          <li onClick={() => scrollTo("#threeSix")}>
+            <div>
+              <div className="nav-indicator"></div>
+              <div className="nav-label">3600</div>
+            </div>
           </li>
-          <li>
-            <Link to="#ClarisXT" activeStyle={activeStyles}>
-              <div></div>
-              <div>Claris XT</div>
-            </Link>
+          <li onClick={() => scrollTo("#ClarisXT")}>
+            <div>
+              <div className="nav-indicator"></div>
+              <div className="nav-label">Claris XT</div>
+            </div>
           </li>
-          <li>
-            <Link to="#ClarityPACS" activeStyle={activeStyles}>
-              <div></div>
-              <div>Clarity PACS</div>
-            </Link>
+          <li onClick={() => scrollTo("#ClarityPACS")}>
+            <div>
+              <div className="nav-indicator"></div>
+              <div className="nav-label">Clarity PACS</div>
+            </div>
           </li>
         </SideNav>
-
-        {/* <section>
-          <NewsHero />
-        </section> */}
-
-        {/* <section>
-          <EventsHero />
-        </section> */}
-
-        {/* <section>
-          <form onSubmit={handleSubmit}>
-            <FormContainer>
-              <div>
-                <input type="text" name="fName" placeholder="First Name" />
-                <input type="text" name="lName" placeholder="Last Name" />
-              </div>
-              <div>
-                <input type="email" name="email" placeholder="Email" />
-                <input type="tel" name="phone" placeholder="Phone" />
-              </div>
-              <div>
-                <input type="text" name="company" placeholder="Company" />
-              </div>
-              <div>
-                <textarea
-                  name="questions"
-                  id=""
-                  cols="54"
-                  rows="10"
-                  placeholder="Questions"
-                ></textarea>
-              </div>
-              <div>
-                <button>Send</button>
-              </div>
-            </FormContainer>
-          </form>
-        </section> */}
       </Wrapper>
     </Layout>
   )
