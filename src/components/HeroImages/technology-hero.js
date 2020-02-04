@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import ClarisLogo from "../HeroImages/ClarisLogo"
 
@@ -38,7 +38,15 @@ const ImageBackground = styled(BackgroundImage)`
     color: #fff;
     font-size: 1.4rem;
     font-weight: 400;
-    margin: 20px auto 0;
+    margin: 20px auto 40px;
+  }
+
+  a {
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    z-index: 500;
   }
 
   @media (max-width: 800px) {
@@ -52,13 +60,6 @@ const HeroBottom = styled("div")`
   position: relative;
   margin-top: 72vh;
   width: 350px;
-  h3 {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 400;
-    /* text-overflow: ; */
-    margin: 20px auto 0;
-  }
 
   @media (max-width: 800px) {
     width: 300px;
@@ -84,10 +85,13 @@ const TechnologyHero = () => {
       preserveStackingContext
       style={{ padding: "0 0 40px" }}
     >
-      <HeroBottom>
-        <ClarisLogo />
-      </HeroBottom>
-      <h3>The Next Dimension of 3D Imaging.</h3>
+      <div>
+        <HeroBottom>
+          <ClarisLogo />
+        </HeroBottom>
+        <h3>The Next Dimension of 3D Imaging.</h3>
+        <Link to="/ClarisXT">Learn More</Link>
+      </div>
     </ImageBackground>
   )
 }

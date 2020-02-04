@@ -67,9 +67,10 @@ const DropDown = styled("div")`
   min-width: 150px;
 
   a {
-    color: #000;
-    // text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5),
-    // 1px 1px 1px rgba(230, 236, 245, 0.5);
+    color: black;
+
+    /* text-shadow: 2px 1px 2px rgba(230, 236, 245, 0.5), */
+    /* 1px 1px 1px rgba(230, 236, 245, 0.5); */
     padding-top: 10px;
     &:hover {
       color: #fff;

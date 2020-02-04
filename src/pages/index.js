@@ -86,6 +86,7 @@ const SideNav = styled("ul")`
       div:last-of-type {
         opacity: 0;
         color: #fff;
+        font-size: 0.845rem;
         font-weight: 600;
         letter-spacing: 1.1px;
         -webkit-transform: translateX(-10%);

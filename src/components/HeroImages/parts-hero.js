@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import ThreeHunLogo from "../HeroImages/3600Logo"
 
@@ -36,17 +36,24 @@ const ImageBackground = styled(BackgroundImage)`
     letter-spacing: 2px;
   }
   h3 {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin: 20px auto 0;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 20px auto 40px;
+  }
+  a {
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    z-index: 500;
   }
 `
 
 const HeroBottom = styled("div")`
   position: relative;
   margin-top: 72vh;
-  width: 350px;
+  width: 320px;
 
   h2 {
     color: #fff;
@@ -85,6 +92,7 @@ const PartsHero = () => {
         <ThreeHunLogo />
       </HeroBottom>
       <h3>The Flagship CR.</h3>
+      <Link to="/3600">Learn More</Link>
     </ImageBackground>
   )
 }

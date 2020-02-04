@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import AirLogo from "../HeroImages/AirLogo"
 
@@ -11,6 +11,9 @@ const ImageBackground = styled(BackgroundImage)`
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
 
   width: 100%;
   background-image: linear-gradient(
@@ -24,7 +27,15 @@ const ImageBackground = styled(BackgroundImage)`
     color: #fff;
     font-size: 1.4rem;
     font-weight: 400;
-    margin: 20px auto 0;
+    margin: 20px auto 40px;
+  }
+  a {
+    /* margin: 20px auto; */
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    z-index: 500;
   }
 `
 const HeroBottom = styled("div")`
@@ -55,10 +66,14 @@ const HomeOne = () => {
       fadeIn="soft"
       preserveStackingContext
     >
-      <HeroBottom>
-        <AirLogo />
-      </HeroBottom>
-      <h3>Digital Imaging Done Right.</h3>
+      <div>
+        <HeroBottom>
+          <AirLogo />
+        </HeroBottom>
+        <h3>Digital Imaging Done Right.</h3>
+
+        <Link to="/AirDR">Learn More</Link>
+      </div>
     </ImageBackground>
   )
 }
