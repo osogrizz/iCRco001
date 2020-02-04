@@ -69,6 +69,7 @@ const SideNav = styled("ul")`
         letter-spacing: 1.1px;
         -webkit-transform: translateX(-10%);
         transform: translateX(-10%);
+
         &:hover {
           cursor: pointer;
           opacity: 100%;
@@ -84,11 +85,15 @@ const SideNav = styled("ul")`
   }
 `
 
-const IndexPage = ({ data }) => {
-  console.log("data", data)
+const IndexPage = () => {
   const handleClick = e => {
-    const elem = document.getElementsByClassName("nav-indicator")
-    console.log(elem)
+    const getActive = document.querySelector(".active")
+    if (getActive) {
+      getActive.classList.remove("active")
+    }
+    const getName = e.target.getAttribute("name")
+    e.target.previousSibling.classList.add("active")
+    scrollTo(getName)
   }
 
   return (
@@ -126,28 +131,36 @@ const IndexPage = ({ data }) => {
         </section>
 
         <SideNav>
-          <li onClick={e => scrollTo("#AirDR")}>
-            <div>
-              <div className="nav-indicator active"></div>
-              <div className="nav-label">Air DR</div>
-            </div>
-          </li>
-          <li onClick={() => scrollTo("#threeSix")}>
+          <li onClick={handleClick}>
             <div>
               <div className="nav-indicator"></div>
-              <div className="nav-label">3600</div>
+              <div className="nav-label" name="#AirDR">
+                Air DR
+              </div>
             </div>
           </li>
-          <li onClick={() => scrollTo("#ClarisXT")}>
+          <li onClick={handleClick}>
             <div>
               <div className="nav-indicator"></div>
-              <div className="nav-label">Claris XT</div>
+              <div className="nav-label" name="#threeSix">
+                3600
+              </div>
             </div>
           </li>
-          <li onClick={() => scrollTo("#ClarityPACS")}>
+          <li onClick={handleClick}>
             <div>
               <div className="nav-indicator"></div>
-              <div className="nav-label">Clarity PACS</div>
+              <div className="nav-label" name="#ClarisXT">
+                Claris XT
+              </div>
+            </div>
+          </li>
+          <li onClick={handleClick}>
+            <div>
+              <div className="nav-indicator"></div>
+              <div className="nav-label" name="#ClarityPACS">
+                Clarity PACS
+              </div>
             </div>
           </li>
         </SideNav>
