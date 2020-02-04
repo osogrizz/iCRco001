@@ -19,21 +19,6 @@ const ImageBackground = styled(BackgroundImage)`
     url("../images/3600LF.png");
   background-size: cover cover;
 
-  h2 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
-    text-align: center;
-    padding: 1rem 1.875rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  h5 {
-    color: #fff;
-    text-align: center;
-    letter-spacing: 2px;
-  }
   h3 {
     color: black;
     font-size: 1.8rem;
@@ -55,7 +40,8 @@ const HeroBottom = styled("div")`
   width: 320px;
 
   @media (max-width: 800px) {
-    width: 300px;
+    width: 220px;
+    margin: 0 auto;
     margin-top: 68vh;
   }
 `

@@ -44,7 +44,8 @@ const HeroBottom = styled("div")`
   width: 350px;
 
   @media (max-width: 800px) {
-    width: 300px;
+    width: 220px;
+    margin: 0 auto;
     margin-top: 68vh;
   }
 `

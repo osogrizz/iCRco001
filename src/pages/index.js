@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import HomeOne from "../components/HeroImages/Home-One"
@@ -52,11 +52,14 @@ const SideNav = styled("ul")`
       display: flex;
 
       .nav-indicator {
-        width: 2px;
+        width: 1px;
         background: #9a9a9a;
         background: lightgray;
         height: 26px;
         margin-right: 10px;
+      }
+      .active {
+        width: 3px;
       }
       .nav-label {
         opacity: 0;
@@ -83,8 +86,9 @@ const SideNav = styled("ul")`
 
 const IndexPage = ({ data }) => {
   console.log("data", data)
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleClick = e => {
+    const elem = document.getElementsByClassName("nav-indicator")
+    console.log(elem)
   }
 
   return (
@@ -122,9 +126,9 @@ const IndexPage = ({ data }) => {
         </section>
 
         <SideNav>
-          <li onClick={() => scrollTo("#AirDR")}>
+          <li onClick={e => scrollTo("#AirDR")}>
             <div>
-              <div className="nav-indicator"></div>
+              <div className="nav-indicator active"></div>
               <div className="nav-label">Air DR</div>
             </div>
           </li>

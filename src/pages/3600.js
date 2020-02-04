@@ -1,7 +1,15 @@
 import React from "react"
 
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 const ThirtySix = () => {
-  return <div>3600</div>
+  return (
+    <Layout>
+      <SEO title="3600" />
+      <div>3600</div>
+    </Layout>
+  )
 }
 
 export default ThirtySix
