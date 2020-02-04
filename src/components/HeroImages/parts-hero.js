@@ -7,7 +7,6 @@ import ThreeHunLogo from "../HeroImages/3600Logo"
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
@@ -55,18 +54,9 @@ const HeroBottom = styled("div")`
   margin-top: 72vh;
   width: 320px;
 
-  h2 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
-    padding: 1rem 1.875rem;
-    max-width: 800px;
-    /* margin: 0 auto; */
-  }
-
   @media (max-width: 800px) {
     width: 300px;
+    margin-top: 68vh;
   }
 `
 
