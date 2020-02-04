@@ -59,12 +59,17 @@ const DropDown = styled("div")`
   min-width: 150px;
 
   a {
-    color: black;
+    /* color: black; */
+    color: #fff;
+    text-shadow: 1px 1px 5px black, 1px 1px 2px black;
     padding-top: 10px;
     &:hover {
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
-        1px 1px 3px rgba(0, 0, 0, 0.4);
+      /* color: #fff; */
+      color: #5290c0;
+      font-weight: 600;
+
+      /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9), */
+      /* 1px 1px 3px rgba(0, 0, 0, 0.9); */
       margin: 0 12px;
       transform: scale(1.1, 1.2);
       transition: all 0.285s ease-in-out;

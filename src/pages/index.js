@@ -59,7 +59,7 @@ const SideNav = styled("ul")`
         margin-right: 10px;
       }
       .active {
-        width: 3px;
+        width: 2.75px;
       }
       .nav-label {
         opacity: 0;
@@ -91,6 +91,7 @@ const IndexPage = () => {
     if (getActive) {
       getActive.classList.remove("active")
     }
+
     const getName = e.target.getAttribute("name")
     e.target.previousSibling.classList.add("active")
     scrollTo(getName)
