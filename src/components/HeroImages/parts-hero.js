@@ -32,6 +32,11 @@ const ImageBackground = styled(BackgroundImage)`
     padding: 10px 20px;
     z-index: 500;
   }
+  @media (max-width: 800px) {
+    h3 {
+      margin: 10px auto 20px;
+    }
+  }
 `
 
 const HeroBottom = styled("div")`
