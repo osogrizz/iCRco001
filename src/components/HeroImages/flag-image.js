@@ -42,14 +42,7 @@ const FlagImage = () => {
     }
   `)
   return (
-    <Container
-    // style={{
-    //   width: "230px",
-    //   height: "126px",
-    //   display: "flex",
-    //   margin: "0 40px 80px",
-    // }}
-    >
+    <Container>
       <ImageBackground fluid={image.sharp.fluid} />
     </Container>
   )

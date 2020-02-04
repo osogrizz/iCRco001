@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
 
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 const FormContainer = styled("div")`
   max-width: 960px;
   margin: 0 auto;
@@ -36,35 +39,38 @@ const FormContainer = styled("div")`
 
 const Contact = () => {
   return (
-    <div>
-      <form>
-        <FormContainer>
-          <div>
-            <input type="text" name="fName" placeholder="First Name" />
-            <input type="text" name="lName" placeholder="Last Name" />
-          </div>
-          <div>
-            <input type="email" name="email" placeholder="Email" />
-            <input type="tel" name="phone" placeholder="Phone" />
-          </div>
-          <div>
-            <input type="text" name="company" placeholder="Company" />
-          </div>
-          <div>
-            <textarea
-              name="questions"
-              id=""
-              cols="54"
-              rows="10"
-              placeholder="Questions"
-            ></textarea>
-          </div>
-          <div>
-            <button>Send</button>
-          </div>
-        </FormContainer>
-      </form>
-    </div>
+    <Layout>
+      <SEO title="contact" />
+      <div>
+        <form>
+          <FormContainer>
+            <div>
+              <input type="text" name="fName" placeholder="First Name" />
+              <input type="text" name="lName" placeholder="Last Name" />
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email" />
+              <input type="tel" name="phone" placeholder="Phone" />
+            </div>
+            <div>
+              <input type="text" name="company" placeholder="Company" />
+            </div>
+            <div>
+              <textarea
+                name="questions"
+                id=""
+                cols="54"
+                rows="10"
+                placeholder="Questions"
+              ></textarea>
+            </div>
+            <div>
+              <button>Send</button>
+            </div>
+          </FormContainer>
+        </form>
+      </div>
+    </Layout>
   )
 }
 
