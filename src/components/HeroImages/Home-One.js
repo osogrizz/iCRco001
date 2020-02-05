@@ -35,7 +35,7 @@ const ImageBackground = styled(BackgroundImage)`
   }
 
   @media (max-width: 800px) {
-    height: 125vh;
+    height: 135vh;
     h3 {
       font-size: 0.8rem;
     }
