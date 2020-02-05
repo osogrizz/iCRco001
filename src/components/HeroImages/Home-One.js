@@ -39,7 +39,7 @@ const ImageBackground = styled(BackgroundImage)`
   }
 
   @media (max-width: 800px) {
-    height: 120vh;
+    height: 125vh;
     h3 {
       font-size: 0.8rem;
     }
@@ -53,7 +53,7 @@ const HeroBottom = styled("div")`
   @media (max-width: 800px) {
     width: 180px;
     margin: 0 auto;
-    margin-top: 68vh;
+    margin-top: 70vh;
   }
 `
 
