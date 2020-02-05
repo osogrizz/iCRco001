@@ -7,14 +7,11 @@ import AirLogo from "../HeroImages/AirLogo"
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-decoration: none;
-
   width: 100%;
   background-image: linear-gradient(
       rgba(80, 80, 80, 0.2),
@@ -30,7 +27,6 @@ const ImageBackground = styled(BackgroundImage)`
     margin: 20px auto 40px;
   }
   a {
-    /* margin: 20px auto; */
     color: #fff;
     border-radius: 20px;
     border: 1px solid #fff;

@@ -10,7 +10,8 @@ const ImageBackground = styled(BackgroundImage)`
   align-items: center;
   height: 100vh;
   height: -webkit-fill-available;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   background-image: linear-gradient(
       rgba(80, 80, 80, 0.2),
@@ -35,7 +36,6 @@ const ImageBackground = styled(BackgroundImage)`
   @media (max-width: 800px) {
     height: 125vh;
     h3 {
-      /* margin: 10px auto 20px; */
       font-size: 0.8rem;
     }
   }
