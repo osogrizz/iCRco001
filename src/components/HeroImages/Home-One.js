@@ -53,7 +53,7 @@ const HeroBottom = styled("div")`
   @media (max-width: 800px) {
     width: 180px;
     margin: 0 auto;
-    margin-top: 70vh;
+    margin-top: 85vh;
   }
 `
 
