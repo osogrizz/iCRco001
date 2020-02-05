@@ -55,7 +55,7 @@ const HomeOne = () => {
     query {
       image: file(relativePath: { eq: "AirDR.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1800) {
+          fluid(maxWidth: 1240, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

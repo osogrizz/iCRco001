@@ -40,7 +40,7 @@ const NewsHero = () => {
     query {
       image: file(relativePath: { eq: "ClarityPACS.mp4" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120) {
+          fluid(maxWidth: 1120, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
