@@ -19,21 +19,6 @@ const ImageBackground = styled(BackgroundImage)`
     url("../images/ClarisXT.png");
   background-size: cover cover;
 
-  h2 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
-    text-align: center;
-    padding: 1rem 1.875rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  h5 {
-    color: #fff;
-    text-align: center;
-    letter-spacing: 2px;
-  }
   h3 {
     color: #fff;
     font-size: 1.4rem;
@@ -51,7 +36,7 @@ const ImageBackground = styled(BackgroundImage)`
 
   @media (max-width: 800px) {
     h3 {
-      font-size: 1.3rem;
+      font-size: 0.8rem;
     }
   }
 `

@@ -37,6 +37,12 @@ const ImageBackground = styled(BackgroundImage)`
     padding: 10px 20px;
     z-index: 500;
   }
+
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 0.8rem;
+    }
+  }
 `
 const HeroBottom = styled("div")`
   position: relative;

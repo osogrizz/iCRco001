@@ -34,7 +34,8 @@ const ImageBackground = styled(BackgroundImage)`
   }
   @media (max-width: 800px) {
     h3 {
-      margin: 10px auto 20px;
+      /* margin: 10px auto 20px; */
+      font-size: 0.8rem;
     }
   }
 `
