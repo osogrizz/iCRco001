@@ -77,6 +77,14 @@ const SideNav = styled("ul")`
           transition: transform 0.6s;
         }
       }
+      .label-active {
+        opacity: 100%;
+        margin-left: 12px;
+        width: 120px;
+        :hover {
+          margin-left: 0;
+        }
+      }
     }
   }
 
@@ -88,11 +96,17 @@ const SideNav = styled("ul")`
 const IndexPage = () => {
   const handleClick = e => {
     const getActive = document.querySelector(".active")
+    const getLabel = document.querySelector(".label-active")
+
     if (getActive) {
       getActive.classList.remove("active")
     }
+    if (getLabel) {
+      getLabel.classList.remove("label-active")
+    }
 
     const getName = e.target.getAttribute("name")
+    e.target.classList.add("label-active")
     e.target.previousSibling.classList.add("active")
     scrollTo(getName)
   }
@@ -136,7 +150,7 @@ const IndexPage = () => {
             <div>
               <div className="nav-indicator"></div>
               <div className="nav-label" name="#AirDR">
-                Air DR
+                AirDR
               </div>
             </div>
           </li>
