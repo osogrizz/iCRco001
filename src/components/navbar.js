@@ -10,8 +10,14 @@ const NavWrapper = styled("nav")`
   width: 760px;
   height: 48px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
     display: none;
+  }
+  @media (max-width: 1300px) {
+    width: 560px;
+  }
+  @media (max-width: 1103px) {
+    width: 500px;
   }
 `
 
@@ -35,6 +41,17 @@ const NavContainer = styled("div")`
   a {
     :hover {
       color: #fff;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    a {
+      font-size: 0.6rem;
+    }
+  }
+  @media (max-width: 1103px) {
+    a {
+      font-size: 0.575rem;
     }
   }
 `

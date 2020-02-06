@@ -46,7 +46,7 @@ const HeaderContainer = styled("div")`
   form {
     margin: 0;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1050px) {
       display: none;
     }
   }
@@ -87,11 +87,15 @@ const LogoContainer = styled("div")`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
     width: 100%;
     justify-content: left;
-    margin-top: 20px;
+    margin: 6px 0;
   }
+`
+
+const ActionContainer = styled("div")`
+  margin: 0 20px;
 `
 
 const useStyles = makeStyles(theme => ({
@@ -142,7 +146,7 @@ const Header = ({ siteTitle }) => {
 
           <Navbar />
 
-          <div style={{ margin: "0 20px" }}>
+          <ActionContainer>
             <form>
               <TextField
                 className={classes.root}
@@ -152,7 +156,7 @@ const Header = ({ siteTitle }) => {
                 // variant="outlined"
               />
             </form>
-          </div>
+          </ActionContainer>
         </HeaderContainer>
       </HeaderMain>
     </HeaderWrapper>
