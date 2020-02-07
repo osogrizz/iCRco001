@@ -12,7 +12,7 @@ const Container = styled("div")`
     height: 100vh;
     padding: 40px 20px;
     h1 {
-      margin-top: 80px;
+      margin-top: 25px;
     }
     h1,
     h2 {
@@ -22,8 +22,9 @@ const Container = styled("div")`
 `
 
 const ProductHeader = styled("nav")`
-  position: fixed;
-  background: #fad5a2;
+  /* position: fixed; */
+  /* background: #fad5a2; */
+  background: #c9c5c7;
   width: 100%;
   height: 80px;
   display: flex;
@@ -32,7 +33,7 @@ const ProductHeader = styled("nav")`
   z-index: 1000;
 
   a {
-    color: #fff;
+    color: black;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -57,6 +58,16 @@ const ProductConfig = styled("div")`
   align-items: center;
 `
 
+const ProductOption = styled("div")`
+  top: 50%;
+  left: 50%;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  margin: -10px;
+  position: relative;
+`
+
 const AirDR = () => {
   return (
     <Layout>
@@ -69,55 +80,36 @@ const AirDR = () => {
             <Link>AirDR LEc</Link>
             <Link>iDR</Link>
             <Link>iDR34</Link>
+            <Link>3600</Link>
           </div>
         </ProductHeader>
         <div>
           <section>
             <h1>AirDR</h1>
             <ProductConfig>
-              <div
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  border: "1px solid black",
-                  height: "20px",
-                  width: "20px",
-                }}
-              ></div>
-              <div
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  border: "1px solid black",
-                  height: "20px",
-                  width: "20px",
-                }}
-              ></div>
-              <div
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  border: "1px solid black",
-                  height: "20px",
-                  width: "20px",
-                }}
-              ></div>
-              <div
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  border: "1px solid black",
-                  height: "20px",
-                  width: "20px",
-                }}
-              ></div>
+              <ProductOption />
+              <ProductOption />
+              <ProductOption />
+              <ProductOption />
             </ProductConfig>
+            <button>Request a Quote</button>
           </section>
           <section>
-            <h2>section 2</h2>
+            <h2>Product Info</h2>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                marginTop: "50vh",
+                width: "960px",
+                margin: " 50vh auto 0",
+              }}
+            >
+              <div>detail 1</div> |<div>detail 2</div> |<div>detail 3</div>
+            </div>
           </section>
           <section>
-            <h2>section 3</h2>
+            <h2>Product Specs</h2>
           </section>
         </div>
       </Container>
