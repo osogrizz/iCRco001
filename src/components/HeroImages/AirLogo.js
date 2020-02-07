@@ -19,7 +19,7 @@ const AirLogo = () => {
       logo: file(relativePath: { eq: "White_AirDR.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
+import AirDR_Product from "../components/HeroImages/AirDR_Product"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -57,7 +58,7 @@ const ProductConfig = styled("ul")`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 0.24s 0.2s;
 
   li {
@@ -74,32 +75,6 @@ const ProductConfig = styled("ul")`
     width: 4em;
     margin: -2em;
     background: black;
-  }
-`
-
-const ProductOption = styled("li")`
-  display: block;
-  overflow: hidden;
-  position: absolute;
-  list-style-type: none;
-  text-align: center;
-  align-items: center;
-  top: 50%;
-  left: 50%;
-  border: 1px solid black;
-  height: 4em;
-  width: 4em;
-  margin: -2em;
-  /* border: 150px solid transparent; */
-  cursor: default;
-  /* transform: scale(0); */
-  /* transition: transform 1.4s 0.07s; */
-  /* z-index: -1; */
-
-  &:hover {
-    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
-    transform: scale(1);
-    z-index: 1;
   }
 `
 
@@ -123,7 +98,17 @@ const AirDR = () => {
             <h1>AirDR</h1>
 
             <ProductConfig>
-              AirDR
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  textAlign: "center",
+                  // cursor: "pointer",
+                }}
+              >
+                <AirDR_Product />
+                AirDR
+              </div>
               <li style={{ transform: "translate(12em)" }}>option 1</li>
               <li
                 style={{
@@ -143,6 +128,7 @@ const AirDR = () => {
             </ProductConfig>
             <button>Request a Quote</button>
           </section>
+
           <section>
             <h2>Product Info</h2>
             <div
@@ -157,6 +143,7 @@ const AirDR = () => {
               <div>detail 1</div> |<div>detail 2</div> |<div>detail 3</div>
             </div>
           </section>
+
           <section>
             <h2>Product Specs</h2>
           </section>

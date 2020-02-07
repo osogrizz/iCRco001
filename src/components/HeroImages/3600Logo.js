@@ -19,7 +19,7 @@ const ThreeHunLogo = () => {
       logo: file(relativePath: { eq: "3600LF_Logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

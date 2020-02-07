@@ -35,7 +35,7 @@ const FlagImage = () => {
       image: file(relativePath: { eq: "flag.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

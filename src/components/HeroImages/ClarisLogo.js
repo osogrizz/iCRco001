@@ -19,7 +19,7 @@ const ClarisLogo = () => {
       logo: file(relativePath: { eq: "White_Claris_XT_Logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
