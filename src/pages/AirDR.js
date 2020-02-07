@@ -29,6 +29,7 @@ const ProductHeader = styled("nav")`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1000;
 
   a {
     color: #fff;
