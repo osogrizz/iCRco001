@@ -29,7 +29,7 @@ const ProductHeader = styled("nav")`
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 1000;
 
@@ -41,16 +41,16 @@ const ProductHeader = styled("nav")`
   }
   .product-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 1120px;
+    padding: 0 2%;
   }
 `
 
 const ProductConfig = styled("ul")`
   position: relative;
   margin: 4.75em auto 0;
-  border: 8px solid black;
-  /* background: black; */
+  border: 2px dotted #33333355;
   border-radius: 50%;
   width: 24em;
   height: 24em;
@@ -60,6 +60,15 @@ const ProductConfig = styled("ul")`
   align-items: center;
   /* cursor: pointer; */
   transition: 0.24s 0.2s;
+
+  .prod-container {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
   li {
     display: block;
@@ -99,10 +108,12 @@ const AirDR = () => {
 
             <ProductConfig>
               <div
+                className="prod-container"
                 style={{
                   width: "80px",
                   height: "80px",
                   textAlign: "center",
+                  fontWeight: "700",
                   // cursor: "pointer",
                 }}
               >
