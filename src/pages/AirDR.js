@@ -45,27 +45,62 @@ const ProductHeader = styled("nav")`
   }
 `
 
-const ProductConfig = styled("div")`
+const ProductConfig = styled("ul")`
   position: relative;
-  margin: 0 auto;
-  padding: 0;
+  margin: 4.75em auto 0;
   border: 8px solid black;
+  /* background: black; */
   border-radius: 50%;
-  width: 520px;
-  height: 520px;
+  width: 24em;
+  height: 24em;
+  padding: 2.8em;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.24s 0.2s;
+
+  li {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    height: 4em;
+    width: 4em;
+    margin: -2em;
+    background: black;
+  }
 `
 
-const ProductOption = styled("div")`
+const ProductOption = styled("li")`
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  list-style-type: none;
+  text-align: center;
+  align-items: center;
   top: 50%;
   left: 50%;
   border: 1px solid black;
-  height: 20px;
-  width: 20px;
-  margin: -10px;
-  position: relative;
+  height: 4em;
+  width: 4em;
+  margin: -2em;
+  /* border: 150px solid transparent; */
+  cursor: default;
+  /* transform: scale(0); */
+  /* transition: transform 1.4s 0.07s; */
+  /* z-index: -1; */
+
+  &:hover {
+    transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform: scale(1);
+    z-index: 1;
+  }
 `
 
 const AirDR = () => {
@@ -86,11 +121,25 @@ const AirDR = () => {
         <div>
           <section>
             <h1>AirDR</h1>
+
             <ProductConfig>
-              <ProductOption />
-              <ProductOption />
-              <ProductOption />
-              <ProductOption />
+              AirDR
+              <li style={{ transform: "translate(12em)" }}>option 1</li>
+              <li
+                style={{
+                  transform: "rotate(90deg) translate(12em) rotate(-90deg)",
+                }}
+              >
+                option 2
+              </li>
+              <li style={{ transform: "translate(-12em)" }}>option 3</li>
+              <li
+                style={{
+                  transform: "rotate(270deg) translate(12em) rotate(-270deg)",
+                }}
+              >
+                option 4
+              </li>
             </ProductConfig>
             <button>Request a Quote</button>
           </section>
