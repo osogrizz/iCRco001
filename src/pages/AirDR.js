@@ -178,7 +178,7 @@ const AirDR = ({ data }) => {
                 }}
               >
                 <AirDR_Product />
-                AirDR
+                AirDR Kit
               </div>
               <li style={{ transform: "translate(12em)" }}>
                 <div className="option-container">
@@ -197,14 +197,32 @@ const AirDR = ({ data }) => {
                 <div style={{ width: "120px" }}>
                   <Img fluid={data.tfsp.fluid} />
                 </div>
+                <div style={{ margin: 0, padding: 0 }}>
+                  <p>True Flat</p>
+                  <p>Scan Path</p>
+                </div>
               </li>
-              <li style={{ transform: "translate(-12em)" }}>option 3</li>
+              <li style={{ transform: "translate(-12em)" }}>
+                <div style={{ width: "60px" }}>
+                  <Img fluid={data.registration.fluid} />
+                </div>
+                <div>
+                  <p>Product</p>
+                  <p>Registration</p>
+                </div>
+              </li>
               <li
                 style={{
                   transform: "rotate(270deg) translate(12em) rotate(-270deg)",
                 }}
               >
-                option 4
+                <div style={{ width: "90px" }}>
+                  <Img fluid={data.pacs.fluid} />
+                </div>
+                <div>
+                  <p>Acuisition</p>
+                  <p>Station</p>
+                </div>
               </li>
             </ProductConfig>
             <button>Request a Quote</button>
@@ -246,6 +264,18 @@ export const query = graphql`
       }
     }
     tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    registration: imageSharp(
+      fluid: { originalName: { eq: "Product_RegistrationIcon.png" } }
+    ) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
