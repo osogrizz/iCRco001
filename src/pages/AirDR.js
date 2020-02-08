@@ -50,10 +50,6 @@ const ProductHeader = styled("nav")`
   }
   @media (max-width: 1300px) {
     margin: 0 auto;
-    .product-nav a {
-      font-size: 0.875rem;
-      width: 100%;
-    }
   }
 
   @media (max-width: 800px) {
@@ -125,12 +121,42 @@ const AirDR = ({ data }) => {
       <Container>
         <ProductHeader>
           <div className="product-nav">
-            <Link>AirDR LE</Link>
-            <Link>Two</Link>
-            <Link>AirDR LEc</Link>
-            <Link>iDR</Link>
-            <Link>iDR34</Link>
-            <Link>3600</Link>
+            <Link>
+              <div style={{ minWidth: "20px" }}>
+                <Img fluid={data.motor.fluid} />
+              </div>
+            </Link>
+            <Link>
+              <div style={{ maxWidth: "50px" }}>
+                <Img
+                  fluid={data.pacs.fluid}
+                  style={{ width: "80px", left: "-15px" }}
+                />
+              </div>
+            </Link>
+            <Link>
+              <div style={{ minWidth: "20px" }}>
+                <Img fluid={data.integrated.fluid} />
+              </div>
+            </Link>
+            <Link>
+              <div style={{ width: "20px" }}>
+                <Img fluid={data.motor.fluid} />
+              </div>
+            </Link>
+            <Link>
+              <div style={{ maxWidth: "20px" }}>
+                <Img
+                  fluid={data.pacs.fluid}
+                  style={{ width: "80px", left: "-30px" }}
+                />
+              </div>
+            </Link>
+            <Link>
+              <div style={{ minWidth: "20px" }}>
+                <Img fluid={data.integrated.fluid} />
+              </div>
+            </Link>
           </div>
         </ProductHeader>
         <div>
