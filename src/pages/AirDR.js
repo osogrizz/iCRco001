@@ -67,7 +67,7 @@ const ProductHeader = styled("nav")`
 
 const ProductConfig = styled("ul")`
   position: relative;
-  margin: 4.75rem auto 5rem;
+  margin: 1.75rem auto 5rem;
   border: 3px solid #333333;
   border-radius: 50%;
   width: 30rem;
@@ -76,7 +76,6 @@ const ProductConfig = styled("ul")`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* cursor: pointer; */
   transition: 0.24s 0.2s;
 
   .prod-container {
@@ -89,10 +88,8 @@ const ProductConfig = styled("ul")`
   }
 
   li {
-    /* display: block; */
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
     position: absolute;
     list-style-type: none;
     text-align: center;
@@ -101,11 +98,10 @@ const ProductConfig = styled("ul")`
     text-align: center;
     top: 50%;
     left: 50%;
-    /* border: 1px solid black; */
     height: 4em;
     width: 4em;
     margin: -2em;
-    /* background: black; */
+    cursor: pointer;
   }
 
   .option-container {
@@ -117,6 +113,7 @@ const ProductConfig = styled("ul")`
     word-wrap: normal;
     line-height: 12px;
     margin: 0;
+    font-weight: 700;
     /* text-align: left; */
   }
 `
@@ -164,8 +161,6 @@ const AirDR = ({ data }) => {
             </video>
           </section> */}
           <section>
-            <h1>AirDR</h1>
-
             <ProductConfig>
               <div
                 className="prod-container"
@@ -174,7 +169,6 @@ const AirDR = ({ data }) => {
                   height: "80px",
                   textAlign: "center",
                   fontWeight: "700",
-                  // cursor: "pointer",
                 }}
               >
                 <AirDRProduct />

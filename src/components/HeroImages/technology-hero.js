@@ -60,7 +60,7 @@ const TechnologyHero = () => {
     query {
       image: file(relativePath: { eq: "ClarisXT.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1240, quality: 100) {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
