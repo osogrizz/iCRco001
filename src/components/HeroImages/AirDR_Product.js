@@ -50,7 +50,7 @@ const HeroBottom = styled("div")`
   }
 `
 
-const AirDR_Product = () => {
+const AirDRProduct = () => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "AirDR_Icon.png" }) {
@@ -71,4 +71,4 @@ const AirDR_Product = () => {
   )
 }
 
-export default AirDR_Product
+export default AirDRProduct

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
-import AirDR_Product from "../components/HeroImages/AirDR_Product"
+import AirDRProduct from "../components/HeroImages/AirDR_Product"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 
@@ -177,10 +177,14 @@ const AirDR = ({ data }) => {
                   // cursor: "pointer",
                 }}
               >
-                <AirDR_Product />
+                <AirDRProduct />
                 AirDR Kit
               </div>
-              <li style={{ transform: "translate(12em)" }}>
+              <li
+                style={{
+                  transform: "rotate(10deg) translate(12em) rotate(-10deg)",
+                }}
+              >
                 <div className="option-container">
                   <Img fluid={data.motor.fluid} />
                 </div>
@@ -191,7 +195,20 @@ const AirDR = ({ data }) => {
               </li>
               <li
                 style={{
-                  transform: "rotate(90deg) translate(12em) rotate(-90deg)",
+                  transform: "rotate(60deg) translate(12em) rotate(-60deg)",
+                }}
+              >
+                <div style={{ width: "50px" }}>
+                  <Img fluid={data.clarity.fluid} />
+                </div>
+                <div style={{ margin: 0, padding: 0 }}>
+                  <p>Clarity</p>
+                  <p>Practice</p>
+                </div>
+              </li>
+              <li
+                style={{
+                  transform: "rotate(115deg) translate(12em) rotate(-115deg)",
                 }}
               >
                 <div style={{ width: "120px" }}>
@@ -202,9 +219,26 @@ const AirDR = ({ data }) => {
                   <p>Scan Path</p>
                 </div>
               </li>
-              <li style={{ transform: "translate(-12em)" }}>
+              <li
+                style={{
+                  transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
+                }}
+              >
                 <div style={{ width: "60px" }}>
                   <Img fluid={data.registration.fluid} />
+                </div>
+                <div>
+                  <p>Product</p>
+                  <p>Registration</p>
+                </div>
+              </li>
+              <li
+                style={{
+                  transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
+                }}
+              >
+                <div style={{ width: "60px" }}>
+                  <Img fluid={data.xc.fluid} />
                 </div>
                 <div>
                   <p>Product</p>
@@ -222,6 +256,19 @@ const AirDR = ({ data }) => {
                 <div>
                   <p>Acuisition</p>
                   <p>Station</p>
+                </div>
+              </li>
+              <li
+                style={{
+                  transform: "rotate(325deg) translate(12em) rotate(-325deg)",
+                }}
+              >
+                <div style={{ width: "32px" }}>
+                  <Img fluid={data.integrated.fluid} />
+                </div>
+                <div style={{ width: "180px" }}>
+                  <p>Integrated PACS &</p>
+                  <p>Workstation PC</p>
                 </div>
               </li>
             </ProductConfig>
@@ -263,7 +310,19 @@ export const query = graphql`
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
+    clarity: imageSharp(
+      fluid: { originalName: { eq: "Clarity_PracticeIcon.png" } }
+    ) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
     tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    xc: imageSharp(fluid: { originalName: { eq: "XC_Icon.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
@@ -276,6 +335,11 @@ export const query = graphql`
       }
     }
     pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    integrated: imageSharp(fluid: { originalName: { eq: "CPU_Icon.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
