@@ -63,12 +63,12 @@ const ProductHeader = styled("nav")`
 
 const ProductConfig = styled("ul")`
   position: relative;
-  margin: 1.75rem auto 5rem;
+  margin: 1.45rem auto 5rem;
   border: 3px solid #333333;
   border-radius: 50%;
-  width: 30rem;
-  height: 30rem;
-  padding: 2.8rem;
+  width: 34rem;
+  height: 34rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
