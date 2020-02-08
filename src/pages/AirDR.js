@@ -110,7 +110,20 @@ const ProductConfig = styled("ul")`
     line-height: 12px;
     margin: 0;
     font-weight: 700;
-    /* text-align: left; */
+  }
+
+  @media (max-width: 1300px) {
+    margin: 10.75rem auto 2rem;
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    padding: 0;
+
+    li {
+      height: 0.4em;
+      width: 0.4em;
+      margin: 0rem;
+    }
   }
 `
 
@@ -292,7 +305,9 @@ const AirDR = ({ data }) => {
                 </div>
               </li>
             </ProductConfig>
-            <button>Request a Quote</button>
+            <div>
+              <button style={{ margin: "8rem auto" }}>Request a Quote</button>
+            </div>
           </section>
 
           <section>
