@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import AirDR_Product from "../components/HeroImages/AirDR_Product"
+import Img from "gatsby-image"
+// import AirDrVideo from "../images/AirDR_Animation.mp4"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,12 +21,13 @@ const Container = styled("div")`
     h2 {
       text-align: center;
     }
+    h2 {
+      margin-top: 25px;
+    }
   }
 `
 
 const ProductHeader = styled("nav")`
-  /* position: fixed; */
-  /* background: #fad5a2; */
   background: #c9c5c7;
   width: 100%;
   height: 80px;
@@ -41,20 +44,35 @@ const ProductHeader = styled("nav")`
   }
   .product-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 1120px;
     padding: 0 2%;
+  }
+  @media (max-width: 1300px) {
+    margin: 0 auto;
+    .product-nav a {
+      font-size: 0.875rem;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    .product-nav a {
+      padding: 0;
+      font-size: 0.5rem;
+    }
   }
 `
 
 const ProductConfig = styled("ul")`
   position: relative;
-  margin: 4.75em auto 0;
-  border: 2px dotted #33333355;
+  margin: 4.75rem auto 5rem;
+  border: 3px solid #333333;
   border-radius: 50%;
-  width: 24em;
-  height: 24em;
-  padding: 2.8em;
+  width: 30rem;
+  height: 30rem;
+  padding: 2.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,23 +89,39 @@ const ProductConfig = styled("ul")`
   }
 
   li {
-    display: block;
-    overflow: hidden;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
     position: absolute;
     list-style-type: none;
     text-align: center;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
     top: 50%;
     left: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 4em;
     width: 4em;
     margin: -2em;
-    background: black;
+    /* background: black; */
+  }
+
+  .option-container {
+    width: 30px;
+  }
+
+  p {
+    font-size: 0.6rem;
+    word-wrap: normal;
+    line-height: 12px;
+    margin: 0;
+    /* text-align: left; */
   }
 `
 
-const AirDR = () => {
+const AirDR = ({ data }) => {
   return (
     <Layout>
       <SEO title="AirDR" />
@@ -103,6 +137,32 @@ const AirDR = () => {
           </div>
         </ProductHeader>
         <div>
+          {/* <section
+            id="ClarityPACS"
+            style={{
+              background: "transparent",
+              top: 0,
+              left: 0,
+              margin: 0,
+              marginLeft: "-48px",
+              padding: 0,
+              height: "520px",
+              width: "1020px",
+            }}
+          >
+            <video
+              style={{ display: "flex" }}
+              className="video-player"
+              height="100%"
+              width="100%"
+              loop
+              muted
+              autoPlay
+              playsInline
+            >
+              <source src={AirDrVideo} type="video/mp4" />
+            </video>
+          </section> */}
           <section>
             <h1>AirDR</h1>
 
@@ -120,13 +180,23 @@ const AirDR = () => {
                 <AirDR_Product />
                 AirDR
               </div>
-              <li style={{ transform: "translate(12em)" }}>option 1</li>
+              <li style={{ transform: "translate(12em)" }}>
+                <div className="option-container">
+                  <Img fluid={data.motor.fluid} />
+                </div>
+                <div>
+                  <p>Motorized</p>
+                  <p>Elevator</p>
+                </div>
+              </li>
               <li
                 style={{
                   transform: "rotate(90deg) translate(12em) rotate(-90deg)",
                 }}
               >
-                option 2
+                <div style={{ width: "120px" }}>
+                  <Img fluid={data.tfsp.fluid} />
+                </div>
               </li>
               <li style={{ transform: "translate(-12em)" }}>option 3</li>
               <li
@@ -165,3 +235,20 @@ const AirDR = () => {
 }
 
 export default AirDR
+
+export const query = graphql`
+  query AirDR {
+    motor: imageSharp(
+      fluid: { originalName: { eq: "Motorized_Elevator.png" } }
+    ) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+`
