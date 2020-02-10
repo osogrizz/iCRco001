@@ -58,7 +58,7 @@ const ThreeSixHero = () => {
     query {
       image: file(relativePath: { eq: "3600LF.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1080, quality: 100) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
