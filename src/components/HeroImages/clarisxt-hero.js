@@ -70,7 +70,7 @@ const ClarisXTHero = () => {
   return (
     <ImageBackground
       fluid={image.sharp.fluid}
-      // fadeIn="soft"
+      fadeIn="soft"
       preserveStackingContext
       style={{ padding: "0 0 40px" }}
     >
