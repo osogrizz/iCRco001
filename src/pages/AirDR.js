@@ -13,16 +13,17 @@ const Container = styled("div")`
   section {
     height: 100vh;
     padding: 40px 20px;
-    h1 {
-      margin-top: 25px;
-    }
     h1,
     h2 {
-      text-align: center;
-    }
-    h2 {
       margin-top: 25px;
+      text-align: center;
+      letter-spacing: 2px;
     }
+
+    /* h2 {
+      margin-top: 25px;
+      text-align: center;
+    } */
   }
 
   @media (max-width: 1300px) {
@@ -205,6 +206,7 @@ const AirDR = ({ data }) => {
             </video>
           </section> */}
           <section>
+            <h1>AirDR</h1>
             <ProductConfig>
               <div
                 className="prod-container"
@@ -219,7 +221,7 @@ const AirDR = ({ data }) => {
                 <div>
                   <Img fluid={data.airdr.fluid} />
                 </div>
-                AirDR Kit
+                AirDR
               </div>
               <li
                 style={{

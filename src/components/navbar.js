@@ -83,11 +83,8 @@ const DropDown = styled("div")`
 
     &:hover {
       color: #5290c0;
-      font-weight: 600;
-      /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9),
-        1px 1px 3px rgba(0, 0, 0, 0.9); */
-      margin: 0 12px;
-      transform: scale(1.1, 1.2);
+      text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.9),
+        0.5px 0.5px 1px rgba(0, 0, 0, 0.9);
       transition: all 0.285s ease-in-out;
     }
   }

@@ -77,7 +77,7 @@ const LogoContainer = styled("div")`
     margin: 5px;
     font-size: 0.8rem;
     letter-spacing: 1.2px;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   @media (max-width: 1400px) {
