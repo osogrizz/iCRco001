@@ -68,7 +68,7 @@ const AirDRHero = () => {
   return (
     <ImageBackground
       fluid={image.sharp.fluid}
-      fadeIn="soft"
+      // fadeIn="soft"
       preserveStackingContext
     >
       <div>
