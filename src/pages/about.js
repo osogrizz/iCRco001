@@ -12,6 +12,7 @@ import SEO from "../components/seo"
 const AboutWrapper = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 80px;
 
   h1 {
     text-align: center;

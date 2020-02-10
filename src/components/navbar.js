@@ -72,21 +72,20 @@ const DropDown = styled("div")`
   border: none;
   backdrop-filter: blur(10px);
   background: rgba(250, 250, 250, 0.3);
+
   border-radius: 0 0 3px 3px;
   min-width: 150px;
 
   a {
-    /* color: black; */
     color: #fff;
     text-shadow: 1px 1px 5px black, 1px 1px 2px black;
     padding-top: 10px;
+
     &:hover {
-      /* color: #fff; */
       color: #5290c0;
       font-weight: 600;
-
-      /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9), */
-      /* 1px 1px 3px rgba(0, 0, 0, 0.9); */
+      /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9),
+        1px 1px 3px rgba(0, 0, 0, 0.9); */
       margin: 0 12px;
       transform: scale(1.1, 1.2);
       transition: all 0.285s ease-in-out;
@@ -134,7 +133,7 @@ const Navbar = () => {
               <DropDown>
                 <Link to="computerd-tomogrphy">Computed Tomography</Link>
                 <Link to="computed-radiology">Computed Radiography</Link>
-                <Link to="digital-radiography">Digital Radiography</Link>
+                <Link to="AirDR">Digital Radiography</Link>
                 <Link to="dicom-printers">DICOM Printers</Link>
                 <Link to="xray-rooms">X-Ray Room Solutions</Link>
                 <Link to="software-hardware-solutions">

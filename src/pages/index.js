@@ -1,10 +1,10 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import HomeOne from "../components/HeroImages/Home-One"
-import PartsHero from "../components/HeroImages/parts-hero"
-import TechnologyHero from "../components/HeroImages/technology-hero"
+import AirDRHero from "../components/HeroImages/airdr-hero"
+import ThreeSix from "../components/HeroImages/threesix-hero"
+import ClarisXTHero from "../components/HeroImages/clarisxt-hero"
 import ShortVideo from "../images/ClarityPACS.mp4"
 
 import Layout from "../components/layout"
@@ -114,20 +114,20 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Wrapper>
         <section id="AirDR">
-          <HomeOne />
+          <AirDRHero />
         </section>
 
         <section id="threeSix">
-          <PartsHero />
+          <ThreeSix />
         </section>
 
         <section id="ClarisXT">
-          <TechnologyHero />
+          <ClarisXTHero />
         </section>
 
         <section
           id="ClarityPACS"
-          style={{ padding: "50px 0", background: "black" }}
+          style={{ padding: "50px 0 35px", background: "black" }}
         >
           <video
             style={{ display: "flex" }}
@@ -141,13 +141,24 @@ const IndexPage = () => {
           >
             <source src={ShortVideo} type="video/mp4" />
           </video>
+          <div style={{ margin: "35px 0 0" }}>
+            <Link
+              style={{
+                background: "transparent",
+                color: "#fff",
+                border: "none",
+              }}
+            >
+              Learn more about Clarity PACS
+            </Link>
+          </div>
         </section>
 
         <SideNav>
           <li onClick={handleClick}>
             <div>
-              <div className="nav-indicator"></div>
-              <div className="nav-label" name="#AirDR">
+              <div className="nav-indicator active"></div>
+              <div className="nav-label label-active" name="#AirDR">
                 AirDR
               </div>
             </div>

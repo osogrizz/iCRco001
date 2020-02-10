@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import AirLogo from "../HeroImages/AirLogo"
+import AirLogo from "./AirLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
@@ -53,12 +53,12 @@ const HeroBottom = styled("div")`
   }
 `
 
-const HomeOne = () => {
+const AirDRHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "AirDR.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
+          fluid(maxWidth: 1080, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -83,4 +83,4 @@ const HomeOne = () => {
   )
 }
 
-export default HomeOne
+export default AirDRHero

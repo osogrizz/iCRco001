@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
-import AirDRProduct from "../components/HeroImages/AirDR_Product"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 
@@ -23,6 +22,12 @@ const Container = styled("div")`
     }
     h2 {
       margin-top: 25px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    section {
+      height: 130vh;
     }
   }
 `
@@ -210,7 +215,10 @@ const AirDR = ({ data }) => {
                   fontWeight: "700",
                 }}
               >
-                <AirDRProduct />
+                {/* <AirDRProduct /> */}
+                <div>
+                  <Img fluid={data.airdr.fluid} />
+                </div>
                 AirDR Kit
               </div>
               <li
@@ -338,6 +346,11 @@ export default AirDR
 
 export const query = graphql`
   query AirDR {
+    airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
     motor: imageSharp(
       fluid: { originalName: { eq: "Motorized_Elevator.png" } }
     ) {
