@@ -78,7 +78,7 @@ const DropDown = styled("div")`
 
   a {
     color: #fff;
-    text-shadow: 1px 1px 5px black, 1px 1px 2px black;
+    text-shadow: 0.5px 0.5px 2px black, 0.5px 0.5px 2px black;
     padding-top: 10px;
 
     &:hover {
@@ -221,13 +221,13 @@ const Navbar = () => {
           onMouseLeave={handleContact}
         >
           Contact
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          {/* <div style={{ display: "flex", flexDirection: "column" }}>
             {contact ? (
               <DropDown>
                 <Link to="/quote">Request a Quote</Link>
               </DropDown>
             ) : null}
-          </div>
+          </div> */}
         </Link>
       </NavContainer>
     </NavWrapper>
