@@ -3,6 +3,8 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 // import AirLogo from "./AirLogo"
+import AironeSection from "../airone-section"
+import Img from "gatsby-image"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
@@ -17,8 +19,9 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(80, 80, 80, 0.2),
       rgba(80, 80, 80, 0.2)
     ),
-    url("../images/sky-hero.png");
+    url("../images/Sky.png");
   background-size: cover cover;
+  z-index: -10;
 
   h3 {
     color: #fff;
@@ -53,14 +56,60 @@ const HeroBottom = styled("div")`
   }
 `
 
-const SkyHero = () => {
+const SkyHero = ({ data }) => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "sky-hero.png" }) {
+      image: file(relativePath: { eq: "Sky.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
+        }
+      }
+      airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      motor: imageSharp(
+        fluid: { originalName: { eq: "Motorized_Elevator.png" } }
+      ) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      clarity: imageSharp(
+        fluid: { originalName: { eq: "Clarity_PracticeIcon.png" } }
+      ) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      xc: imageSharp(fluid: { originalName: { eq: "XC_Icon.png" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      registration: imageSharp(
+        fluid: { originalName: { eq: "Product_RegistrationIcon.png" } }
+      ) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+      integrated: imageSharp(fluid: { originalName: { eq: "CPU_Icon.png" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -71,7 +120,119 @@ const SkyHero = () => {
       // fadeIn="soft"
       preserveStackingContext
     >
-      <div></div>
+      <section>
+        <h1>AirDR</h1>
+        <ProductConfig>
+          <div
+            className="prod-container"
+            style={{
+              width: "80px",
+              height: "80px",
+              textAlign: "center",
+              fontWeight: "700",
+            }}
+          >
+            <div>
+              <Img fluid={data.airdr.fluid} />
+            </div>
+            AirDR
+          </div>
+          <li
+            style={{
+              transform: "rotate(10deg) translate(12em) rotate(-10deg)",
+            }}
+          >
+            <div className="option-container">
+              <Img fluid={data.motor.fluid} />
+            </div>
+            <div>
+              <p>Motorized</p>
+              <p>Elevator</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(60deg) translate(12em) rotate(-60deg)",
+            }}
+          >
+            <div style={{ width: "50px" }}>
+              <Img fluid={data.clarity.fluid} />
+            </div>
+            <div style={{ margin: 0, padding: 0 }}>
+              <p>Clarity</p>
+              <p>Practice</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(115deg) translate(12em) rotate(-115deg)",
+            }}
+          >
+            <div style={{ width: "120px" }}>
+              <Img fluid={data.tfsp.fluid} />
+            </div>
+            <div style={{ margin: 0, padding: 0 }}>
+              <p>True Flat</p>
+              <p>Scan Path</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
+            }}
+          >
+            <div style={{ width: "60px" }}>
+              <Img fluid={data.registration.fluid} />
+            </div>
+            <div>
+              <p>Product</p>
+              <p>Registration</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
+            }}
+          >
+            <div style={{ width: "60px" }}>
+              <Img fluid={data.xc.fluid} />
+            </div>
+            <div>
+              <p>Product</p>
+              <p>Registration</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(270deg) translate(12em) rotate(-270deg)",
+            }}
+          >
+            <div style={{ width: "90px" }}>
+              <Img fluid={data.pacs.fluid} />
+            </div>
+            <div>
+              <p>Acuisition</p>
+              <p>Station</p>
+            </div>
+          </li>
+          <li
+            style={{
+              transform: "rotate(325deg) translate(12em) rotate(-325deg)",
+            }}
+          >
+            <div style={{ width: "32px" }}>
+              <Img fluid={data.integrated.fluid} />
+            </div>
+            <div style={{ width: "180px" }}>
+              <p>Integrated PACS &</p>
+              <p>Workstation PC</p>
+            </div>
+          </li>
+        </ProductConfig>
+        <div>
+          <button style={{ margin: "8rem auto" }}>Request a Quote</button>
+        </div>
+      </section>
     </ImageBackground>
   )
 }
