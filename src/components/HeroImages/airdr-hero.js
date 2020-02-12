@@ -17,7 +17,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(80, 80, 80, 0.2),
       rgba(80, 80, 80, 0.2)
     ),
-    url("../images/AirDR.png");
+    url("../images/AirDR-hero.png");
   background-size: cover cover;
 
   h3 {
@@ -56,7 +56,7 @@ const HeroBottom = styled("div")`
 const AirDRHero = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "AirDR.png" }) {
+      image: file(relativePath: { eq: "AirDR-hero.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid

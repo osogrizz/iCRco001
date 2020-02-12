@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
+import SkyHero from "../components/HeroImages/sky-hero"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -36,11 +37,12 @@ const Container = styled("div")`
 const ProductHeader = styled("nav")`
   background: #c9c5c7;
   width: 100%;
-  height: 80px;
+  height: 140px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   z-index: 1000;
+  /* padding-top: 20px; */
 
   a {
     color: black;
@@ -65,6 +67,10 @@ const ProductHeader = styled("nav")`
       font-size: 0.5rem;
     }
   }
+
+  /* img {
+    padding: 40px 0;
+  } */
 `
 
 const ProductConfig = styled("ul")`
@@ -78,6 +84,7 @@ const ProductConfig = styled("ul")`
   display: flex;
   justify-content: center;
   align-items: center;
+
   transition: 0.24s 0.2s;
 
   .prod-container {
@@ -141,39 +148,39 @@ const AirDR = ({ data }) => {
         <ProductHeader>
           <div className="product-nav">
             <Link>
-              <div style={{ minWidth: "20px" }}>
-                <Img fluid={data.motor.fluid} />
+              <div style={{ width: "70px" }}>
+                <Img fluid={data.airdrNav.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
             <Link>
-              <div style={{ maxWidth: "50px" }}>
-                <Img
-                  fluid={data.pacs.fluid}
-                  style={{ width: "80px", left: "-15px" }}
-                />
+              <div style={{ width: "72px" }}>
+                <Img fluid={data.airdrC.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
             <Link>
-              <div style={{ minWidth: "20px" }}>
-                <Img fluid={data.integrated.fluid} />
+              <div style={{ width: "70px" }}>
+                <Img fluid={data.airdrLE.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "20px" }}>
-                <Img fluid={data.motor.fluid} />
+              <div style={{ width: "70px" }}>
+                <Img fluid={data.airdrLEc.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
             <Link>
-              <div style={{ maxWidth: "20px" }}>
-                <Img
-                  fluid={data.pacs.fluid}
-                  style={{ width: "80px", left: "-30px" }}
-                />
+              <div style={{ width: "30px" }}>
+                <Img fluid={data.iDRL.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>Air</p>
               </div>
             </Link>
             <Link>
-              <div style={{ minWidth: "20px" }}>
-                <Img fluid={data.integrated.fluid} />
+              <div style={{ width: "40px" }}>
+                <Img fluid={data.iDR34.fluid} />
+                <p style={{ fontSize: "0.6rem" }}>Air</p>
               </div>
             </Link>
           </div>
@@ -206,118 +213,121 @@ const AirDR = ({ data }) => {
             </video>
           </section> */}
           <section>
-            <h1>AirDR</h1>
-            <ProductConfig>
-              <div
-                className="prod-container"
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  textAlign: "center",
-                  fontWeight: "700",
-                }}
-              >
-                {/* <AirDRProduct /> */}
-                <div>
-                  <Img fluid={data.airdr.fluid} />
+            <SkyHero>
+              <h1>AirDR</h1>
+              <ProductConfig>
+                <div
+                  className="prod-container"
+                  style={{
+                    width: "80px",
+                    height: "80px",
+                    textAlign: "center",
+                    fontWeight: "700",
+                  }}
+                >
+                  {/* <AirDRProduct /> */}
+                  <div>
+                    <Img fluid={data.airdr.fluid} />
+                  </div>
+                  AirDR
                 </div>
-                AirDR
+                <li
+                  style={{
+                    transform: "rotate(10deg) translate(12em) rotate(-10deg)",
+                  }}
+                >
+                  <div className="option-container">
+                    <Img fluid={data.motor.fluid} />
+                  </div>
+                  <div>
+                    <p>Motorized</p>
+                    <p>Elevator</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform: "rotate(60deg) translate(12em) rotate(-60deg)",
+                  }}
+                >
+                  <div style={{ width: "50px" }}>
+                    <Img fluid={data.clarity.fluid} />
+                  </div>
+                  <div style={{ margin: 0, padding: 0 }}>
+                    <p>Clarity</p>
+                    <p>Practice</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform: "rotate(115deg) translate(12em) rotate(-115deg)",
+                  }}
+                >
+                  <div style={{ width: "120px" }}>
+                    <Img fluid={data.tfsp.fluid} />
+                  </div>
+                  <div style={{ margin: 0, padding: 0 }}>
+                    <p>True Flat</p>
+                    <p>Scan Path</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform:
+                      "rotate(-325deg) translate(-12em) rotate(325deg)",
+                  }}
+                >
+                  <div style={{ width: "60px" }}>
+                    <Img fluid={data.registration.fluid} />
+                  </div>
+                  <div>
+                    <p>Product</p>
+                    <p>Registration</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
+                  }}
+                >
+                  <div style={{ width: "60px" }}>
+                    <Img fluid={data.xc.fluid} />
+                  </div>
+                  <div>
+                    <p>Product</p>
+                    <p>Registration</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform: "rotate(270deg) translate(12em) rotate(-270deg)",
+                  }}
+                >
+                  <div style={{ width: "90px" }}>
+                    <Img fluid={data.pacs.fluid} />
+                  </div>
+                  <div>
+                    <p>Acuisition</p>
+                    <p>Station</p>
+                  </div>
+                </li>
+                <li
+                  style={{
+                    transform: "rotate(325deg) translate(12em) rotate(-325deg)",
+                  }}
+                >
+                  <div style={{ width: "32px" }}>
+                    <Img fluid={data.integrated.fluid} />
+                  </div>
+                  <div style={{ width: "180px" }}>
+                    <p>Integrated PACS &</p>
+                    <p>Workstation PC</p>
+                  </div>
+                </li>
+              </ProductConfig>
+              <div>
+                <button style={{ margin: "8rem auto" }}>Request a Quote</button>
               </div>
-              <li
-                style={{
-                  transform: "rotate(10deg) translate(12em) rotate(-10deg)",
-                }}
-              >
-                <div className="option-container">
-                  <Img fluid={data.motor.fluid} />
-                </div>
-                <div>
-                  <p>Motorized</p>
-                  <p>Elevator</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(60deg) translate(12em) rotate(-60deg)",
-                }}
-              >
-                <div style={{ width: "50px" }}>
-                  <Img fluid={data.clarity.fluid} />
-                </div>
-                <div style={{ margin: 0, padding: 0 }}>
-                  <p>Clarity</p>
-                  <p>Practice</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(115deg) translate(12em) rotate(-115deg)",
-                }}
-              >
-                <div style={{ width: "120px" }}>
-                  <Img fluid={data.tfsp.fluid} />
-                </div>
-                <div style={{ margin: 0, padding: 0 }}>
-                  <p>True Flat</p>
-                  <p>Scan Path</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
-                }}
-              >
-                <div style={{ width: "60px" }}>
-                  <Img fluid={data.registration.fluid} />
-                </div>
-                <div>
-                  <p>Product</p>
-                  <p>Registration</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
-                }}
-              >
-                <div style={{ width: "60px" }}>
-                  <Img fluid={data.xc.fluid} />
-                </div>
-                <div>
-                  <p>Product</p>
-                  <p>Registration</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(270deg) translate(12em) rotate(-270deg)",
-                }}
-              >
-                <div style={{ width: "90px" }}>
-                  <Img fluid={data.pacs.fluid} />
-                </div>
-                <div>
-                  <p>Acuisition</p>
-                  <p>Station</p>
-                </div>
-              </li>
-              <li
-                style={{
-                  transform: "rotate(325deg) translate(12em) rotate(-325deg)",
-                }}
-              >
-                <div style={{ width: "32px" }}>
-                  <Img fluid={data.integrated.fluid} />
-                </div>
-                <div style={{ width: "180px" }}>
-                  <p>Integrated PACS &</p>
-                  <p>Workstation PC</p>
-                </div>
-              </li>
-            </ProductConfig>
-            <div>
-              <button style={{ margin: "8rem auto" }}>Request a Quote</button>
-            </div>
+            </SkyHero>
           </section>
 
           <section>
@@ -348,6 +358,36 @@ export default AirDR
 
 export const query = graphql`
   query AirDR {
+    airdrNav: imageSharp(fluid: { originalName: { eq: "AirDR.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    airdrC: imageSharp(fluid: { originalName: { eq: "AirDRc.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    airdrLE: imageSharp(fluid: { originalName: { eq: "AirDR_LE.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    airdrLEc: imageSharp(fluid: { originalName: { eq: "AirDR_LEc.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    iDRL: imageSharp(fluid: { originalName: { eq: "iDR-L.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    iDR34: imageSharp(fluid: { originalName: { eq: "iDR34.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
     airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
