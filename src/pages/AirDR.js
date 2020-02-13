@@ -42,7 +42,6 @@ const ProductHeader = styled("nav")`
   height: 140px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   z-index: 1000;
   /* padding-top: 20px; */
 
@@ -55,8 +54,9 @@ const ProductHeader = styled("nav")`
   .product-nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: baseline;
     width: 1120px;
-    padding: 0 2%;
+    padding: 20px 2% 0;
   }
   @media (max-width: 1300px) {
     margin: 0 auto;

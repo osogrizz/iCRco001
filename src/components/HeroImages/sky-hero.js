@@ -2,8 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-// import AirLogo from "./AirLogo"
-import AironeSection from "../airone-section"
 import Img from "gatsby-image"
 
 const ImageBackground = styled(BackgroundImage)`
