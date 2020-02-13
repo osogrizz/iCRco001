@@ -70,7 +70,7 @@ const ProductConfig = styled("ul")`
   }
 `
 
-const AironeSection = () => {
+const AironeSection = ({ data }) => {
   return (
     <>
       <section>

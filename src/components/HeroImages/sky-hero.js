@@ -56,8 +56,85 @@ const HeroBottom = styled("div")`
   }
 `
 
+const ProductConfig = styled("ul")`
+  position: relative;
+  margin: 1.45rem auto 5rem;
+  border: 3px solid #333333;
+  border-radius: 50%;
+  width: 34rem;
+  height: 34rem;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.24s 0.2s;
+
+  .prod-container {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    height: 4em;
+    width: 4em;
+    margin: -2em;
+    cursor: pointer;
+  }
+
+  .option-container {
+    width: 30px;
+  }
+
+  p {
+    font-size: 0.6rem;
+    word-wrap: normal;
+    line-height: 12px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1300px) {
+    margin: 10.75rem auto 2rem;
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    padding: 0;
+
+    li {
+      height: 0.4em;
+      width: 0.4em;
+      margin: 0rem;
+    }
+  }
+`
+
 const SkyHero = ({ data }) => {
-  const { image } = useStaticQuery(graphql`
+  const {
+    image,
+    airdr,
+    motor,
+    clarity,
+    tfsp,
+    registration,
+    xc,
+    pacs,
+    integrated,
+  } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "Sky.png" }) {
         sharp: childImageSharp {
@@ -66,50 +143,60 @@ const SkyHero = ({ data }) => {
           }
         }
       }
-      airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      airdr: file(relativePath: { eq: "AirDR_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      motor: imageSharp(
-        fluid: { originalName: { eq: "Motorized_Elevator.png" } }
-      ) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      motor: file(relativePath: { eq: "Motorized_Elevator.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      clarity: imageSharp(
-        fluid: { originalName: { eq: "Clarity_PracticeIcon.png" } }
-      ) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      clarity: file(relativePath: { eq: "Clarity_PracticeIcon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      tfsp: file(relativePath: { eq: "TFSP_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      xc: imageSharp(fluid: { originalName: { eq: "XC_Icon.png" } }) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      registration: file(relativePath: { eq: "XC_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      registration: imageSharp(
-        fluid: { originalName: { eq: "Product_RegistrationIcon.png" } }
-      ) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      xc: file(relativePath: { eq: "Product_RegistrationIcon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      pacs: file(relativePath: { eq: "PACS_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
-      integrated: imageSharp(fluid: { originalName: { eq: "CPU_Icon.png" } }) {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      integrated: file(relativePath: { eq: "CPU_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
     }
@@ -121,7 +208,7 @@ const SkyHero = ({ data }) => {
       preserveStackingContext
     >
       <section>
-        <h1>AirDR</h1>
+        <h1>Air DR</h1>
         <ProductConfig>
           <div
             className="prod-container"
@@ -133,7 +220,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div>
-              <Img fluid={data.airdr.fluid} />
+              <Img fluid={airdr.sharp.fluid} />
             </div>
             AirDR
           </div>
@@ -143,7 +230,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div className="option-container">
-              <Img fluid={data.motor.fluid} />
+              <Img fluid={motor.sharp.fluid} />
             </div>
             <div>
               <p>Motorized</p>
@@ -156,7 +243,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "50px" }}>
-              <Img fluid={data.clarity.fluid} />
+              <Img fluid={clarity.sharp.fluid} />
             </div>
             <div style={{ margin: 0, padding: 0 }}>
               <p>Clarity</p>
@@ -169,7 +256,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "120px" }}>
-              <Img fluid={data.tfsp.fluid} />
+              <Img fluid={tfsp.sharp.fluid} />
             </div>
             <div style={{ margin: 0, padding: 0 }}>
               <p>True Flat</p>
@@ -182,7 +269,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "60px" }}>
-              <Img fluid={data.registration.fluid} />
+              <Img fluid={registration.sharp.fluid} />
             </div>
             <div>
               <p>Product</p>
@@ -195,7 +282,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "60px" }}>
-              <Img fluid={data.xc.fluid} />
+              <Img fluid={xc.sharp.fluid} />
             </div>
             <div>
               <p>Product</p>
@@ -208,7 +295,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "90px" }}>
-              <Img fluid={data.pacs.fluid} />
+              <Img fluid={pacs.sharp.fluid} />
             </div>
             <div>
               <p>Acuisition</p>
@@ -221,7 +308,7 @@ const SkyHero = ({ data }) => {
             }}
           >
             <div style={{ width: "32px" }}>
-              <Img fluid={data.integrated.fluid} />
+              <Img fluid={integrated.sharp.fluid} />
             </div>
             <div style={{ width: "180px" }}>
               <p>Integrated PACS &</p>
@@ -229,12 +316,95 @@ const SkyHero = ({ data }) => {
             </div>
           </li>
         </ProductConfig>
-        <div>
-          <button style={{ margin: "8rem auto" }}>Request a Quote</button>
-        </div>
       </section>
     </ImageBackground>
   )
 }
 
 export default SkyHero
+
+// export const query = graphql`
+//   query skyHero {
+//     bg: imageSharp(fluid: { originalName: { eq: "AirDR.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     airdrNav: imageSharp(fluid: { originalName: { eq: "AirDR.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     airdrC: imageSharp(fluid: { originalName: { eq: "AirDRc.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     airdrLE: imageSharp(fluid: { originalName: { eq: "AirDR_LE.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     airdrLEc: imageSharp(fluid: { originalName: { eq: "AirDR_LEc.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     iDRL: imageSharp(fluid: { originalName: { eq: "iDR-L.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     iDR34: imageSharp(fluid: { originalName: { eq: "iDR34.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     motor: imageSharp(
+//       fluid: { originalName: { eq: "Motorized_Elevator.png" } }
+//     ) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     clarity: imageSharp(
+//       fluid: { originalName: { eq: "Clarity_PracticeIcon.png" } }
+//     ) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     xc: imageSharp(fluid: { originalName: { eq: "XC_Icon.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     registration: imageSharp(
+//       fluid: { originalName: { eq: "Product_RegistrationIcon.png" } }
+//     ) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//     integrated: imageSharp(fluid: { originalName: { eq: "CPU_Icon.png" } }) {
+//       fluid(maxWidth: 800) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//   }
+// `

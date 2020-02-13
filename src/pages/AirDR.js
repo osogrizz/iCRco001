@@ -188,7 +188,7 @@ const AirDR = ({ data }) => {
           </div>
         </ProductHeader>
         <div>
-          <SkyHero></SkyHero>
+          <SkyHero />
 
           <section>
             <h2>Product Info</h2>
