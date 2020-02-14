@@ -121,6 +121,42 @@ const ProductConfig = styled("ul")`
   }
 `
 
+const ProductHeader = styled("nav")`
+  background: #c9c5c7;
+  /* background: transparent; */
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1000;
+  /* padding-top: 20px; */
+
+  a {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+  .product-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 1120px;
+    padding: 20px 2% 0;
+  }
+  @media (max-width: 1300px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    .product-nav a {
+      padding: 0;
+      font-size: 0.5rem;
+    }
+  }
+`
+
 const SkyHero = ({ data }) => {
   const {
     image,
@@ -134,6 +170,48 @@ const SkyHero = ({ data }) => {
     integrated,
   } = useStaticQuery(graphql`
     query {
+      airdrNav: file(relativePath: { eq: "AirDR.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       image: file(relativePath: { eq: "Sky.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
@@ -205,6 +283,46 @@ const SkyHero = ({ data }) => {
       // fadeIn="soft"
       preserveStackingContext
     >
+      <ProductHeader>
+        <div className="product-nav">
+          <Link>
+            <div style={{ width: "70px", textAlign: "center" }}>
+              <Img fluid={data.airdrNav.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>AirDR</p>
+            </div>
+          </Link>
+          <Link>
+            <div style={{ width: "72px", textAlign: "center" }}>
+              <Img fluid={data.airdrC.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>AirDR c</p>
+            </div>
+          </Link>
+          <Link>
+            <div style={{ width: "70px", textAlign: "center" }}>
+              <Img fluid={data.airdrLE.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>AirDR LE</p>
+            </div>
+          </Link>
+          <Link>
+            <div style={{ width: "70px", textAlign: "center" }}>
+              <Img fluid={data.airdrLEc.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>AirDR LE c</p>
+            </div>
+          </Link>
+          <Link>
+            <div style={{ width: "30px", textAlign: "center" }}>
+              <Img fluid={data.iDRL.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>iDR-L</p>
+            </div>
+          </Link>
+          <Link>
+            <div style={{ width: "40px", textAlign: "center" }}>
+              <Img fluid={data.iDR34.fluid} />
+              <p style={{ fontSize: "0.6rem" }}>iDR34</p>
+            </div>
+          </Link>
+        </div>
+      </ProductHeader>
       <section>
         <h1>Air DR</h1>
         <ProductConfig>

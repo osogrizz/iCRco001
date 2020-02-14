@@ -38,6 +38,7 @@ const Container = styled("div")`
 
 const ProductHeader = styled("nav")`
   background: #c9c5c7;
+  /* background: transparent; */
   width: 100%;
   height: 140px;
   display: flex;
@@ -69,10 +70,6 @@ const ProductHeader = styled("nav")`
       font-size: 0.5rem;
     }
   }
-
-  /* img {
-    padding: 40px 0;
-  } */
 `
 
 const ProductConfig = styled("ul")`
@@ -121,6 +118,7 @@ const ProductConfig = styled("ul")`
 
   p {
     font-size: 0.6rem;
+    text-align: center;
     word-wrap: normal;
     line-height: 12px;
     margin: 0;
@@ -147,46 +145,46 @@ const AirDR = ({ data }) => {
     <Layout>
       <SEO title="AirDR" />
       <Container>
-        <ProductHeader>
+        {/* <ProductHeader>
           <div className="product-nav">
             <Link>
-              <div style={{ width: "70px" }}>
+              <div style={{ width: "70px", textAlign: "center" }}>
                 <Img fluid={data.airdrNav.fluid} />
                 <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "72px" }}>
+              <div style={{ width: "72px", textAlign: "center" }}>
                 <Img fluid={data.airdrC.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
+                <p style={{ fontSize: "0.6rem" }}>AirDR c</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "70px" }}>
+              <div style={{ width: "70px", textAlign: "center" }}>
                 <Img fluid={data.airdrLE.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
+                <p style={{ fontSize: "0.6rem" }}>AirDR LE</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "70px" }}>
+              <div style={{ width: "70px", textAlign: "center" }}>
                 <Img fluid={data.airdrLEc.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>AirDR</p>
+                <p style={{ fontSize: "0.6rem" }}>AirDR LE c</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "30px" }}>
+              <div style={{ width: "30px", textAlign: "center" }}>
                 <Img fluid={data.iDRL.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>Air</p>
+                <p style={{ fontSize: "0.6rem" }}>iDR-L</p>
               </div>
             </Link>
             <Link>
-              <div style={{ width: "40px" }}>
+              <div style={{ width: "40px", textAlign: "center" }}>
                 <Img fluid={data.iDR34.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>Air</p>
+                <p style={{ fontSize: "0.6rem" }}>iDR34</p>
               </div>
             </Link>
           </div>
-        </ProductHeader>
+        </ProductHeader> */}
         <div>
           <SkyHero />
 
