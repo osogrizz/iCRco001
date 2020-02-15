@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 import SkyHero from "../components/HeroImages/sky-hero"
-import AironeSection from "../components/airone-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,8 +12,8 @@ const Container = styled("div")`
   margin-top: 50px;
 
   section {
-    height: 100vh;
-    padding: 40px 20px;
+    /* height: 100vh; */
+    /* padding: 40px 20px; */
     z-index: 1000;
     h1,
     h2 {
@@ -22,11 +21,6 @@ const Container = styled("div")`
       text-align: center;
       letter-spacing: 2px;
     }
-
-    /* h2 {
-      margin-top: 25px;
-      text-align: center;
-    } */
   }
 
   @media (max-width: 1300px) {
@@ -37,14 +31,12 @@ const Container = styled("div")`
 `
 
 const ProductHeader = styled("nav")`
-  background: #c9c5c7;
-  /* background: transparent; */
+  background: #e6eef0;
   width: 100%;
   height: 140px;
   display: flex;
   justify-content: space-evenly;
   z-index: 1000;
-  /* padding-top: 20px; */
 
   a {
     color: black;
@@ -72,119 +64,105 @@ const ProductHeader = styled("nav")`
   }
 `
 
-const ProductConfig = styled("ul")`
-  position: relative;
-  margin: 1.45rem auto 5rem;
-  border: 3px solid #333333;
-  border-radius: 50%;
-  width: 34rem;
-  height: 34rem;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: 0.24s 0.2s;
-
-  .prod-container {
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    font-weight: 700;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-
-  li {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    list-style-type: none;
-    text-align: center;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    height: 4em;
-    width: 4em;
-    margin: -2em;
-    cursor: pointer;
-  }
-
-  .option-container {
-    width: 30px;
-  }
-
-  p {
-    font-size: 0.6rem;
-    text-align: center;
-    word-wrap: normal;
-    line-height: 12px;
-    margin: 0;
-    font-weight: 700;
-  }
-
-  @media (max-width: 1300px) {
-    margin: 10.75rem auto 2rem;
-    width: 10rem;
-    height: 10rem;
-    border: none;
-    padding: 0;
-
-    li {
-      height: 0.4em;
-      width: 0.4em;
-      margin: 0rem;
-    }
-  }
-`
-
 const AirDR = ({ data }) => {
   return (
     <Layout>
       <SEO title="AirDR" />
       <Container>
-        {/* <ProductHeader>
+        <ProductHeader>
           <div className="product-nav">
             <Link>
-              <div style={{ width: "70px", textAlign: "center" }}>
+              <div
+                style={{
+                  width: "70px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <Img fluid={data.airdrNav.fluid} />
                 <p style={{ fontSize: "0.6rem" }}>AirDR</p>
               </div>
             </Link>
+
             <Link>
-              <div style={{ width: "72px", textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <Img fluid={data.airdrC.fluid} />
                 <p style={{ fontSize: "0.6rem" }}>AirDR c</p>
               </div>
             </Link>
+
             <Link>
-              <div style={{ width: "70px", textAlign: "center" }}>
+              <div
+                style={{
+                  width: "70px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <Img fluid={data.airdrLE.fluid} />
                 <p style={{ fontSize: "0.6rem" }}>AirDR LE</p>
               </div>
             </Link>
+
             <Link>
-              <div style={{ width: "70px", textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
                 <Img fluid={data.airdrLEc.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>AirDR LE c</p>
+                <p style={{ fontSize: "0.6rem", width: "80px" }}>AirDR LE c</p>
               </div>
             </Link>
+
             <Link>
-              <div style={{ width: "30px", textAlign: "center" }}>
-                <Img fluid={data.iDRL.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>iDR-L</p>
+              <div
+                style={{
+                  width: "40px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Img fluid={data.iDRL.fluid} style={{ width: "24px" }} />
+                <p style={{ fontSize: "0.6rem", width: "38px" }}>iDR-L</p>
               </div>
             </Link>
+
             <Link>
-              <div style={{ width: "40px", textAlign: "center" }}>
-                <Img fluid={data.iDR34.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>iDR34</p>
+              <div
+                style={{
+                  width: "40px",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <Img fluid={data.iDR34.fluid} style={{ width: "30px" }} />
+                <p style={{ fontSize: "0.6rem", width: "40px" }}>iDR34</p>
               </div>
             </Link>
           </div>
-        </ProductHeader> */}
+        </ProductHeader>
         <div>
           <SkyHero />
 
