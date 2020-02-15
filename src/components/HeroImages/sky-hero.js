@@ -8,7 +8,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 100vh; */
+  height: 82vh !important;
   height: -webkit-fill-available;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -45,11 +45,11 @@ const ImageBackground = styled(BackgroundImage)`
 
 const ProductConfig = styled("ul")`
   position: relative;
-  margin: 1.45rem auto 5rem;
+  margin: 2.45rem auto 5rem;
   border: 3px solid #333333;
   border-radius: 50%;
-  width: 34rem;
-  height: 34rem;
+  width: 30rem;
+  height: 30rem;
   padding: 0.8rem;
   display: flex;
   justify-content: center;
@@ -200,8 +200,8 @@ const SkyHero = ({ data }) => {
           <div
             className="prod-container"
             style={{
-              width: "80px",
-              height: "80px",
+              width: "50px",
+              height: "50px",
               textAlign: "center",
               fontWeight: "700",
             }}
@@ -252,7 +252,7 @@ const SkyHero = ({ data }) => {
           </li>
           <li
             style={{
-              transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
+              transform: "rotate(-325deg) translate(-10em) rotate(325deg)",
             }}
           >
             <div style={{ width: "60px" }}>

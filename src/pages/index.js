@@ -146,10 +146,13 @@ const IndexPage = () => {
               style={{
                 background: "transparent",
                 color: "#fff",
-                border: "none",
+                borderRadius: "20px",
+                border: "1px solid #fff",
+                padding: "10px 20px",
+                zIndex: "500",
               }}
             >
-              Learn more about Clarity PACS
+              Learn More
             </Link>
           </div>
         </section>

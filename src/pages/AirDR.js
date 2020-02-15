@@ -33,7 +33,7 @@ const Container = styled("div")`
 const ProductHeader = styled("nav")`
   background: #e6eef0;
   width: 100%;
-  height: 140px;
+  height: 120px;
   display: flex;
   justify-content: space-evenly;
   z-index: 1000;
@@ -49,7 +49,7 @@ const ProductHeader = styled("nav")`
     justify-content: space-evenly;
     align-items: baseline;
     width: 1120px;
-    padding: 20px 2% 0;
+    padding: 18px 2% 0;
   }
   @media (max-width: 1300px) {
     margin: 0 auto;
@@ -74,7 +74,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "70px",
+                  width: "60px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -89,7 +89,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "80px",
+                  width: "70px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -104,7 +104,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "70px",
+                  width: "60px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -119,7 +119,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "80px",
+                  width: "70px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -127,7 +127,7 @@ const AirDR = ({ data }) => {
                 }}
               >
                 <Img fluid={data.airdrLEc.fluid} />
-                <p style={{ fontSize: "0.6rem", width: "80px" }}>AirDR LE c</p>
+                <p style={{ fontSize: "0.6rem", width: "68px" }}>AirDR LE c</p>
               </div>
             </Link>
 
