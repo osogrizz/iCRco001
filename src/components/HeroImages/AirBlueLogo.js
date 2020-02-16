@@ -2,11 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const AirLogo = () => {
+const AirBlueLogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "White_AirDR.png" }) {
-        childImageSharp {
+      blue: file(relativePath: { eq: "AirDr_Logo.png" }) {
+        sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
@@ -15,7 +15,7 @@ const AirLogo = () => {
     }
   `)
 
-  return <Img fluid={data.logo.childImageSharp.fluid} />
+  return <Img fluid={data.blue.sharp.fluid} />
 }
 
-export default AirLogo
+export default AirBlueLogo

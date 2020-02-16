@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
+import AirBlueLogo from "./AirBlueLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
@@ -195,21 +196,31 @@ const SkyHero = () => {
       preserveStackingContext
     >
       <section>
-        <h1>Air DR</h1>
+        <div
+          style={{
+            position: "relative",
+            width: "320px",
+            zIndex: "1000",
+            margin: "30px auto 20px",
+          }}
+        >
+          <AirBlueLogo />
+        </div>
         <ProductConfig>
           <div
             className="prod-container"
             style={{
-              width: "50px",
-              height: "50px",
+              width: "120px",
+              height: "120px",
               textAlign: "center",
               fontWeight: "700",
             }}
           >
-            <div>
-              <Img fluid={airdr.sharp.fluid} />
+            <div style={{ width: "120px", color: "#0069aa" }}>
+              {/* <Img fluid={airdr.sharp.fluid} /> */}
+
+              <h1>KIT</h1>
             </div>
-            AirDR
           </div>
           <li
             style={{
