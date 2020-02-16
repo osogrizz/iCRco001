@@ -110,7 +110,7 @@ const ProductConfig = styled("ul")`
   }
 `
 
-const SkyHero = ({ data }) => {
+const SkyHero = () => {
   const {
     image,
     airdr,
