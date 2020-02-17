@@ -117,7 +117,7 @@ const SkyHero = () => {
     airdr,
     motor,
     clarity,
-    tfsp,
+    workStation,
     registration,
     xc,
     pacs,
@@ -173,14 +173,14 @@ const SkyHero = () => {
           }
         }
       }
-      practice: file(relativePath: { eq: "PACS_Icon.png" }) {
+      workStation: file(relativePath: { eq: "PACS_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      integrated: file(relativePath: { eq: "CPU_Icon.png" }) {
+      integrated: file(relativePath: { eq: "CPU.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -230,22 +230,9 @@ const SkyHero = () => {
             </div>
           </div>
 
-          {/* <li
-            style={{
-              transform: "rotate(10deg) translate(12em) rotate(-10deg)",
-            }}
-          >
-            <div className="option-container">
-              <Img fluid={motor.sharp.fluid} />
-            </div>
-            <div>
-              <p>Motorized</p>
-              <p>Elevator</p>
-            </div>
-          </li> */}
           <li
             style={{
-              transform: "rotate(-315deg) translate(-12em) rotate(315deg)",
+              transform: "rotate(-315deg) translate(-11em) rotate(315deg)",
             }}
           >
             <div className="option-container">
@@ -257,25 +244,12 @@ const SkyHero = () => {
             </div>
           </li>
 
-          {/* <li
-            style={{
-              transform: "rotate(60deg) translate(12em) rotate(-60deg)",
-            }}
-          >
-            <div style={{ width: "50px" }}>
-              <Img fluid={clarity.sharp.fluid} />
-            </div>
-            <div style={{ margin: 0, padding: 0 }}>
-              <p>Clarity</p>
-              <p>Practice</p>
-            </div>
-          </li> */}
           <li
             style={{
-              transform: "rotate(45deg) translate(12em) rotate(-45deg)",
+              transform: "rotate(45deg) translate(11em) rotate(-45deg)",
             }}
           >
-            <div style={{ width: "50px" }}>
+            <div style={{ width: "60px" }}>
               <Img fluid={clarity.sharp.fluid} />
             </div>
             <div style={{ margin: 0, padding: 0 }}>
@@ -285,33 +259,35 @@ const SkyHero = () => {
           </li>
           <li
             style={{
-              transform: "rotate(115deg) translate(12em) rotate(-115deg)",
+              transform: "rotate(135deg) translate(11em) rotate(-135deg)",
             }}
           >
-            <div style={{ width: "120px" }}>
-              <Img fluid={tfsp.sharp.fluid} />
+            <div style={{ width: "90px" }}>
+              <Img fluid={workStation.sharp.fluid} />
             </div>
             <div style={{ margin: 0, padding: 0 }}>
               <p>True Flat</p>
               <p>Scan Path</p>
             </div>
           </li>
-          {/* <li
+
+          <li
             style={{
-              transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
+              transform: " translate(-11em) ",
             }}
           >
-            <div style={{ width: "60px" }}>
-              <Img fluid={xc.sharp.fluid} />
+            <div style={{ width: "30px" }}>
+              <Img fluid={integrated.sharp.fluid} />
             </div>
             <div>
               <p>Product</p>
               <p>Registration</p>
             </div>
-          </li> */}
+          </li>
+
           <li
             style={{
-              transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
+              transform: "rotate(-90deg) translate(-11em) rotate(90deg)",
             }}
           >
             <div style={{ width: "60px" }}>
@@ -322,9 +298,10 @@ const SkyHero = () => {
               <p>Registration</p>
             </div>
           </li>
+
           <li
             style={{
-              transform: "rotate(270deg) translate(12em) rotate(-270deg)",
+              transform: "rotate(270deg) translate(11em) rotate(-270deg)",
             }}
           >
             <div style={{ width: "50px" }}>
@@ -337,7 +314,7 @@ const SkyHero = () => {
 
           <li
             style={{
-              transform: "rotate(315deg) translate(12em) rotate(-315deg)",
+              transform: "rotate(315deg) translate(11em) rotate(-315deg)",
             }}
           >
             <div style={{ width: "80px" }}>
