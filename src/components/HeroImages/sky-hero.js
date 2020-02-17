@@ -159,21 +159,21 @@ const SkyHero = () => {
           }
         }
       }
-      registration: file(relativePath: { eq: "XC_Icon.png" }) {
+      registration: file(relativePath: { eq: "Product_RegistrationIcon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      xc: file(relativePath: { eq: "Product_RegistrationIcon.png" }) {
+      xc: file(relativePath: { eq: "XC_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      pacs: file(relativePath: { eq: "PACS_Icon.png" }) {
+      practice: file(relativePath: { eq: "PACS_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -181,6 +181,13 @@ const SkyHero = () => {
         }
       }
       integrated: file(relativePath: { eq: "CPU_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      pacs: file(relativePath: { eq: "Clarity_PACS_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -222,7 +229,8 @@ const SkyHero = () => {
               <h1>KIT</h1>
             </div>
           </div>
-          <li
+
+          {/* <li
             style={{
               transform: "rotate(10deg) translate(12em) rotate(-10deg)",
             }}
@@ -234,10 +242,37 @@ const SkyHero = () => {
               <p>Motorized</p>
               <p>Elevator</p>
             </div>
-          </li>
+          </li> */}
           <li
             style={{
+              transform: "rotate(-315deg) translate(-12em) rotate(315deg)",
+            }}
+          >
+            <div className="option-container">
+              <Img fluid={motor.sharp.fluid} />
+            </div>
+            <div>
+              <p>Motorized</p>
+              <p>Elevator</p>
+            </div>
+          </li>
+
+          {/* <li
+            style={{
               transform: "rotate(60deg) translate(12em) rotate(-60deg)",
+            }}
+          >
+            <div style={{ width: "50px" }}>
+              <Img fluid={clarity.sharp.fluid} />
+            </div>
+            <div style={{ margin: 0, padding: 0 }}>
+              <p>Clarity</p>
+              <p>Practice</p>
+            </div>
+          </li> */}
+          <li
+            style={{
+              transform: "rotate(45deg) translate(12em) rotate(-45deg)",
             }}
           >
             <div style={{ width: "50px" }}>
@@ -261,9 +296,22 @@ const SkyHero = () => {
               <p>Scan Path</p>
             </div>
           </li>
+          {/* <li
+            style={{
+              transform: "rotate(-325deg) translate(-12em) rotate(325deg)",
+            }}
+          >
+            <div style={{ width: "60px" }}>
+              <Img fluid={xc.sharp.fluid} />
+            </div>
+            <div>
+              <p>Product</p>
+              <p>Registration</p>
+            </div>
+          </li> */}
           <li
             style={{
-              transform: "rotate(-325deg) translate(-10em) rotate(325deg)",
+              transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
             }}
           >
             <div style={{ width: "60px" }}>
@@ -276,41 +324,41 @@ const SkyHero = () => {
           </li>
           <li
             style={{
-              transform: "rotate(-10deg) translate(-12em) rotate(10deg)",
-            }}
-          >
-            <div style={{ width: "60px" }}>
-              <Img fluid={xc.sharp.fluid} />
-            </div>
-            <div>
-              <p>Product</p>
-              <p>Registration</p>
-            </div>
-          </li>
-          <li
-            style={{
               transform: "rotate(270deg) translate(12em) rotate(-270deg)",
             }}
           >
-            <div style={{ width: "90px" }}>
-              <Img fluid={pacs.sharp.fluid} />
+            <div style={{ width: "50px" }}>
+              <Img fluid={airdr.sharp.fluid} />
             </div>
             <div>
-              <p>Acuisition</p>
-              <p>Station</p>
+              <p>AirDR</p>
+            </div>
+          </li>
+
+          <li
+            style={{
+              transform: "rotate(315deg) translate(12em) rotate(-315deg)",
+            }}
+          >
+            <div style={{ width: "80px" }}>
+              <Img fluid={xc.sharp.fluid} />
+            </div>
+            <div style={{ width: "180px" }}>
+              <p>XC 2.0 Acquisition</p>
+              <p>Software</p>
             </div>
           </li>
           <li
             style={{
-              transform: "rotate(325deg) translate(12em) rotate(-325deg)",
+              transform: " translate(12em) ",
             }}
           >
-            <div style={{ width: "32px" }}>
-              <Img fluid={integrated.sharp.fluid} />
+            <div style={{ width: "80px" }}>
+              <Img fluid={pacs.sharp.fluid} />
             </div>
             <div style={{ width: "180px" }}>
-              <p>Integrated PACS &</p>
-              <p>Workstation PC</p>
+              <p>Clarity</p>
+              <p>PACS</p>
             </div>
           </li>
         </ProductConfig>
