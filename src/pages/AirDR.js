@@ -194,22 +194,22 @@ export default AirDR
 
 export const query = graphql`
   query AirDR {
-    airdrNav: imageSharp(fluid: { originalName: { eq: "AirDR.png" } }) {
+    airdrNav: imageSharp(fluid: { originalName: { eq: "AirDR2.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-    airdrC: imageSharp(fluid: { originalName: { eq: "AirDRc.png" } }) {
+    airdrC: imageSharp(fluid: { originalName: { eq: "AirDRC2.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-    airdrLE: imageSharp(fluid: { originalName: { eq: "AirDR_LE.png" } }) {
+    airdrLE: imageSharp(fluid: { originalName: { eq: "AirDR2LE.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-    airdrLEc: imageSharp(fluid: { originalName: { eq: "AirDR_LEc.png" } }) {
+    airdrLEc: imageSharp(fluid: { originalName: { eq: "AirDR_LEc2.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
@@ -220,52 +220,6 @@ export const query = graphql`
       }
     }
     iDR34: imageSharp(fluid: { originalName: { eq: "iDR34.png" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    airdr: imageSharp(fluid: { originalName: { eq: "AirDR_Icon.png" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    motor: imageSharp(
-      fluid: { originalName: { eq: "Motorized_Elevator.png" } }
-    ) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    clarity: imageSharp(
-      fluid: { originalName: { eq: "Clarity_PracticeIcon.png" } }
-    ) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    tfsp: imageSharp(fluid: { originalName: { eq: "TFSP_Icon.png" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    xc: imageSharp(fluid: { originalName: { eq: "XC_Icon.png" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    registration: imageSharp(
-      fluid: { originalName: { eq: "Product_RegistrationIcon.png" } }
-    ) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    pacs: imageSharp(fluid: { originalName: { eq: "PACS_Icon.png" } }) {
-      fluid(maxWidth: 800) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-    integrated: imageSharp(fluid: { originalName: { eq: "CPU_Icon.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }

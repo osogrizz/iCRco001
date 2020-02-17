@@ -138,7 +138,7 @@ const SkyHero = () => {
           }
         }
       }
-      motor: file(relativePath: { eq: "Motorized_Elevator.png" }) {
+      motor: file(relativePath: { eq: "CPU.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
