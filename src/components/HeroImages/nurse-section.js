@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import AirLogo from "../HeroImages/AirBlueLogo"
 
 const Container = styled("div")`
   display: flex;
@@ -24,13 +25,6 @@ const LogoContainer = styled("div")`
 const NurseSection = () => {
   const { logo, nurse } = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "AirDR_Logo.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       nurse: file(relativePath: { eq: "AirDR_Nurse.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
@@ -43,7 +37,10 @@ const NurseSection = () => {
   return (
     <Container>
       <LogoContainer>
-        <Img fluid={logo.sharp.fluid} style={{ width: "300px" }} />
+        {/* <Img fluid={logo.sharp.fluid} style={{ width: "300px" }} /> */}
+        <div style={{ width: "350px", margin: "40px auto" }}>
+          <AirLogo style={{ width: "120px" }} />
+        </div>
         <h2>Digital Imaging Solutions</h2>
         <hr />
         <p>
