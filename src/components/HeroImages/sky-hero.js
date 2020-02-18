@@ -113,6 +113,7 @@ const ProductConfig = styled("ul")`
 
 const SkyHero = () => {
   const {
+    blue,
     image,
     airdr,
     motor,
@@ -124,6 +125,13 @@ const SkyHero = () => {
   } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "Sky.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      blue: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -210,7 +218,8 @@ const SkyHero = () => {
             margin: "30px auto 20px",
           }}
         >
-          <AirBlueLogo />
+          {/* <AirBlueLogo /> */}
+          <Img fluid={blue.sharp.fluid} />
         </div>
         <ProductConfig>
           <div
