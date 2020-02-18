@@ -22,9 +22,9 @@ const LogoContainer = styled("div")`
 `
 
 const NurseSection = () => {
-  const { title, nurse } = useStaticQuery(graphql`
+  const { logo, nurse } = useStaticQuery(graphql`
     query {
-      title: file(relativePath: { eq: "AirDR_Logo.png" }) {
+      logo: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -43,7 +43,7 @@ const NurseSection = () => {
   return (
     <Container>
       <LogoContainer>
-        <Img fluid={title.sharp.fluid} style={{ width: "300px" }} />
+        <Img fluid={logo.sharp.fluid} style={{ width: "300px" }} />
         <h2>Digital Imaging Solutions</h2>
         <hr />
         <p>
