@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 const AirBlueLogo = () => {
   const { blue } = useStaticQuery(graphql`
-    query {
+    query BlueLogo {
       blue: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
