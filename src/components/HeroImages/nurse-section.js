@@ -39,7 +39,7 @@ const NurseSection = () => {
       <LogoContainer>
         {/* <Img fluid={logo.sharp.fluid} style={{ width: "300px" }} /> */}
         <div style={{ width: "350px", margin: "40px auto" }}>
-          <AirLogo style={{ width: "120px" }} />
+          {/* <AirLogo style={{ width: "120px" }} /> */}
         </div>
         <h2>Digital Imaging Solutions</h2>
         <hr />
