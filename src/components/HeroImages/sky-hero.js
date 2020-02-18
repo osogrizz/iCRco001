@@ -113,7 +113,7 @@ const ProductConfig = styled("ul")`
 
 const SkyHero = () => {
   const {
-    blue,
+    blueLogo,
     image,
     airdr,
     motor,
@@ -131,9 +131,9 @@ const SkyHero = () => {
           }
         }
       }
-      blue: file(relativePath: { eq: "AirDR_Logo.png" }) {
+      blueLogo: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -153,13 +153,6 @@ const SkyHero = () => {
         }
       }
       clarity: file(relativePath: { eq: "Clarity_PracticeIcon.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      tfsp: file(relativePath: { eq: "TFSP_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -218,8 +211,7 @@ const SkyHero = () => {
             margin: "30px auto 20px",
           }}
         >
-          {/* <AirBlueLogo /> */}
-          <Img fluid={blue.sharp.fluid} />
+          <Img fluid={blueLogo.sharp.fluid} />
         </div>
         <ProductConfig>
           <div

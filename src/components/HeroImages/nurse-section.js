@@ -16,9 +16,13 @@ const Container = styled("div")`
   }
 `
 
-const LogoContainer = styled("div")`
+const InfoContainer = styled("div")`
   margin: 40px auto;
-  /* justify-content: center; */
+`
+
+const LogoContainer = styled("div")`
+  max-width: 350px;
+  margin: 40px auto;
 `
 
 const NurseSection = () => {
@@ -26,7 +30,7 @@ const NurseSection = () => {
     query {
       logo: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -42,29 +46,31 @@ const NurseSection = () => {
   `)
   return (
     <Container>
-      <LogoContainer>
-        <div style={{ width: "350px", margin: "40px auto" }}>
+      <InfoContainer>
+        <LogoContainer>
           <Img fluid={logo.sharp.fluid} />
-        </div>
+        </LogoContainer>
         <h2>Digital Imaging Solutions</h2>
         <hr />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-          voluptates odio possimus culpa nisi iure adipisci optio quod,
-          consectetur fugiat reiciendis facilis voluptatem rerum ab ex nihil
-          blanditiis repudiandae corporis?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, saepe
-          ipsa veniam rerum perferendis in repellat impedit voluptate laboriosam
-          non dolores praesentium tenetur? Dignissimos, et! Dolore laboriosam
-          ipsa porro sed?
-        </p>
+        <div style={{ padding: "20px 80px" }}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            voluptates odio possimus culpa nisi iure adipisci optio quod,
+            consectetur fugiat reiciendis facilis voluptatem rerum ab ex nihil
+            blanditiis repudiandae corporis?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            saepe ipsa veniam rerum perferendis in repellat impedit voluptate
+            laboriosam non dolores praesentium tenetur? Dignissimos, et! Dolore
+            laboriosam ipsa porro sed?
+          </p>
+        </div>
         <button>Learn More</button>
         <div style={{ display: "flex" }}>
           <div>100</div> |<div>16</div> |<div>15</div>
         </div>
-      </LogoContainer>
+      </InfoContainer>
       <div>
         <Img fluid={nurse.sharp.fluid} />
       </div>
