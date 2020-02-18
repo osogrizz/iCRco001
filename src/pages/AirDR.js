@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 import SkyHero from "../components/HeroImages/sky-hero"
 import NurseSection from "../components/HeroImages/nurse-section"
+import Dimension from "../components/HeroImages/dimensions-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -165,6 +166,7 @@ const AirDR = ({ data }) => {
         <div>
           <SkyHero />
           <NurseSection />
+          <Dimension />
 
           <section>
             <h2>Product Specs</h2>

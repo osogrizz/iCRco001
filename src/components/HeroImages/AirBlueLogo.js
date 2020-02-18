@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const AirBlueLogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      blue: file(relativePath: { eq: "AirDr_Logo.png" }) {
+      blue: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG

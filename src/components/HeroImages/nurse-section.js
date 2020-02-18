@@ -17,9 +17,8 @@ const Container = styled("div")`
 `
 
 const LogoContainer = styled("div")`
-  margin: 20px auto;
+  margin: 40px auto;
   /* justify-content: center; */
-  /* align-items: center; */
 `
 
 const NurseSection = () => {
