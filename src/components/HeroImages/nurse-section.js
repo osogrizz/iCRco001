@@ -28,7 +28,7 @@ const LogoContainer = styled("div")`
 const NurseSection = () => {
   const { logo, nurse } = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "AirDR_Logo.png" }) {
+      logo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid

@@ -131,7 +131,7 @@ const SkyHero = () => {
           }
         }
       }
-      blueLogo: file(relativePath: { eq: "AirDR_Logo.png" }) {
+      blueLogo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
