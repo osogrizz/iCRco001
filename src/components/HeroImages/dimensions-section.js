@@ -19,9 +19,9 @@ const Container = styled("div")`
 const DimensionSection = () => {
   const { wave, panels } = useStaticQuery(graphql`
     query {
-      wave: file(relativePath: { eq: "wave.jpg" }) {
+      wave: file(relativePath: { eq: "wave.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 1120, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
