@@ -121,7 +121,6 @@ const SkyHero = () => {
     registration,
     xc,
     pacs,
-    integrated,
   } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "Sky.png" }) {

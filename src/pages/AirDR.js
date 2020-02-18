@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 import SkyHero from "../components/HeroImages/sky-hero"
+import NurseSection from "../components/HeroImages/nurse-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -163,21 +164,7 @@ const AirDR = ({ data }) => {
         </ProductHeader>
         <div>
           <SkyHero />
-
-          <section>
-            <h2>Product Info</h2>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                marginTop: "50vh",
-                width: "960px",
-                margin: " 50vh auto 0",
-              }}
-            >
-              <div>detail 1</div> |<div>detail 2</div> |<div>detail 3</div>
-            </div>
-          </section>
+          <NurseSection />
 
           <section>
             <h2>Product Specs</h2>
@@ -218,6 +205,11 @@ export const query = graphql`
       }
     }
     iDR34: imageSharp(fluid: { originalName: { eq: "iDR34.png" } }) {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+    nurse: imageSharp(fluid: { originalName: { eq: "AirDR_Nurse.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
