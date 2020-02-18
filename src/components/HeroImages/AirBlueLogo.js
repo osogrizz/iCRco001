@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const AirBlueLogo = () => {
-  const data = useStaticQuery(graphql`
+  const { blue } = useStaticQuery(graphql`
     query {
       blue: file(relativePath: { eq: "AirDR_Logo.png" }) {
         sharp: childImageSharp {
@@ -15,7 +15,7 @@ const AirBlueLogo = () => {
     }
   `)
 
-  return <Img fluid={data.blue.sharp.fluid} />
+  return <Img fluid={blue.sharp.fluid} />
 }
 
 export default AirBlueLogo
