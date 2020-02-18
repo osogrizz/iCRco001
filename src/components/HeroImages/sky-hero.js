@@ -9,7 +9,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 82vh !important;
+  height: 81vh !important;
   height: -webkit-fill-available;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -131,7 +131,7 @@ const SkyHero = () => {
           }
         }
       }
-      airdr: file(relativePath: { eq: "AirDR_Icon.png" }) {
+      airdr: file(relativePath: { eq: "AirDR2.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -223,30 +223,28 @@ const SkyHero = () => {
               fontWeight: "700",
             }}
           >
-            <div style={{ width: "120px", color: "#0069aa" }}>
-              {/* <Img fluid={airdr.sharp.fluid} /> */}
-
-              <h1>KIT</h1>
+            <div style={{ width: "100%", color: "#0069aa" }}>
+              <h1 style={{ fontSize: "3.75rem" }}>KIT</h1>
             </div>
           </div>
 
           <li
             style={{
-              transform: "rotate(-315deg) translate(-11em) rotate(315deg)",
+              transform: "rotate(-324deg) translate(-11em) rotate(324deg)",
             }}
           >
             <div className="option-container">
               <Img fluid={motor.sharp.fluid} />
             </div>
-            <div>
-              <p>Motorized</p>
-              <p>Elevator</p>
+            <div style={{ width: "120px" }}>
+              <p>iCRco Integrated PACS</p>
+              <p>& Workstation PC</p>
             </div>
           </li>
 
           <li
             style={{
-              transform: "rotate(45deg) translate(11em) rotate(-45deg)",
+              transform: "rotate(60deg) translate(11em) rotate(-60deg)",
             }}
           >
             <div style={{ width: "60px" }}>
@@ -259,35 +257,20 @@ const SkyHero = () => {
           </li>
           <li
             style={{
-              transform: "rotate(135deg) translate(11em) rotate(-135deg)",
+              transform: "rotate(165deg) translate(11em) rotate(-165deg)",
             }}
           >
             <div style={{ width: "90px" }}>
               <Img fluid={workStation.sharp.fluid} />
             </div>
-            <div style={{ margin: 0, padding: 0 }}>
-              <p>True Flat</p>
-              <p>Scan Path</p>
+            <div style={{ margin: 0, padding: 0, width: "120px" }}>
+              <p>Acquisition Station</p>
             </div>
           </li>
 
           <li
             style={{
-              transform: " translate(-11em) ",
-            }}
-          >
-            <div style={{ width: "30px" }}>
-              <Img fluid={integrated.sharp.fluid} />
-            </div>
-            <div>
-              <p>Product</p>
-              <p>Registration</p>
-            </div>
-          </li>
-
-          <li
-            style={{
-              transform: "rotate(-90deg) translate(-11em) rotate(90deg)",
+              transform: "rotate(-60deg) translate(-11em) rotate(60deg)",
             }}
           >
             <div style={{ width: "60px" }}>
@@ -314,7 +297,7 @@ const SkyHero = () => {
 
           <li
             style={{
-              transform: "rotate(315deg) translate(11em) rotate(-315deg)",
+              transform: "rotate(330deg) translate(11em) rotate(-330deg)",
             }}
           >
             <div style={{ width: "80px" }}>
@@ -327,7 +310,7 @@ const SkyHero = () => {
           </li>
           <li
             style={{
-              transform: " translate(12em) ",
+              transform: "rotate(15deg) translate(12em) rotate(-15deg)",
             }}
           >
             <div style={{ width: "80px" }}>

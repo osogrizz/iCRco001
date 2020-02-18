@@ -12,8 +12,6 @@ const Container = styled("div")`
   margin-top: 50px;
 
   section {
-    /* height: 100vh; */
-    /* padding: 40px 20px; */
     z-index: 1000;
     h1,
     h2 {
@@ -33,7 +31,7 @@ const Container = styled("div")`
 const ProductHeader = styled("nav")`
   background: #e6eef0;
   width: 100%;
-  height: 120px;
+  height: 130px;
   display: flex;
   justify-content: space-evenly;
   z-index: 1000;
@@ -74,7 +72,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "60px",
+                  width: "50px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -89,7 +87,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "70px",
+                  width: "60px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -104,7 +102,7 @@ const AirDR = ({ data }) => {
             <Link>
               <div
                 style={{
-                  width: "60px",
+                  width: "50px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
@@ -112,14 +110,14 @@ const AirDR = ({ data }) => {
                 }}
               >
                 <Img fluid={data.airdrLE.fluid} />
-                <p style={{ fontSize: "0.6rem" }}>AirDR LE</p>
+                <p style={{ fontSize: "0.6rem", width: "60px" }}>AirDR LE</p>
               </div>
             </Link>
 
             <Link>
               <div
                 style={{
-                  width: "70px",
+                  width: "60px",
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
