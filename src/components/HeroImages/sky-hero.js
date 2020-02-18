@@ -210,7 +210,7 @@ const SkyHero = () => {
             margin: "30px auto 20px",
           }}
         >
-          {/* <AirBlueLogo />s */}
+          <AirBlueLogo />
         </div>
         <ProductConfig>
           <div
