@@ -14,6 +14,22 @@ const Container = styled("div")`
   div {
     width: 100%;
   }
+
+  button {
+    border: 2px solid transparent;
+    border-radius: 40px;
+    background: #0069aa;
+    color: #fff;
+    padding: 15px 40px;
+    margin: 20px;
+
+    &:hover {
+      color: #0069aa;
+      background: #fff;
+      border: 2px solid #0069aa;
+      cursor: pointer;
+    }
+  }
 `
 
 const InfoContainer = styled("div")`
@@ -23,6 +39,13 @@ const InfoContainer = styled("div")`
 const LogoContainer = styled("div")`
   max-width: 350px;
   margin: 40px auto;
+`
+
+const TextBox = styled("div")`
+  padding: 10px 150px 40px;
+  line-height: 35px;
+  letter-spacing: 1.1px;
+  font-size: 0.875rem;
 `
 
 const NurseSection = () => {
@@ -52,23 +75,37 @@ const NurseSection = () => {
         </LogoContainer>
         <h2>Digital Imaging Solutions</h2>
         <hr />
-        <div style={{ padding: "20px 80px" }}>
+        <TextBox>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            voluptates odio possimus culpa nisi iure adipisci optio quod,
-            consectetur fugiat reiciendis facilis voluptatem rerum ab ex nihil
-            blanditiis repudiandae corporis?
+            The AirDR is a durable, low-dose cassette-size DR panel loaded with
+            cutting edge, fail-safe features while ensuring patients receive the
+            lowest possible dose. This Flat Panel Detector uses a low-power WiFi
+            connection to transmit images, allowing you the freedom to capture
+            difficult or unusual projections. With a thin and sturdy carbon
+            fiber frame and wireless capabilities, it can be seamlessly
+            integratedinto new or existing x-ray rooms. Rugged and reliable, the
+            AirDR has acheived a high Water and Dust rating of IP42 to protect
+            it from outside dust particles, and if accidentally wet, it is
+            engineered to protect the panel and prevent the circuits from
+            shorting out.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-            saepe ipsa veniam rerum perferendis in repellat impedit voluptate
-            laboriosam non dolores praesentium tenetur? Dignissimos, et! Dolore
-            laboriosam ipsa porro sed?
-          </p>
-        </div>
-        <button>Learn More</button>
+        </TextBox>
+        <button>Download Brochure</button>
         <div style={{ display: "flex" }}>
-          <div>100</div> |<div>16</div> |<div>15</div>
+          <div>
+            <h2>100</h2>
+            <p>Microns</p>
+          </div>{" "}
+          |
+          <div>
+            <h2>16</h2>
+            <p>Bit Resolutions</p>
+          </div>{" "}
+          |
+          <div>
+            <h2>15</h2>
+            <p>Megapixel</p>
+          </div>
         </div>
       </InfoContainer>
       <div>
