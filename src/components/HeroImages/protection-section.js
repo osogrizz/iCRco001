@@ -1,41 +1,53 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import AirLogo from "./AirLogo"
 
-const Container = styled("div")`
+const ImageBackground = styled(BackgroundImage)`
   display: flex;
-  height: 100vh;
-  width: 100%;
-  text-align: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  height: -webkit-fill-available;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(80, 80, 80, 0.2),
+      rgba(80, 80, 80, 0.2)
+    ),
+    url("../images/protection_hero.png");
+  background-size: cover cover;
 
-  div {
-    width: 100%;
-  }
-`
-
-const InfoBox = styled("div")`
   h3 {
-    color: #0069aa;
-    letter-spacing: 1.2px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px auto 40px;
+  }
+  a {
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    z-index: 500;
+  }
+
+  @media (max-width: 800px) {
+    height: 135vh;
+    h3 {
+      font-size: 0.8rem;
+    }
   }
 `
 
-const ProtectionSection = () => {
-  const { wave, panels } = useStaticQuery(graphql`
+const ProtectionHero = () => {
+  const { protection } = useStaticQuery(graphql`
     query {
-      wave: file(relativePath: { eq: "wave.png" }) {
+      protection: file(relativePath: { eq: "protection_hero.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      panels: file(relativePath: { eq: "AirDR_Dimensions.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -43,49 +55,16 @@ const ProtectionSection = () => {
     }
   `)
   return (
-    <Container>
+    <ImageBackground
+      fluid={protection.sharp.fluid}
+      fadeIn="soft"
+      preserveStackingContext
+    >
       <div>
-        <Img
-          fluid={wave.sharp.fluid}
-          style={{ height: "50vh", backgroundSize: "cover" }}
-        />
+        <h3>Protection</h3>
       </div>
-      <div style={{ display: "flex" }}>
-        <InfoBox>
-          <h3>Specifications</h3>
-          <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
-          </p>
-        </InfoBox>{" "}
-        |
-        <InfoBox>
-          <h3>Detector</h3>
-          <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
-          </p>
-        </InfoBox>{" "}
-        |
-        <InfoBox>
-          <h3>Single Detector</h3>
-          <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
-          </p>
-        </InfoBox>
-      </div>
-    </Container>
+    </ImageBackground>
   )
 }
 
-export default ProtectionSection
+export default ProtectionHero
