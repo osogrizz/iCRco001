@@ -77,14 +77,14 @@ const NurseSection = () => {
         <hr />
         <TextBox>
           <p>
-            The AirDR is a durable, low-dose cassette-size DR panel loaded with
+            The AirDR™ is a durable, low-dose cassette-size DR panel loaded with
             cutting edge, fail-safe features while ensuring patients receive the
             lowest possible dose. This Flat Panel Detector uses a low-power WiFi
             connection to transmit images, allowing you the freedom to capture
             difficult or unusual projections. With a thin and sturdy carbon
             fiber frame and wireless capabilities, it can be seamlessly
             integratedinto new or existing x-ray rooms. Rugged and reliable, the
-            AirDR has acheived a high Water and Dust rating of IP42 to protect
+            AirDR™ has acheived a high Water and Dust rating of IP42 to protect
             it from outside dust particles, and if accidentally wet, it is
             engineered to protect the panel and prevent the circuits from
             shorting out.
