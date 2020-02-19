@@ -23,7 +23,7 @@ const InfoBox = styled("div")`
   }
 `
 
-const DimensionSection = () => {
+const ProtectionSection = () => {
   const { wave, panels } = useStaticQuery(graphql`
     query {
       wave: file(relativePath: { eq: "wave.png" }) {
@@ -88,4 +88,4 @@ const DimensionSection = () => {
   )
 }
 
-export default DimensionSection
+export default ProtectionSection

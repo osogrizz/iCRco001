@@ -6,6 +6,8 @@ import Img from "gatsby-image"
 import SkyHero from "../components/HeroImages/sky-hero"
 import NurseSection from "../components/HeroImages/nurse-section"
 import Dimension from "../components/HeroImages/dimensions-section"
+import DROptions from "../components/HeroImages/droptions-section"
+import Protection from "../components/HeroImages/protection-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -167,10 +169,8 @@ const AirDR = ({ data }) => {
           <SkyHero />
           <NurseSection />
           <Dimension />
-
-          <section>
-            <h2>Product Specs</h2>
-          </section>
+          <DROptions />
+          <Protection />
         </div>
       </Container>
     </Layout>
