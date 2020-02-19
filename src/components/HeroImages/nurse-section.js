@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Container = styled("div")`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -21,9 +23,10 @@ const Container = styled("div")`
     background: #0069aa;
     color: #fff;
     padding: 15px 40px;
-    margin: 20px;
+    margin-bottom: 60px;
 
     &:hover {
+      outline: transparent;
       color: #0069aa;
       background: #fff;
       border: 2px solid #0069aa;
@@ -46,6 +49,13 @@ const TextBox = styled("div")`
   line-height: 35px;
   letter-spacing: 1.1px;
   font-size: 0.875rem;
+`
+
+const InfoBox = styled("div")`
+  p {
+    font-weight: 600;
+    letter-spacing: 1.2px;
+  }
 `
 
 const NurseSection = () => {
@@ -92,20 +102,20 @@ const NurseSection = () => {
         </TextBox>
         <button>Download Brochure</button>
         <div style={{ display: "flex" }}>
-          <div>
+          <InfoBox>
             <h2>100</h2>
             <p>Microns</p>
-          </div>{" "}
+          </InfoBox>{" "}
           |
-          <div>
+          <InfoBox>
             <h2>16</h2>
             <p>Bit Resolutions</p>
-          </div>{" "}
+          </InfoBox>{" "}
           |
-          <div>
+          <InfoBox>
             <h2>15</h2>
             <p>Megapixel</p>
-          </div>
+          </InfoBox>
         </div>
       </InfoContainer>
       <div>

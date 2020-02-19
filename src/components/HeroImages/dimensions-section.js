@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
+import WaveHero from "./wave-hero"
 import Img from "gatsby-image"
 
 const Container = styled("div")`
@@ -33,22 +34,19 @@ const DimensionSection = () => {
           }
         }
       }
-      panels: file(relativePath: { eq: "AirDR_Dimensions.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+      # panels: file(relativePath: { eq: "AirDR_Dimensions.png" }) {
+      #   sharp: childImageSharp {
+      #     fluid(maxWidth: 800) {
+      #       ...GatsbyImageSharpFluid
+      #     }
+      #   }
+      # }
     }
   `)
   return (
     <Container>
       <div>
-        <Img
-          fluid={wave.sharp.fluid}
-          style={{ height: "50vh", backgroundSize: "cover" }}
-        />
+        <WaveHero />
       </div>
       <div style={{ display: "flex" }}>
         <InfoBox>

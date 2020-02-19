@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
-import AirBlueLogo from "./AirBlueLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
