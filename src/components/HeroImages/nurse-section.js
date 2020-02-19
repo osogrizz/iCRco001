@@ -49,6 +49,7 @@ const TextBox = styled("div")`
   line-height: 35px;
   letter-spacing: 1.1px;
   font-size: 0.875rem;
+  text-align: left;
 `
 
 const InfoBox = styled("div")`

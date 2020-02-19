@@ -2,9 +2,10 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import WaveHero from "./wave-hero"
-import Img from "gatsby-image"
 
 const Container = styled("div")`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -18,9 +19,15 @@ const Container = styled("div")`
 `
 
 const InfoBox = styled("div")`
+  padding: 5px 26px;
   h3 {
     color: #0069aa;
     letter-spacing: 1.2px;
+  }
+  p {
+    font-size: 0.875rem;
+    letter-spacing: 1.1px;
+    text-align: left;
   }
 `
 
@@ -52,33 +59,35 @@ const DimensionSection = () => {
         <InfoBox>
           <h3>Specifications</h3>
           <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
+            The <strong>AirDR™</strong> is a lightweight digital radiographic
+            system designed to optimize workflow, increase throughhput, and
+            eliminate unnecessary exposure for patients. Its durable frame and
+            wirelesscapabilities allow you complete imaging freedom foreven the
+            most difficult image projections. Using advancedacquisition
+            software, the <strong>AirDR™</strong> allows you to acheive
+            unprecedented workflow and save valuable time.
           </p>
-        </InfoBox>{" "}
-        |
+        </InfoBox>
         <InfoBox>
           <h3>Detector</h3>
           <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
+            The <strong>AirDR™</strong> is a 100-micronn, direct deposit Cesium,
+            flat panel detector. The detector transmits images to the
+            acquisition station through a WiFi connection, eliminatingthe need
+            for a hard wire. If WiFo is unavailable, a backup cable connection
+            can be used. Powered by a Cesium Iodide Scintilator, the detector
+            delivers high-resolution images at the lowest possible dose.
           </p>
-        </InfoBox>{" "}
-        |
+        </InfoBox>
         <InfoBox>
           <h3>Single Detector</h3>
           <p>
-            Lorem ipsum dolor amet slow-carb cold-pressed kogi pinterest
-            polaroid pabst ennui whatever. Post-ironic pork belly slow-carb
-            before they sold out dreamcatcher. Microdosing pork belly ethical,
-            woke offal leggings cliche mustache chia ramps taxidermy yuccie
-            green juice iPhone. Post-ironic tumblr tacos fingerstache, echo park
+            Other panels on the market can have as many as 5 separate sensorsand
+            the panel and the panel relies on these sensors to work in concert
+            to acquire an image. Multi-sensor panels are often vulnerable to
+            failure points between sensors, which cancause "no triggers" and
+            "false triggers" during a routune study and ultimately lead to
+            uneccessary repeat exposure for patients.
           </p>
         </InfoBox>
       </div>
