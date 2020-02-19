@@ -83,11 +83,11 @@ const DimensionSection = () => {
           <h3>Single Detector</h3>
           <p>
             Other panels on the market can have as many as 5 separate sensorsand
-            the panel and the panel relies on these sensors to work in concert
-            to acquire an image. Multi-sensor panels are often vulnerable to
-            failure points between sensors, which cancause "no triggers" and
-            "false triggers" during a routune study and ultimately lead to
-            uneccessary repeat exposure for patients.
+            the panel relies on these sensors to work in concert to acquire an
+            image. Multi-sensor panels are often vulnerable to failure points
+            between sensors, which cancause "no triggers" and "false triggers"
+            during a routune study and ultimately lead to uneccessary repeat
+            exposure for patients.
           </p>
         </InfoBox>
       </div>
