@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
 import WaveHero from "./wave-hero"
 
 const Container = styled("div")`
@@ -32,24 +31,6 @@ const InfoBox = styled("div")`
 `
 
 const DimensionSection = () => {
-  const { wave, panels } = useStaticQuery(graphql`
-    query {
-      wave: file(relativePath: { eq: "wave.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 1120, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      # panels: file(relativePath: { eq: "AirDR_Dimensions.png" }) {
-      #   sharp: childImageSharp {
-      #     fluid(maxWidth: 800) {
-      #       ...GatsbyImageSharpFluid
-      #     }
-      #   }
-      # }
-    }
-  `)
   return (
     <Container>
       <div>

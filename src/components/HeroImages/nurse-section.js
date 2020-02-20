@@ -7,7 +7,7 @@ const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  height: 100vh;
+  height: 92.6vh;
   width: 100%;
   text-align: center;
   flex-direction: row;
@@ -36,12 +36,20 @@ const Container = styled("div")`
 `
 
 const InfoContainer = styled("div")`
-  margin: 40px auto;
+  padding-bottom: 0;
+
+  hr {
+    height: 2px;
+    width: 650px;
+    margin: 0 auto;
+    background: #333;
+  }
 `
 
 const LogoContainer = styled("div")`
+  margin: 50px auto;
   max-width: 350px;
-  margin: 40px auto;
+  margin: 0 auto;
 `
 
 const TextBox = styled("div")`
@@ -88,11 +96,13 @@ const NurseSection = () => {
   return (
     <Container>
       <InfoContainer>
-        <LogoContainer>
+        <LogoContainer style={{ margin: "40px auto" }}>
           <Img fluid={logo.sharp.fluid} />
         </LogoContainer>
         <h2>Digital Imaging Solutions</h2>
-        <hr />
+        <div style={{ margin: "0 auto" }}>
+          <hr />
+        </div>
         <TextBox>
           <p>
             The <strong>AirDR™</strong> is a durable, low-dose cassette-size DR
@@ -103,7 +113,7 @@ const NurseSection = () => {
           </p>
           <p>
             With a thin and sturdy carbon fiber frame and wireless capabilities,
-            it can be seamlessly integratedinto new or existing x-ray rooms.
+            it can be seamlessly integrated into new or existing x-ray rooms.
             Rugged and reliable, the <strong>AirDR™</strong> has acheived a high
             Water and Dust rating of IP42 to protect it from outside dust
             particles, and if accidentally wet, it is engineered to protect the
@@ -129,8 +139,16 @@ const NurseSection = () => {
           </InfoBox>
         </LowerContainer>
       </InfoContainer>
-      <div>
-        <Img fluid={nurse.sharp.fluid} />
+      <div style={{ margin: 0, padding: 0 }}>
+        <Img
+          fluid={nurse.sharp.fluid}
+          style={{
+            height: "-webkit-fill-content",
+            width: "100%",
+            top: 0,
+            bottom: 0,
+          }}
+        />
       </div>
     </Container>
   )
