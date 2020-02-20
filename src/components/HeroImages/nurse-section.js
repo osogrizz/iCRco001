@@ -7,7 +7,8 @@ const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  height: 92.6vh;
+  /* height: 92.6vh; */
+  height: 100vh;
   width: 100%;
   text-align: center;
   flex-direction: row;
@@ -144,7 +145,8 @@ const NurseSection = () => {
           fluid={nurse.sharp.fluid}
           style={{
             height: "-webkit-fill-content",
-            width: "100%",
+            // width: "100%",
+            height: "103.5vh",
             top: 0,
             bottom: 0,
           }}
