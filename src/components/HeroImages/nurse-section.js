@@ -53,10 +53,17 @@ const TextBox = styled("div")`
 `
 
 const InfoBox = styled("div")`
+  width: 200px;
   p {
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
+`
+
+const LowerContainer = styled("div")`
+  display: flex;
+  margin: 0 auto;
+  width: 750px !important;
 `
 
 const NurseSection = () => {
@@ -88,36 +95,39 @@ const NurseSection = () => {
         <hr />
         <TextBox>
           <p>
-            The AirDR™ is a durable, low-dose cassette-size DR panel loaded with
-            cutting edge, fail-safe features while ensuring patients receive the
-            lowest possible dose. This Flat Panel Detector uses a low-power WiFi
-            connection to transmit images, allowing you the freedom to capture
-            difficult or unusual projections. With a thin and sturdy carbon
-            fiber frame and wireless capabilities, it can be seamlessly
-            integratedinto new or existing x-ray rooms. Rugged and reliable, the
-            AirDR™ has acheived a high Water and Dust rating of IP42 to protect
-            it from outside dust particles, and if accidentally wet, it is
-            engineered to protect the panel and prevent the circuits from
-            shorting out.
+            The <strong>AirDR™</strong> is a durable, low-dose cassette-size DR
+            panel loaded with cutting edge, fail-safe features while ensuring
+            patients receive the lowest possible dose. This Flat Panel Detector
+            uses a low-power WiFi connection to transmit images, allowing you
+            the freedom to capture difficult or unusual projections.
+          </p>
+          <p>
+            With a thin and sturdy carbon fiber frame and wireless capabilities,
+            it can be seamlessly integratedinto new or existing x-ray rooms.
+            Rugged and reliable, the <strong>AirDR™</strong> has acheived a high
+            Water and Dust rating of IP42 to protect it from outside dust
+            particles, and if accidentally wet, it is engineered to protect the
+            panel and prevent the circuits from shorting out.
           </p>
         </TextBox>
         <button>Download Brochure</button>
-        <div style={{ display: "flex" }}>
-          <InfoBox>
+
+        <LowerContainer>
+          <InfoBox style={{ borderRight: "2px solid black" }}>
             <h2>100</h2>
             <p>Microns</p>
-          </InfoBox>{" "}
-          |
-          <InfoBox>
+          </InfoBox>
+
+          <InfoBox style={{}}>
             <h2>16</h2>
             <p>Bit Resolutions</p>
-          </InfoBox>{" "}
-          |
-          <InfoBox>
+          </InfoBox>
+
+          <InfoBox style={{ borderLeft: "2px solid black" }}>
             <h2>15</h2>
             <p>Megapixel</p>
           </InfoBox>
-        </div>
+        </LowerContainer>
       </InfoContainer>
       <div>
         <Img fluid={nurse.sharp.fluid} />
