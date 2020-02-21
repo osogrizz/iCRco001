@@ -37,17 +37,18 @@ const ImageBackground = styled(BackgroundImage)`
 `
 
 const Container = styled("div")`
+  height: 100vh;
   width: 100%;
   text-align: center;
 `
 
 const SelectionBox = styled("div")`
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   h2 {
-    top: 50%;
     font-size: 2.8rem;
     margin: 0;
     padding: 20px;
@@ -56,12 +57,13 @@ const SelectionBox = styled("div")`
     color: #0069aa;
     align-items: center;
   }
-  a {
+  button {
     color: #fff;
     border-radius: 20px;
     border: 1px solid #fff;
     background: #ffffff55;
     z-index: 500;
+    cursor: pointer;
   }
 `
 
@@ -85,13 +87,13 @@ const OptionsHero = () => {
     >
       <Container>
         <h2>DR Options</h2>
-        <SelectionBox>
-          <Link>
+        <SelectionBox style={{ height: "50vh" }}>
+          <button>
             <h2>Cesium</h2>
-          </Link>
-          <Link>
+          </button>
+          <button>
             <h2>Gadox</h2>
-          </Link>
+          </button>
         </SelectionBox>
       </Container>
     </ImageBackground>

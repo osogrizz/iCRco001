@@ -92,7 +92,7 @@ const DropDown = styled("div")`
 
 const Navbar = () => {
   const [solutions, setSolutions] = useState(false)
-  const [specialties, setSpecialties] = useState(false)
+  // const [specialties, setSpecialties] = useState(false)
   const [service, setService] = useState(false)
   const [about, setAbout] = useState(false)
   const [contact, setContact] = useState(false)
@@ -100,9 +100,9 @@ const Navbar = () => {
   const handleSolutions = () => {
     setSolutions(!solutions)
   }
-  const handleSpecialties = () => {
-    setSpecialties(!specialties)
-  }
+  // const handleSpecialties = () => {
+  //   setSpecialties(!specialties)
+  // }
   const handleService = () => {
     setService(!service)
   }
@@ -141,7 +141,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <Link
+        {/* <Link
           className="top-nav"
           activeStyle={activeStyles}
           to="/specialties/"
@@ -166,7 +166,7 @@ const Navbar = () => {
               </DropDown>
             ) : null}
           </div>
-        </Link>
+        </Link> */}
         <Link
           className="top-nav"
           activeStyle={activeStyles}
