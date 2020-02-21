@@ -14,7 +14,7 @@ const HeaderWrapper = styled("div")`
   left: 0;
   width: 100%;
   background: rgba(20, 20, 20, 0.8);
-  z-index: 100;
+  z-index: 900;
 `
 
 const HeaderMain = styled("header")`

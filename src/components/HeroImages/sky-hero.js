@@ -19,7 +19,7 @@ const ImageBackground = styled(BackgroundImage)`
     ),
     url("../images/Sky.png");
   background-size: cover cover;
-  z-index: -10;
+  z-index: 1;
   overflow: hidden;
 
   h3 {
@@ -33,7 +33,6 @@ const ImageBackground = styled(BackgroundImage)`
     border-radius: 20px;
     border: 1px solid #fff;
     padding: 10px 20px;
-    z-index: 500;
   }
 
   @media (max-width: 800px) {
@@ -55,6 +54,7 @@ const ProductConfig = styled("ul")`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* z-index: 1; */
 
   transition: 0.24s 0.2s;
 

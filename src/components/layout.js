@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Header style={{ zIndex: 900 }} />
       <div
         style={{
           margin: `0 auto`,

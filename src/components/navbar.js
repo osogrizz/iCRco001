@@ -31,6 +31,7 @@ const NavContainer = styled("div")`
   font-weight: 700;
   letter-spacing: 1px;
   height: 52px;
+  z-index: 100;
 
   .top-nav {
     padding: 10px 0;

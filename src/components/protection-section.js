@@ -71,8 +71,6 @@ const InfoCard = styled("div")`
   border-radius: 20px;
   border: 1px solid #fff;
   background: #ffffff55;
-  /* z-index: 500; */
-  /* cursor: pointer; */
 
   p {
     font-weight: 500;
