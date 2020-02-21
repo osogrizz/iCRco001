@@ -20,6 +20,7 @@ const ImageBackground = styled(BackgroundImage)`
     url("../images/Sky.png");
   background-size: cover cover;
   z-index: -10;
+  overflow: hidden;
 
   h3 {
     color: #fff;

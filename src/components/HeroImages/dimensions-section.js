@@ -6,11 +6,14 @@ const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 
   div {
     width: 100%;

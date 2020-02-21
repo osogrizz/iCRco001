@@ -2,12 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import NurseHero from "../components/HeroImages/nurse-hero"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  /* height: 92.6vh; */
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -39,6 +39,8 @@ const Container = styled("div")`
 
 const InfoContainer = styled("div")`
   padding-bottom: 0;
+  margin-bottom: 0;
+  width: 120%;
 
   hr {
     height: 2px;
@@ -64,6 +66,7 @@ const TextBox = styled("div")`
 
 const InfoBox = styled("div")`
   width: 200px;
+
   p {
     font-weight: 700;
     letter-spacing: 2px;
@@ -143,7 +146,7 @@ const NurseSection = () => {
         </LowerContainer>
       </InfoContainer>
       {/* <div style={{ margin: 0, padding: 0 }}> */}
-      <Img
+      {/* <Img
         fluid={nurse.sharp.fluid}
         style={{
           height: "100vh",
@@ -154,8 +157,10 @@ const NurseSection = () => {
           // bottom: 0,
           // backgroundSize: "cover cover",
         }}
-      />
+      /> */}
       {/* </div> */}
+
+      <NurseHero />
     </Container>
   )
 }
