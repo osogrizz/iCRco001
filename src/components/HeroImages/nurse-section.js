@@ -66,6 +66,7 @@ const InfoBox = styled("div")`
   p {
     font-weight: 700;
     letter-spacing: 2px;
+    margin: 0;
   }
 `
 
@@ -140,18 +141,20 @@ const NurseSection = () => {
           </InfoBox>
         </LowerContainer>
       </InfoContainer>
-      <div style={{ margin: 0, padding: 0 }}>
-        <Img
-          fluid={nurse.sharp.fluid}
-          style={{
-            height: "-webkit-fill-content",
-            // width: "100%",
-            height: "103.5vh",
-            top: 0,
-            bottom: 0,
-          }}
-        />
-      </div>
+      {/* <div style={{ margin: 0, padding: 0 }}> */}
+      <Img
+        fluid={nurse.sharp.fluid}
+        style={{
+          height: "100vh",
+          width: "80vw",
+          // overflowY: "hidden",
+          // height: "103.5vh",
+          // top: 0,
+          // bottom: 0,
+          // backgroundSize: "cover cover",
+        }}
+      />
+      {/* </div> */}
     </Container>
   )
 }
