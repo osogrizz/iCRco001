@@ -58,7 +58,7 @@ const AirDRHero = () => {
     query {
       image: file(relativePath: { eq: "AirDR-hero.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
+          fluid(maxWidth: 1120, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

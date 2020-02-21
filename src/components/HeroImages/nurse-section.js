@@ -13,6 +13,7 @@ const Container = styled("div")`
   text-align: center;
   flex-direction: row;
   justify-content: space-evenly;
+  overflow: hidden;
 
   div {
     width: 100%;
