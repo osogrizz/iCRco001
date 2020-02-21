@@ -44,8 +44,8 @@ const InfoContainer = styled("div")`
 
   hr {
     height: 2px;
-    width: 650px;
-    margin: 0 auto;
+    width: 580px;
+    margin: 0 auto 5px;
     background: #333;
   }
 `
@@ -58,7 +58,7 @@ const LogoContainer = styled("div")`
 
 const TextBox = styled("div")`
   padding: 10px 150px 40px;
-  line-height: 35px;
+  line-height: 30px;
   letter-spacing: 1.1px;
   font-size: 0.875rem;
   text-align: left;

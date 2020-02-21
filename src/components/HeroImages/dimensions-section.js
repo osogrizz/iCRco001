@@ -21,7 +21,8 @@ const Container = styled("div")`
 `
 
 const InfoBox = styled("div")`
-  padding: 5px 26px;
+  padding: 35px 26px 0;
+  height: 40vh;
   h3 {
     color: #0069aa;
     letter-spacing: 1.2px;
@@ -46,7 +47,7 @@ const DimensionSection = () => {
             The <strong>AirDR™</strong> is a lightweight digital radiographic
             system designed to optimize workflow, increase throughhput, and
             eliminate unnecessary exposure for patients. Its durable frame and
-            wirelesscapabilities allow you complete imaging freedom foreven the
+            wireless capabilities allow you complete imaging freedom foreven the
             most difficult image projections. Using advancedacquisition
             software, the <strong>AirDR™</strong> allows you to acheive
             unprecedented workflow and save valuable time.
@@ -58,7 +59,7 @@ const DimensionSection = () => {
             The <strong>AirDR™</strong> is a 100-micronn, direct deposit Cesium,
             flat panel detector. The detector transmits images to the
             acquisition station through a WiFi connection, eliminatingthe need
-            for a hard wire. If WiFo is unavailable, a backup cable connection
+            for a hard wire. If WiFi is unavailable, a backup cable connection
             can be used. Powered by a Cesium Iodide Scintilator, the detector
             delivers high-resolution images at the lowest possible dose.
           </p>
