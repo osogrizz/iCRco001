@@ -92,7 +92,7 @@ const InfoCard = styled("div")`
     bottom: 0;
     list-style: none;
     &::before {
-      content: "check ";
+      content: "✓ ";
     }
   }
 `
