@@ -13,11 +13,7 @@ const ImageBackground = styled(BackgroundImage)`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
-  background-image: linear-gradient(
-      rgba(80, 80, 80, 0.2),
-      rgba(80, 80, 80, 0.2)
-    ),
-    url("../images/protection_hero.png");
+  background-image: url("../images/protection_hero.png");
   background-size: cover cover;
 
   h2 {
@@ -60,7 +56,9 @@ const SelectionBox = styled("div")`
   button {
     color: #fff;
     border-radius: 20px;
-    border: 1px solid #fff;
+    border: none;
+    outline: orange;
+    /* border: 1px solid #fff; */
     background: #ffffff55;
     cursor: pointer;
   }
