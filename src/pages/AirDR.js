@@ -73,7 +73,7 @@ const AirDR = ({ data }) => {
       <Container>
         <ProductHeader>
           <div className="product-nav">
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "50px",
@@ -88,7 +88,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "60px",
@@ -103,7 +103,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "50px",
@@ -118,7 +118,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "60px",
@@ -133,7 +133,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "40px",
@@ -149,7 +149,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link>
+            <Link to="/">
               <div
                 style={{
                   width: "40px",
