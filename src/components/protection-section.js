@@ -156,12 +156,13 @@ const ProtectionHero = () => {
                 panel cover can travel with your AirDR and fit into any table
                 and wall stand with no modifications.
               </p>
-              <div>
+              <div style={{ width: "100%", height: "250px" }}>
                 <Img
                   fluid={airCase.sharp.fluid}
                   style={{
-                    width: "60%",
-                    top: -70,
+                    width: "70%",
+                    top: -80,
+                    left: -20,
                     backgroundSize: "cover",
                     margin: "0 auto",
                   }}
@@ -200,12 +201,12 @@ const ProtectionHero = () => {
                 deterioration while still maintaining the highest quality of
                 imaging.
               </p>
-              <div>
+              <div style={{ width: "100%", height: "250px" }}>
                 <Img
                   fluid={tough.sharp.fluid}
                   style={{
-                    width: "50%",
-                    top: -60,
+                    width: "60%",
+                    top: -110,
                     backgroundSize: "cover",
                     margin: "0 auto",
                   }}
