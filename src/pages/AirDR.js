@@ -3,11 +3,11 @@ import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
-import SkyHero from "../components/HeroImages/sky-hero"
-import NurseSection from "../components/nurse-section"
-import Dimension from "../components/HeroImages/dimensions-section"
-import DROptions from "../components/HeroImages/droptions-section"
-import Protection from "../components/protection-section"
+import SkyHero from "../components/AirDR/sky-hero"
+import NurseSection from "../components/AirDR/nurse-section"
+import Dimension from "../components/AirDR/dimensions-section"
+import DROptions from "../components/AirDR/droptions-section"
+import Protection from "../components/AirDR/protection-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -73,7 +73,7 @@ const AirDR = ({ data }) => {
       <Container>
         <ProductHeader>
           <div className="product-nav">
-            <Link to="/">
+            <Link to="/AirDR">
               <div
                 style={{
                   width: "50px",
@@ -88,7 +88,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link to="/">
+            <Link to="/AirDR_C">
               <div
                 style={{
                   width: "60px",
@@ -103,7 +103,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link to="/">
+            <Link to="/AirDR_LE">
               <div
                 style={{
                   width: "50px",
@@ -118,7 +118,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link to="/">
+            <Link to="/AirDR_LE_C">
               <div
                 style={{
                   width: "60px",
@@ -133,7 +133,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link to="/">
+            <Link to="/iDR_L">
               <div
                 style={{
                   width: "40px",
@@ -149,7 +149,7 @@ const AirDR = ({ data }) => {
               </div>
             </Link>
 
-            <Link to="/">
+            <Link to="/iDR34">
               <div
                 style={{
                   width: "40px",
