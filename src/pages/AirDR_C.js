@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 // import AirDrVideo from "../images/AirDR_Animation.mp4"
 import AirDRCHero from "../components/AirDRC/airdrC-hero"
 import NurseSection from "../components/AirDR/nurse-section"
+import AirDRCSection2 from "../components/AirDRC/airDRC-section-2"
 import Dimension from "../components/AirDR/dimensions-section"
 import DROptions from "../components/AirDR/droptions-section"
 import Protection from "../components/AirDR/protection-section"
@@ -168,7 +169,7 @@ const AirDRC = ({ data }) => {
 
         <div>
           <AirDRCHero />
-          <NurseSection />
+          <AirDRCSection2 />
           <Dimension />
           <DROptions />
           <Protection />

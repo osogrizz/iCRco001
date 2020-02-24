@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import NurseHero from "../HeroImages/nurse-hero"
+import NurseHeroC from "../HeroImages/nurse-heroC"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -11,7 +11,7 @@ const Container = styled("div")`
   height: 100vh;
   width: 100%;
   text-align: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
   overflow: hidden;
 
@@ -80,20 +80,13 @@ const LowerContainer = styled("div")`
   width: 750px !important;
 `
 
-const NurseSection = () => {
-  const { logo, nurse } = useStaticQuery(graphql`
+const AirDRCSection2 = () => {
+  const { logo } = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
+      logo: file(relativePath: { eq: "AirDRc_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      nurse: file(relativePath: { eq: "AirDR_Nurse.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -101,7 +94,7 @@ const NurseSection = () => {
   `)
   return (
     <Container>
-      <InfoContainer>
+      {/* <InfoContainer style={{}}>
         <LogoContainer style={{ margin: "40px auto" }}>
           <Img fluid={logo.sharp.fluid} />
         </LogoContainer>
@@ -111,19 +104,12 @@ const NurseSection = () => {
         </div>
         <TextBox>
           <p>
-            The <strong>AirDR™</strong> is a durable, low-dose cassette-size DR
-            panel loaded with cutting edge, fail-safe features while ensuring
-            patients receive the lowest possible dose. This Flat Panel Detector
-            uses a low-power WiFi connection to transmit images, allowing you
-            the freedom to capture difficult or unusual projections.
-          </p>
-          <p>
-            With a thin and sturdy carbon fiber frame and wireless capabilities,
-            it can be seamlessly integrated into new or existing x-ray rooms.
-            Rugged and reliable, the <strong>AirDR™</strong> has acheived a high
-            Water and Dust rating of IP42 to protect it from outside dust
-            particles, and if accidentally wet, it is engineered to protect the
-            panel and prevent the circuits from shorting out.
+            Introducing the latest in DR innovation from iCRco, the{" "}
+            <span>AirDRc™</span>. A fully-ruggedized, cassette-size, wired flat
+            panel DR engineered for the modern healthcare professional. The
+            detector provides integrated AED (Automatic Exposure Detection)
+            which allows for seamless, retrofit integration and no-hassle
+            implementation into your practice.
           </p>
         </TextBox>
         <button>Download Brochure</button>
@@ -144,25 +130,10 @@ const NurseSection = () => {
             <p>Megapixel</p>
           </InfoBox>
         </LowerContainer>
-      </InfoContainer>
-      {/* <div style={{ margin: 0, padding: 0 }}> */}
-      {/* <Img
-        fluid={nurse.sharp.fluid}
-        style={{
-          height: "100vh",
-          width: "80vw",
-          // overflowY: "hidden",
-          // height: "103.5vh",
-          // top: 0,
-          // bottom: 0,
-          // backgroundSize: "cover cover",
-        }}
-      /> */}
-      {/* </div> */}
-
-      <NurseHero />
+      </InfoContainer> */}
+      <NurseHeroC />
     </Container>
   )
 }
 
-export default NurseSection
+export default AirDRCSection2
