@@ -81,19 +81,12 @@ const LowerContainer = styled("div")`
 `
 
 const NurseSection = () => {
-  const { logo, nurse } = useStaticQuery(graphql`
+  const { logo } = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      nurse: file(relativePath: { eq: "AirDR_Nurse.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -145,20 +138,6 @@ const NurseSection = () => {
           </InfoBox>
         </LowerContainer>
       </InfoContainer>
-      {/* <div style={{ margin: 0, padding: 0 }}> */}
-      {/* <Img
-        fluid={nurse.sharp.fluid}
-        style={{
-          height: "100vh",
-          width: "80vw",
-          // overflowY: "hidden",
-          // height: "103.5vh",
-          // top: 0,
-          // bottom: 0,
-          // backgroundSize: "cover cover",
-        }}
-      /> */}
-      {/* </div> */}
 
       <NurseHero />
     </Container>
