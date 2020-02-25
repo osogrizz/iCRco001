@@ -1,147 +1,82 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import NurseHero from "../HeroImages/nurse-hero"
+import WaveHero2 from "../HeroImages/wave-hero-2"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  height: 100vh;
   width: 100%;
   text-align: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 
   div {
     width: 100%;
   }
-
-  button {
-    border: 2px solid transparent;
-    border-radius: 8px;
-    background: #0069aa;
-    color: #fff;
-    padding: 15px 40px;
-    margin-bottom: 60px;
-
-    &:hover {
-      outline: transparent;
-      color: #0069aa;
-      background: #fff;
-      border: 2px solid #0069aa;
-      cursor: pointer;
-    }
-  }
-`
-
-const InfoContainer = styled("div")`
-  padding-bottom: 0;
-  margin-bottom: 0;
-  width: 120%;
-
-  hr {
-    height: 2px;
-    width: 580px;
-    margin: 0 auto 5px;
-    background: #333;
-  }
-`
-
-const LogoContainer = styled("div")`
-  margin: 50px auto;
-  max-width: 350px;
-  margin: 0 auto;
-`
-
-const TextBox = styled("div")`
-  padding: 10px 150px 40px;
-  line-height: 30px;
-  letter-spacing: 1.1px;
-  font-size: 0.875rem;
-  text-align: left;
 `
 
 const InfoBox = styled("div")`
-  width: 200px;
-
+  padding: 35px 26px 0;
+  height: 40vh;
+  h3 {
+    color: #0069aa;
+    letter-spacing: 1.2px;
+  }
   p {
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
+    font-size: 0.875rem;
+    letter-spacing: 1.1px;
+    text-align: left;
   }
 `
 
-const LowerContainer = styled("div")`
-  display: flex;
-  margin: 0 auto;
-  width: 750px !important;
-`
-
-const NurseSection = () => {
-  const { logo } = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
+const DimensionSection2 = () => {
   return (
     <Container>
-      <InfoContainer>
-        <LogoContainer style={{ margin: "40px auto" }}>
-          <Img fluid={logo.sharp.fluid} />
-        </LogoContainer>
-        <h2>Digital Imaging Solutions</h2>
-        <div style={{ margin: "0 auto" }}>
-          <hr />
-        </div>
-        <TextBox>
+      <div>
+        <WaveHero2 />
+      </div>
+      <div style={{ display: "flex" }}>
+        <InfoBox>
+          <h3>Specifications</h3>
           <p>
-            The <strong>AirDR™</strong> is a durable, low-dose cassette-size DR
-            panel loaded with cutting edge, fail-safe features while ensuring
-            patients receive the lowest possible dose. This Flat Panel Detector
-            uses a low-power WiFi connection to transmit images, allowing you
-            the freedom to capture difficult or unusual projections.
+            The <strong>AirDR™</strong> is a lightweight digital radiographic
+            system designed to optimize workflow, increase throughhput, and
+            eliminate unnecessary exposure for patients. Its durable frame and
+            wireless capabilities allow you complete imaging freedom foreven the
+            most difficult image projections. Using advancedacquisition
+            software, the <strong>AirDR™</strong> allows you to acheive
+            unprecedented workflow and save valuable time.
           </p>
+        </InfoBox>
+        <InfoBox>
+          <h3>Detector</h3>
           <p>
-            With a thin and sturdy carbon fiber frame and wireless capabilities,
-            it can be seamlessly integrated into new or existing x-ray rooms.
-            Rugged and reliable, the <strong>AirDR™</strong> has acheived a high
-            Water and Dust rating of IP42 to protect it from outside dust
-            particles, and if accidentally wet, it is engineered to protect the
-            panel and prevent the circuits from shorting out.
+            The <strong>AirDR™</strong> is a 100-micronn, direct deposit Cesium,
+            flat panel detector. The detector transmits images to the
+            acquisition station through a WiFi connection, eliminatingthe need
+            for a hard wire. If WiFi is unavailable, a backup cable connection
+            can be used. Powered by a Cesium Iodide Scintilator, the detector
+            delivers high-resolution images at the lowest possible dose.
           </p>
-        </TextBox>
-        <button>Download Brochure</button>
-
-        <LowerContainer>
-          <InfoBox style={{ borderRight: "2px solid black" }}>
-            <h2>100</h2>
-            <p>Microns</p>
-          </InfoBox>
-
-          <InfoBox style={{}}>
-            <h2>16</h2>
-            <p>Bit Resolutions</p>
-          </InfoBox>
-
-          <InfoBox style={{ borderLeft: "2px solid black" }}>
-            <h2>15</h2>
-            <p>Megapixel</p>
-          </InfoBox>
-        </LowerContainer>
-      </InfoContainer>
-
-      <NurseHero />
+        </InfoBox>
+        <InfoBox>
+          <h3>Single Detector</h3>
+          <p>
+            Other panels on the market can have as many as 5 separate sensorsand
+            the panel relies on these sensors to work in concert to acquire an
+            image. Multi-sensor panels are often vulnerable to failure points
+            between sensors, which cancause "no triggers" and "false triggers"
+            during a routune study and ultimately lead to uneccessary repeat
+            exposure for patients.
+          </p>
+        </InfoBox>
+      </div>
     </Container>
   )
 }
 
-export default NurseSection
+export default DimensionSection2
