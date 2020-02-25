@@ -25,6 +25,7 @@ const Container = styled("div")`
     background: #0069aa;
     color: #fff;
     padding: 15px 40px;
+    margin-top: 80px;
     margin-bottom: 60px;
 
     &:hover {
@@ -33,6 +34,9 @@ const Container = styled("div")`
       background: #fff;
       border: 2px solid #0069aa;
       cursor: pointer;
+    }
+    @media (max-width: 1781px) {
+      margin-top: 0;
     }
   }
 `
