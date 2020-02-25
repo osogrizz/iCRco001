@@ -21,7 +21,7 @@ const Container = styled("div")`
 
   button {
     border: 2px solid transparent;
-    border-radius: 4px;
+    border-radius: 12px;
     background: #0069aa;
     color: #fff;
     padding: 15px 40px;
