@@ -59,10 +59,7 @@ const InfoContainer = styled("div")`
   }
 
   @media (max-width: 1480px) {
-    /* max-width: 100vw; */
-    /* heigth: 100vh; */
     margin: 0 auto;
-    /* background: rgba(200, 200, 200, 0.8); */
   }
 `
 
@@ -86,7 +83,7 @@ const TextBox = styled("div")`
 
 const InfoBox = styled("div")`
   /* width: 100%; */
-  h2 {
+  width: 180px {
     font-size: 1.45rem;
   }
 
@@ -101,7 +98,7 @@ const InfoBox = styled("div")`
 const LowerContainer = styled("div")`
   display: flex;
   margin: 0 auto;
-  width: 410px !important;
+  width: 400px !important;
   padding: auto;
   padding-bottom: 100vh;
 `
@@ -158,7 +155,7 @@ const NurseHero = () => {
               <p>Microns</p>
             </InfoBox>
 
-            <InfoBox style={{}}>
+            <InfoBox style={{ margin: "0 20px" }}>
               <h2>16</h2>
               <p>Bit Resolutions</p>
             </InfoBox>
