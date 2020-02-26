@@ -104,7 +104,7 @@ const AirDRCSection6 = () => {
           }
         }
       }
-      airCase: file(relativePath: { eq: "AirDR_Case.png" }) {
+      airCase: file(relativePath: { eq: "AirDRC_Case.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -160,8 +160,8 @@ const AirDRCSection6 = () => {
                 <Img
                   fluid={airCase.sharp.fluid}
                   style={{
-                    width: "70%",
-                    top: -96,
+                    width: "62%",
+                    top: -30,
                     left: -20,
                     backgroundSize: "cover",
                     margin: "0 auto",
