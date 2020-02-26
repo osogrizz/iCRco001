@@ -25,6 +25,7 @@ const InfoBox = styled("div")`
   h3 {
     color: #0069aa;
     letter-spacing: 1.2px;
+    text-align: left;
   }
   p {
     font-size: 0.875rem;
@@ -64,7 +65,7 @@ const DimensionSection2 = () => {
           </p>
         </InfoBox>
         <InfoBox>
-          <h3>Single Detector</h3>
+          <h3>Single Sensor Detector</h3>
           <p>
             Other panels on the market can have as many as 5 separate sensorsand
             the panel relies on these sensors to work in concert to acquire an

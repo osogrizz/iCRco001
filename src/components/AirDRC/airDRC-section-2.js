@@ -94,43 +94,6 @@ const AirDRCSection2 = () => {
   `)
   return (
     <Container>
-      {/* <InfoContainer style={{}}>
-        <LogoContainer style={{ margin: "40px auto" }}>
-          <Img fluid={logo.sharp.fluid} />
-        </LogoContainer>
-        <h2>Digital Imaging Solutions</h2>
-        <div style={{ margin: "0 auto" }}>
-          <hr />
-        </div>
-        <TextBox>
-          <p>
-            Introducing the latest in DR innovation from iCRco, the{" "}
-            <span>AirDRc™</span>. A fully-ruggedized, cassette-size, wired flat
-            panel DR engineered for the modern healthcare professional. The
-            detector provides integrated AED (Automatic Exposure Detection)
-            which allows for seamless, retrofit integration and no-hassle
-            implementation into your practice.
-          </p>
-        </TextBox>
-        <button>Download Brochure</button>
-
-        <LowerContainer>
-          <InfoBox style={{ borderRight: "2px solid black" }}>
-            <h2>100</h2>
-            <p>Microns</p>
-          </InfoBox>
-
-          <InfoBox style={{}}>
-            <h2>16</h2>
-            <p>Bit Resolutions</p>
-          </InfoBox>
-
-          <InfoBox style={{ borderLeft: "2px solid black" }}>
-            <h2>15</h2>
-            <p>Megapixel</p>
-          </InfoBox>
-        </LowerContainer>
-      </InfoContainer> */}
       <NurseHeroC />
     </Container>
   )
