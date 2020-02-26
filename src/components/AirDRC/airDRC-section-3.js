@@ -21,7 +21,7 @@ const Container = styled("div")`
 
 const InfoBox = styled("div")`
   padding: 35px 26px 0;
-  height: 40vh;
+  height: 48vh;
   h3 {
     color: #0069aa;
     letter-spacing: 1.2px;

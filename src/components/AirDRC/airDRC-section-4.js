@@ -8,7 +8,7 @@ const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   text-align: center;
   flex-direction: row-reverse;
@@ -22,11 +22,11 @@ const InfoContainer = styled("div")`
   width: 100%;
   h2 {
     color: #0069aa;
-    font-size: 3rem;
+    font-size: 2.765rem;
     margin: 20px auto;
   }
   p {
-    margin: 20px 10%;
+    margin: 10px 10%;
     text-align: left;
     font-size: 0.775rem;
   }

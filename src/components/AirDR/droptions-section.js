@@ -8,8 +8,8 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  height: -webkit-fill-available;
+  height: 95vh;
+  /* height: -webkit-fill-available; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;

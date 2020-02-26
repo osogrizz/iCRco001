@@ -8,8 +8,8 @@ import AirDRCSection2 from "../components/AirDRC/airDRC-section-2"
 import AirDRCSection3 from "../components/AirDRC/airDRC-section-3"
 import AirDRCSection4 from "../components/AirDRC/airDRC-section-4"
 import AirDRCSection5 from "../components/AirDRC/airDRC-section-5"
+import AirDRCSection6 from "../components/AirDRC/airDRC-section-6"
 import DROptions from "../components/AirDR/droptions-section"
-import Protection from "../components/AirDR/protection-section"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -175,7 +175,7 @@ const AirDRC = ({ data }) => {
           <AirDRCSection4 />
           <AirDRCSection5 />
           <DROptions />
-          <Protection />
+          <AirDRSection6 />
         </div>
       </Container>
     </Layout>

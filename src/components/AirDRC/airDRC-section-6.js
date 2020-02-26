@@ -94,7 +94,7 @@ const InfoCard = styled("div")`
   }
 `
 
-const ProtectionHero = () => {
+const AirDRCSection6 = () => {
   const { protection, airCase, tough } = useStaticQuery(graphql`
     query {
       protection: file(relativePath: { eq: "protection_hero.png" }) {
@@ -228,4 +228,4 @@ const ProtectionHero = () => {
   )
 }
 
-export default ProtectionHero
+export default AirDRCSection6
