@@ -11,83 +11,37 @@ const Container = styled("div")`
   height: 100vh;
   width: 100%;
   text-align: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   overflow: hidden;
-
-  div {
-    width: 100%;
-  }
-
-  button {
-    border: 2px solid transparent;
-    border-radius: 12px;
-    background: #0069aa;
-    color: #fff;
-    padding: 15px 40px;
-    margin-top: 80px;
-    margin-bottom: 60px;
-
-    &:hover {
-      outline: transparent;
-      color: #0069aa;
-      background: #fff;
-      border: 2px solid #0069aa;
-      cursor: pointer;
-    }
-    @media (max-width: 1781px) {
-      margin-top: 0;
-    }
-  }
-`
-
-const InfoContainer = styled("div")`
-  padding-bottom: 0;
-  margin-bottom: 0;
-  width: 120%;
-
-  hr {
-    height: 2px;
-    width: 580px;
-    margin: 0 auto 5px;
-    background: #333;
-  }
-`
-
-const LogoContainer = styled("div")`
-  margin: 50px auto;
-  max-width: 350px;
-  margin: 0 auto;
-`
-
-const TextBox = styled("div")`
-  padding: 10px 150px 40px;
-  line-height: 30px;
-  letter-spacing: 1.1px;
-  font-size: 0.875rem;
-  text-align: left;
 `
 
 const InfoBox = styled("div")`
-  width: 200px;
-
+  padding: 35px 26px 0;
+  height: 40vh;
+  h3 {
+    color: #0069aa;
+    letter-spacing: 1.2px;
+    text-align: left;
+  }
   p {
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
+    font-size: 0.875rem;
+    letter-spacing: 1.1px;
+    text-align: left;
   }
 `
 
-const LowerContainer = styled("div")`
-  display: flex;
-  margin: 0 auto;
-  width: 750px !important;
-`
-
 const AirDRCSection5 = () => {
-  const { logo } = useStaticQuery(graphql`
+  const { integrated, workflow } = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "AirDr_Logo1.png" }) {
+      integrated: file(relativePath: { eq: "AirDr_Logo1.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      workflow: file(relativePath: { eq: "AirDr_Logo1.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -98,7 +52,47 @@ const AirDRCSection5 = () => {
   `)
   return (
     <Container>
-      <NurseHero />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ width: "500px", margin: "0 auto" }}>
+          <Img fluid={integrated.sharp.fluid} />
+        </div>
+        <div style={{ width: "500px", margin: "0 auto" }}>
+          <Img fluid={workflow.sharp.fluid} />
+        </div>
+      </div>
+
+      <div style={{ display: "flex" }}>
+        <InfoBox>
+          <h3>Specifications</h3>
+          <p>
+            The <strong>AirDR™</strong> is a lightweight digital radiographic
+            system designed to optimize workflow, increase throughhput, and
+            eliminate unnecessary exposure for patients. Its durable frame and
+            wireless capabilities allow you complete imaging freedom foreven the
+            most difficult image projections. Using advancedacquisition
+            software, the <strong>AirDR™</strong> allows you to acheive
+            unprecedented workflow and save valuable time.
+          </p>
+        </InfoBox>
+
+        <InfoBox>
+          <h3>Single Sensor Detector</h3>
+          <p>
+            Other panels on the market can have as many as 5 separate sensorsand
+            the panel relies on these sensors to work in concert to acquire an
+            image. Multi-sensor panels are often vulnerable to failure points
+            between sensors, which cancause "no triggers" and "false triggers"
+            during a routune study and ultimately lead to uneccessary repeat
+            exposure for patients.
+          </p>
+        </InfoBox>
+      </div>
     </Container>
   )
 }
