@@ -8,7 +8,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 50vh; */
+  height: 60vh;
   width: 100%;
   background-image: url("../images/wave.png");
   background-size: cover cover;

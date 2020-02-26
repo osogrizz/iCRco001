@@ -20,8 +20,9 @@ const Container = styled("div")`
 `
 
 const InfoBox = styled("div")`
-  padding: 35px 26px 0;
-  height: 48vh;
+  padding: 30px 60px 0;
+  max-width: 600px;
+  height: 40vh;
   h3 {
     color: #0069aa;
     letter-spacing: 1.2px;
@@ -40,7 +41,7 @@ const DimensionSection2 = () => {
       <div>
         <WaveHero2 />
       </div>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", margin: "0 40px" }}>
         <InfoBox>
           <h3>Specifications</h3>
           <p>

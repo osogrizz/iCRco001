@@ -61,10 +61,10 @@ const AirDRCSection5 = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ width: "500px", margin: "40px auto" }}>
+        <div style={{ width: "700px", margin: "40px auto" }}>
           <Img fluid={integrated.sharp.fluid} />
         </div>
-        <div style={{ width: "500px", margin: "40px auto" }}>
+        <div style={{ width: "700px", margin: "40px auto" }}>
           <Img fluid={workflow.sharp.fluid} />
         </div>
       </div>
