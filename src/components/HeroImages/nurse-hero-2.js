@@ -10,11 +10,7 @@ const ImageBackground = styled(BackgroundImage)`
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-image: linear-gradient(
-      rgba(80, 80, 80, 0.1),
-      rgba(80, 80, 80, 0.1)
-    ),
-    url("../images/airdrc-image01.png");
+  background-image: url("../images/airdrc-image01.png");
   background-size: cover cover;
 
   @media (max-width: 800px) {
