@@ -175,7 +175,7 @@ const AirDRC = ({ data }) => {
           <AirDRCSection4 />
           <AirDRCSection5 />
           <DROptions />
-          <AirDRSection6 />
+          <AirDRCSection6 />
         </div>
       </Container>
     </Layout>
