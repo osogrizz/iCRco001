@@ -17,9 +17,10 @@ const Container = styled("div")`
 `
 
 const InfoBox = styled("div")`
+  width: 800px;
   padding: 35px 26px 0;
   height: 40vh;
-  h3 {
+  h4 {
     color: #0069aa;
     letter-spacing: 1.2px;
     text-align: left;
@@ -67,29 +68,32 @@ const AirDRCSection5 = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
         <InfoBox>
-          <h3>Specifications</h3>
+          <h4>
+            Integrated AED for "No-Hassle Implentation" into existing X-Ray
+            rooms
+          </h4>
           <p>
-            The <strong>AirDR™</strong> is a lightweight digital radiographic
-            system designed to optimize workflow, increase throughhput, and
-            eliminate unnecessary exposure for patients. Its durable frame and
-            wireless capabilities allow you complete imaging freedom foreven the
-            most difficult image projections. Using advancedacquisition
-            software, the <strong>AirDR™</strong> allows you to acheive
-            unprecedented workflow and save valuable time.
+            The AirDR c offers incredible versatility and lightning-fast image
+            display speed. This cassette-sized, flat panel fits into existing
+            tables and wall buckys. With a small upfront investment you can
+            transform your radiology department into an efficient, profit center
+            with increased patient throughput and a smoother acquisition
+            experience.
           </p>
         </InfoBox>
 
         <InfoBox>
-          <h3>Single Sensor Detector</h3>
+          <h4>Improved Workflow</h4>
           <p>
-            Other panels on the market can have as many as 5 separate sensorsand
-            the panel relies on these sensors to work in concert to acquire an
-            image. Multi-sensor panels are often vulnerable to failure points
-            between sensors, which cancause "no triggers" and "false triggers"
-            during a routune study and ultimately lead to uneccessary repeat
-            exposure for patients.
+            The AirDR c provides a lightning-fast display time of 2.5 seconds.
+            You'll never experience battery failure or battery depletion during
+            use, saving you valuable time. iCRco has been introducing proven
+            imaging solutions across the medical industry for nearly 25 years.
+            As the official CR provider to the US military, iCRco has propelled
+            its products to the furthest reaches of the world, and the AirDR c
+            is no exception.
           </p>
         </InfoBox>
       </div>
