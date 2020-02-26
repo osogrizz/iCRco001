@@ -28,6 +28,7 @@ const InfoContainer = styled("div")`
   p {
     margin: 20px 10%;
     text-align: left;
+    font-size: 0.775rem;
   }
 `
 
@@ -39,15 +40,17 @@ const Row = styled("div")`
   div:first-child {
     color: #fff;
     background: #0069aa88;
-    width: 200px;
+    width: 250px;
     text-align: left;
     padding: 8px;
+    font-size: 0.975rem;
   }
   div:last-child {
     text-align: left;
     width: 100%;
     padding: 8px;
     background: lightgray;
+    font-size: 0.75rem;
   }
 `
 
@@ -58,60 +61,73 @@ const NurseSection = () => {
         <h2>AIRDR c SPECIFICATIONS</h2>
         <div display={{}}>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Application</div>
+            <div>General Radiography</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Sensor</div>
+            <div>Direct Deposit Cesium Iodide</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Panel</div>
+            <div>Amorphous Silicon active TFT/diode array</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Active Area</div>
+            <div>17 x 17 inch (432mm x 432mm)</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Sensor panel</div>
+            <div>4,138 x 4320 (18.7M pixels)</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Image Data</div>
+            <div>16 bit</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Trigger Mode</div>
+            <div>Auto Sensing, Manual, User Open (for NDT)</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Image Preview</div>
+            <div>2 ~ 5 sec. (approx.)</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Image Transfer Time</div>
+            <div>600 ms. (approx.)</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>
+              Wired Interface <br />
+              (Data Output)
+            </div>
+            <div>Gigabit Ethernet and X-Ray I/F</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Voltage</div>
+            <div>100-240 V ~.50/60 Hz</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Power Consumption</div>
+            <div>35 VA MAximum</div>
           </Row>
           <Row>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Environment</div>
+            <div>
+              Storage: -10°C ~ 60°C, 10% ~ 90% RH (Non-condensing) <br />
+              Working: 10°C ~35°C, 20% ~75% RH (Non-condensing)
+            </div>
+          </Row>
+          <Row>
+            <div>Dimensions (WxLXT)</div>
+            <div>
+              18.11 x 18.11 x 59" (Cassette-size for the standard table or wall
+              bucky)
+            </div>
           </Row>
           <Row style={{ borderBottom: "none" }}>
-            <div>title</div>
-            <div>lorem ipsum...</div>
+            <div>Weight</div>
+            <div>4.5kg (9.4lb)</div>
           </Row>
 
           <p>
