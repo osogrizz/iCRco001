@@ -8,7 +8,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 105vh;
+  height: 60vh;
   width: 100%;
   background-image: url("../images/AiirDRLE_Nurse.png");
   background-size: cover cover;

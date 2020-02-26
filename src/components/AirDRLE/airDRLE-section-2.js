@@ -33,6 +33,27 @@ const InfoBox = styled("div")`
     text-align: left;
   }
 `
+const LowerContainer = styled("div")`
+  height: 40vh;
+  display: flex;
+  margin: 0 auto;
+  width: 400px !important;
+  padding: auto;
+  padding-bottom: 100vh;
+`
+
+const InfoBox = styled("div")`
+  width: 180px {
+    font-size: 1.45rem;
+  }
+
+  p {
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 0;
+    font-size: 0.75rem;
+  }
+`
 
 const DimensionSection2 = () => {
   return (
@@ -40,7 +61,22 @@ const DimensionSection2 = () => {
       <div>
         <NurseHero3 />
       </div>
-      <div style={{ display: "flex", height: "20vh" }}></div>
+      <LowerContainer>
+        <InfoBox style={{ borderRight: "2px solid black" }}>
+          <h2>100</h2>
+          <p>Microns</p>
+        </InfoBox>
+
+        <InfoBox style={{ margin: "0 20px" }}>
+          <h2>16</h2>
+          <p>Bit Resolutions</p>
+        </InfoBox>
+
+        <InfoBox style={{ borderLeft: "2px solid black" }}>
+          <h2>15</h2>
+          <p>Megapixel</p>
+        </InfoBox>
+      </LowerContainer>
     </Container>
   )
 }
