@@ -138,7 +138,7 @@ const AirDRCHero = () => {
           }
         }
       }
-      airdr: file(relativePath: { eq: "AirDR2.png" }) {
+      airdr: file(relativePath: { eq: "AirDRC2.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -291,7 +291,7 @@ const AirDRCHero = () => {
               <Img fluid={airdr.sharp.fluid} />
             </div>
             <div>
-              <p>AirDR</p>
+              <p>AirDR c</p>
             </div>
           </li>
 
