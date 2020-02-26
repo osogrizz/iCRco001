@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import NurseHero from "../HeroImages/nurse-hero"
+import NurseHero2 from "../HeroImages/nurse-hero-2"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -139,7 +139,7 @@ const NurseSection = () => {
           </p>
         </div>
       </InfoContainer>
-      <NurseHero />
+      <NurseHero2 />
     </Container>
   )
 }

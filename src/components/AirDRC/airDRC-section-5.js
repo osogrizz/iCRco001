@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import NurseHero from "../HeroImages/nurse-hero"
+// import NurseHero from "../HeroImages/nurse-hero"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -20,6 +20,7 @@ const InfoBox = styled("div")`
   width: 800px;
   padding: 35px 26px 0;
   height: 40vh;
+
   h4 {
     color: #0069aa;
     letter-spacing: 1.2px;
@@ -35,16 +36,16 @@ const InfoBox = styled("div")`
 const AirDRCSection5 = () => {
   const { integrated, workflow } = useStaticQuery(graphql`
     query {
-      integrated: file(relativePath: { eq: "AirDr_Logo1.png" }) {
+      integrated: file(relativePath: { eq: "airdrc_kid.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      workflow: file(relativePath: { eq: "AirDr_Logo1.png" }) {
+      workflow: file(relativePath: { eq: "airdrc_lady.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -60,15 +61,20 @@ const AirDRCSection5 = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ width: "500px", margin: "0 auto" }}>
+        <div style={{ width: "500px", margin: "40px auto" }}>
           <Img fluid={integrated.sharp.fluid} />
         </div>
-        <div style={{ width: "500px", margin: "0 auto" }}>
+        <div style={{ width: "500px", margin: "40px auto" }}>
           <Img fluid={workflow.sharp.fluid} />
         </div>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
         <InfoBox>
           <h4>
             Integrated AED for "No-Hassle Implentation" into existing X-Ray
