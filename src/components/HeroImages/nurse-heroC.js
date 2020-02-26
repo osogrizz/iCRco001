@@ -108,7 +108,7 @@ const NurseHero = () => {
     query {
       nurse: file(relativePath: { eq: "AirDRc_cover.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1120, quality: 100) {
+          fluid(maxWidth: 1440, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
