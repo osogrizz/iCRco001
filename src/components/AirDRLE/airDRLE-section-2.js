@@ -18,21 +18,6 @@ const Container = styled("div")`
     width: 100%;
   }
 `
-
-const InfoBox = styled("div")`
-  padding: 35px 26px 0;
-  /* height: 48vh; */
-  h3 {
-    color: #0069aa;
-    letter-spacing: 1.2px;
-    text-align: left;
-  }
-  p {
-    font-size: 0.875rem;
-    letter-spacing: 1.1px;
-    text-align: left;
-  }
-`
 const LowerContainer = styled("div")`
   height: 40vh;
   display: flex;
