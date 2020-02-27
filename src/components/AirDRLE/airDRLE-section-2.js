@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
+// import WaveHero from "../HeroImages/wave-hero"
 import NurseHero3 from "../HeroImages/nurse-hero-3"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
+  /* height: 100vh; */
   width: 100%;
   text-align: center;
   flex-direction: column;
@@ -18,52 +20,65 @@ const Container = styled("div")`
     width: 100%;
   }
 `
-const LowerContainer = styled("div")`
-  height: 40vh;
-  display: flex;
-  margin: 0 auto;
-  width: 400px !important;
-  padding: auto;
-  padding-bottom: 100vh;
-`
 
 const InfoBox = styled("div")`
-  width: 180px {
-    font-size: 1.45rem;
-  }
-
-  p {
-    font-weight: 700;
+  padding: 35px 26px 0;
+  height: 20vh;
+  h3 {
+    color: #0069aa;
     letter-spacing: 1.2px;
-    margin: 0;
-    font-size: 0.75rem;
+  }
+  p {
+    font-size: 0.875rem;
+    letter-spacing: 1.1px;
+    text-align: left;
   }
 `
 
-const DimensionSection2 = () => {
+const DimensionSection = () => {
   return (
     <Container>
       <div>
         <NurseHero3 />
       </div>
-      <LowerContainer>
-        <InfoBox style={{ borderRight: "2px solid black" }}>
-          <h2>100</h2>
-          <p>Microns</p>
+      <div style={{ display: "flex" }}>
+        <InfoBox>
+          <h3>Specifications</h3>
+          <p>
+            The <strong>AirDR™</strong> is a lightweight digital radiographic
+            system designed to optimize workflow, increase throughhput, and
+            eliminate unnecessary exposure for patients. Its durable frame and
+            wireless capabilities allow you complete imaging freedom foreven the
+            most difficult image projections. Using advancedacquisition
+            software, the <strong>AirDR™</strong> allows you to acheive
+            unprecedented workflow and save valuable time.
+          </p>
         </InfoBox>
-
-        <InfoBox style={{ margin: "0 20px" }}>
-          <h2>16</h2>
-          <p>Bit Resolutions</p>
+        <InfoBox>
+          <h3>Detector</h3>
+          <p>
+            The <strong>AirDR™</strong> is a 100-micronn, direct deposit Cesium,
+            flat panel detector. The detector transmits images to the
+            acquisition station through a WiFi connection, eliminatingthe need
+            for a hard wire. If WiFi is unavailable, a backup cable connection
+            can be used. Powered by a Cesium Iodide Scintilator, the detector
+            delivers high-resolution images at the lowest possible dose.
+          </p>
         </InfoBox>
-
-        <InfoBox style={{ borderLeft: "2px solid black" }}>
-          <h2>15</h2>
-          <p>Megapixel</p>
+        <InfoBox>
+          <h3>Single Detector</h3>
+          <p>
+            Other panels on the market can have as many as 5 separate sensorsand
+            the panel relies on these sensors to work in concert to acquire an
+            image. Multi-sensor panels are often vulnerable to failure points
+            between sensors, which cancause "no triggers" and "false triggers"
+            during a routune study and ultimately lead to uneccessary repeat
+            exposure for patients.
+          </p>
         </InfoBox>
-      </LowerContainer>
+      </div>
     </Container>
   )
 }
 
-export default DimensionSection2
+export default DimensionSection

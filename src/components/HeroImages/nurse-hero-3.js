@@ -39,15 +39,7 @@ const NurseHero3 = () => {
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
-    >
-      <div
-        style={{
-          position: "relative",
-          width: "480px",
-          margin: "30px auto 20px",
-        }}
-      ></div>
-    </ImageBackground>
+    ></ImageBackground>
   )
 }
 
