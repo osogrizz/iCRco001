@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
+// import WaveHero from "../HeroImages/wave-hero"
 import NurseHero3 from "../HeroImages/nurse-hero-3"
 
 const Container = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
+  /* height: 100vh; */
   width: 100%;
   height: 95vh;
   text-align: center;
@@ -21,6 +23,7 @@ const Container = styled("div")`
     padding: 0;
   }
 `
+
 const LowerContainer = styled("div")`
   top: -50;
   display: flex;
@@ -51,7 +54,7 @@ const InfoBox = styled("div")`
   }
 `
 
-const DimensionSection2 = () => {
+const DimensionSection = () => {
   return (
     <Container>
       <div>
@@ -79,4 +82,4 @@ const DimensionSection2 = () => {
   )
 }
 
-export default DimensionSection2
+export default DimensionSection
