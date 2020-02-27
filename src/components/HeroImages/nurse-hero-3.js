@@ -1,17 +1,19 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  /* height: 100vh; */
   width: 100%;
   background-image: url("../images/AiirDRLE_Nurse.png");
   background-size: cover cover;
+  margin: 0;
+  padding: 0;
 `
 
 const NurseHero3 = () => {
@@ -39,15 +41,7 @@ const NurseHero3 = () => {
       fluid={image.sharp.fluid}
       fadeIn="soft"
       preserveStackingContext
-    >
-      <div
-        style={{
-          position: "relative",
-          width: "480px",
-          margin: "30px auto 20px",
-        }}
-      ></div>
-    </ImageBackground>
+    ></ImageBackground>
   )
 }
 

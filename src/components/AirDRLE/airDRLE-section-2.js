@@ -7,6 +7,7 @@ const Container = styled("div")`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   width: 100%;
+  height: 95vh;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -16,27 +17,37 @@ const Container = styled("div")`
 
   div {
     width: 100%;
+    margin: 0 auto;
+    padding: 0;
   }
 `
 const LowerContainer = styled("div")`
-  height: 40vh;
+  top: -50;
   display: flex;
   margin: 0 auto;
-  width: 400px !important;
-  padding: auto;
-  padding-bottom: 100vh;
+  width: 800px !important;
+`
+
+const InfoContainer = styled("div")`
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: 120%;
+
+  hr {
+    height: 2px;
+    width: 580px;
+    margin: 0 auto 5px;
+    background: #333;
+  }
 `
 
 const InfoBox = styled("div")`
-  width: 180px {
-    font-size: 1.45rem;
-  }
+  width: 200px;
 
   p {
     font-weight: 700;
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
     margin: 0;
-    font-size: 0.75rem;
   }
 `
 
@@ -46,22 +57,24 @@ const DimensionSection2 = () => {
       <div>
         <NurseHero3 />
       </div>
-      <LowerContainer>
-        <InfoBox style={{ borderRight: "2px solid black" }}>
-          <h2>100</h2>
-          <p>Microns</p>
-        </InfoBox>
+      <InfoContainer>
+        <LowerContainer>
+          <InfoBox style={{ borderRight: "2px solid black" }}>
+            <h2>100</h2>
+            <p>Microns</p>
+          </InfoBox>
 
-        <InfoBox style={{ margin: "0 20px" }}>
-          <h2>16</h2>
-          <p>Bit Resolutions</p>
-        </InfoBox>
+          <InfoBox style={{ margin: "0 20px" }}>
+            <h2>16</h2>
+            <p>Bit Resolutions</p>
+          </InfoBox>
 
-        <InfoBox style={{ borderLeft: "2px solid black" }}>
-          <h2>15</h2>
-          <p>Megapixel</p>
-        </InfoBox>
-      </LowerContainer>
+          <InfoBox style={{ borderLeft: "2px solid black" }}>
+            <h2>15</h2>
+            <p>Megapixel</p>
+          </InfoBox>
+        </LowerContainer>
+      </InfoContainer>
     </Container>
   )
 }
