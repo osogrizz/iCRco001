@@ -10,7 +10,7 @@ const ImageBackground = styled(BackgroundImage)`
   align-items: center;
   /* height: 100vh; */
   width: 100%;
-  background-image: url("../images/AiirDRLE_Nurse.png");
+  background-image: url("../images/AirDRLE_Nurse.png");
   background-size: cover cover;
   margin: 0;
   padding: 0;

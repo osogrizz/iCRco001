@@ -168,11 +168,11 @@ const AirDR_LE = ({ data }) => {
 
         <div>
           <AirDRLEHero />
-          {/* <AirDRLESection2 /> */}
+          <AirDRLESection2 />
           {/* <NurseSection /> */}
           <Dimension />
           <DROptions />
-          {/* <AirDRLESection5 /> */}
+          <AirDRLESection5 />
           {/* <Protection /> */}
         </div>
       </Container>
