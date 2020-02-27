@@ -3,7 +3,8 @@ import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AirDRLEHero from "../components/AirDRLE/airDRLE-hero"
-import AirDRLESection2 from "../components/AirDRLE/airDRLE-section-2"
+import NurseHero3 from "../components/HeroImages/nurse-hero-3"
+// import AirDRLESection2 from "../components/AirDRLE/airDRLE-section-2"
 import Dimension from "../components/AirDR/dimensions-section"
 import DROptions from "../components/AirDR/droptions-section"
 // import Protection from "../components/AirDR/protection-section"
@@ -168,11 +169,12 @@ const AirDR_LE = ({ data }) => {
 
         <div>
           <AirDRLEHero />
-          <AirDRLESection2 />
+          {/* <NurseHero3 /> */}
+          {/* <AirDRLESection2 /> */}
           {/* <NurseSection /> */}
-          <Dimension />
-          <DROptions />
-          <AirDRLESection5 />
+          {/* <Dimension /> */}
+          {/* <DROptions /> */}
+          {/* <AirDRLESection5 /> */}
           {/* <Protection /> */}
         </div>
       </Container>

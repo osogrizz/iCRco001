@@ -9,6 +9,7 @@ const Container = styled("div")`
   display: flex;
   /* height: 100vh; */
   width: 100%;
+  height: 95vh;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
@@ -18,8 +19,11 @@ const Container = styled("div")`
 
   div {
     width: 100%;
+    margin: 0 auto;
+    padding: 0;
   }
 `
+<<<<<<< HEAD
 
 const InfoBox = styled("div")`
   padding: 35px 26px 0;
@@ -32,6 +36,35 @@ const InfoBox = styled("div")`
     font-size: 0.875rem;
     letter-spacing: 1.1px;
     text-align: left;
+=======
+const LowerContainer = styled("div")`
+  top: -50;
+  display: flex;
+  margin: 0 auto;
+  width: 800px !important;
+`
+
+const InfoContainer = styled("div")`
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: 120%;
+
+  hr {
+    height: 2px;
+    width: 580px;
+    margin: 0 auto 5px;
+    background: #333;
+  }
+`
+
+const InfoBox = styled("div")`
+  width: 200px;
+
+  p {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+>>>>>>> e3b8e3fb8e4beb6627129e12df775164b9583e5d
   }
 `
 
@@ -41,6 +74,7 @@ const DimensionSection = () => {
       <div>
         <NurseHero3 />
       </div>
+<<<<<<< HEAD
       <div style={{ display: "flex" }}>
         <InfoBox>
           <h3>Specifications</h3>
@@ -77,6 +111,26 @@ const DimensionSection = () => {
           </p>
         </InfoBox>
       </div>
+=======
+      <InfoContainer>
+        <LowerContainer>
+          <InfoBox style={{ borderRight: "2px solid black" }}>
+            <h2>100</h2>
+            <p>Microns</p>
+          </InfoBox>
+
+          <InfoBox style={{ margin: "0 20px" }}>
+            <h2>16</h2>
+            <p>Bit Resolutions</p>
+          </InfoBox>
+
+          <InfoBox style={{ borderLeft: "2px solid black" }}>
+            <h2>15</h2>
+            <p>Megapixel</p>
+          </InfoBox>
+        </LowerContainer>
+      </InfoContainer>
+>>>>>>> e3b8e3fb8e4beb6627129e12df775164b9583e5d
     </Container>
   )
 }
