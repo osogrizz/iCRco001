@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-// import WaveHero from "../HeroImages/wave-hero"
 import NurseHero3 from "../HeroImages/nurse-hero-3"
 
 const Container = styled("div")`
@@ -24,13 +23,6 @@ const Container = styled("div")`
   }
 `
 
-const LowerContainer = styled("div")`
-  top: -50;
-  display: flex;
-  margin: 0 auto;
-  width: 800px !important;
-`
-
 const InfoContainer = styled("div")`
   padding-bottom: 0;
   margin-bottom: 0;
@@ -42,6 +34,12 @@ const InfoContainer = styled("div")`
     margin: 0 auto 5px;
     background: #333;
   }
+`
+const LowerContainer = styled("div")`
+  top: -50;
+  display: flex;
+  margin: 0 auto;
+  width: 800px !important;
 `
 
 const InfoBox = styled("div")`

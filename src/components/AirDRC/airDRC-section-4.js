@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+
 import NurseHero2 from "../HeroImages/nurse-hero-2"
 
 const Container = styled("div")`

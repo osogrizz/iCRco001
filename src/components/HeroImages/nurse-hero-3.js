@@ -9,7 +9,7 @@ const ImageBackground = styled(BackgroundImage)`
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background-image: url("../images/AirDRLE_Nurse.png");
   background-size: cover cover;

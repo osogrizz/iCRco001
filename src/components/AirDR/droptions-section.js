@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import AirLogo from "../HeroImages/AirLogo"
 
 const ImageBackground = styled(BackgroundImage)`
   display: flex;

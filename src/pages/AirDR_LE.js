@@ -3,12 +3,9 @@ import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AirDRLEHero from "../components/AirDRLE/airDRLE-hero"
-import NurseHero3 from "../components/HeroImages/nurse-hero-3"
-// import AirDRLESection2 from "../components/AirDRLE/airDRLE-section-2"
-import Dimension from "../components/AirDR/dimensions-section"
+
+import AirDRCSection6 from "../components/AirDRC/airDRC-section-6"
 import DROptions from "../components/AirDR/droptions-section"
-// import Protection from "../components/AirDR/protection-section"
-import AirDRLESection5 from "../components/AirDRLE/airdrLE-section-5"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -67,7 +64,7 @@ const ProductHeader = styled("nav")`
   }
 `
 
-const AirDR_LE = ({ data }) => {
+const AirDRLE = ({ data }) => {
   return (
     <Layout>
       <SEO title="AirDR_C" />
@@ -169,20 +166,18 @@ const AirDR_LE = ({ data }) => {
 
         <div>
           <AirDRLEHero />
-          <NurseHero3 />
           {/* <AirDRLESection2 /> */}
-          {/* <NurseSection /> */}
-          {/* <Dimension /> */}
-          {/* <DROptions /> */}
-          {/* <AirDRLESection5 /> */}
-          {/* <Protection /> */}
+          {/* <NurseHero3 /> */}
+
+          <DROptions />
+          <AirDRCSection6 />
         </div>
       </Container>
     </Layout>
   )
 }
 
-export default AirDR_LE
+export default AirDRLE
 
 export const query = graphql`
   query AirDR_LE {
