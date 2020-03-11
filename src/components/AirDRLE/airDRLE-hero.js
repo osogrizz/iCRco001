@@ -131,7 +131,7 @@ const AirDRLEHero = () => {
           }
         }
       }
-      blueLogo: file(relativePath: { eq: "AirDRLE_logo.png" }) {
+      blueLogo: file(relativePath: { eq: "AirDRLE_logo_MAIN.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
