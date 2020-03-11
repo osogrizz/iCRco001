@@ -16,7 +16,6 @@ const InfoBox = styled("div")`
   width: 320px;
   text-align: center;
   margin: 20px auto;
-  /* padding: 15px; */
 
   h4 {
     font-size: 1.2rem;
