@@ -5,10 +5,7 @@ import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   background-image: url("../images/wave.png");
   background-size: cover cover;
@@ -24,7 +21,6 @@ const Container = styled("div")`
 
 const Table = styled("div")`
   padding-bottom: 0;
-  margin-bottom: 40px;
   width: 100%;
   h2 {
     color: #0069aa;
@@ -61,6 +57,12 @@ const Row = styled("div")`
   }
 `
 
+const FinePrint = styled("div")`
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.85rem;
+`
+
 const Section3 = () => {
   const { image, measure } = useStaticQuery(graphql`
     query {
@@ -89,7 +91,14 @@ const Section3 = () => {
     >
       <>
         <Container>
-          <div style={{ width: "100%" }}>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
             <div
               style={{
                 position: "relative",
@@ -125,7 +134,7 @@ const Section3 = () => {
           <div style={{ width: "100%" }}>
             <Table>
               <h2>AIRDR LE SPECIFICATIONS</h2>
-              <div display={{}}>
+              <div>
                 <Row>
                   <div>Technology</div>
                   <div>a-Si TFT with photodiode</div>
@@ -203,13 +212,15 @@ const Section3 = () => {
           </div>
         </Container>
 
-        <div style={{ textAlign: "center" }}>
+        <FinePrint>
           <p>
-            *Specifications are subject to change without notice. Processing and
-            display time are dependent on the prrocesor speed, RAM disk access
-            and video card.
+            <em>
+              *Specifications are subject to change without notice. Processing
+              and display time are dependent on the prrocesor speed, RAM disk
+              access and video card.
+            </em>
           </p>
-        </div>
+        </FinePrint>
       </>
     </ImageBackground>
   )
