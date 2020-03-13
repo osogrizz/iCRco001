@@ -17,6 +17,7 @@ const ImageBackground = styled(BackgroundImage)`
     ),
     url("../images/AirDRc_cover.png");
   background-size: cover cover;
+  top: -35px;
 
   @media (max-width: 800px) {
     height: 135vh;
@@ -66,9 +67,6 @@ const LogoContainer = styled("div")`
 `
 
 const TextBox = styled("div")`
-  /* padding: 10px 150px 40px; */
-  /* width: 350px; */
-  /* width: 80%; */
   padding: 10px 30px;
   line-height: 30px;
   letter-spacing: 1.1px;
