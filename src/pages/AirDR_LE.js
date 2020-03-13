@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AirDRLEHero from "../components/AirDRLE/airDRLE-hero"
 import AirDRLESection2 from "../components/AirDRLE/airDRLESection2"
+// import AirDRLESection3 from "../components/AirDRLE/airDRLE-section-3"
+import AirDRLESection3 from "../components/AirDRLE/airDRLE-section-3"
 import Nurse3 from "../components/HeroImages/nurse-hero-3"
 import AirDRCSection6 from "../components/AirDRC/airDRC-section-6"
 import DROptions from "../components/AirDR/droptions-section"
@@ -168,7 +170,7 @@ const AirDRLE = ({ data }) => {
         <div>
           <AirDRLEHero />
           <AirDRLESection2 />
-
+          <AirDRLESection3 />
           <DROptions />
           <AirDRCSection6 />
         </div>
