@@ -4,11 +4,9 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AirDRLEHero from "../components/AirDRLE/airDRLE-hero"
 import AirDRLESection2 from "../components/AirDRLE/airDRLESection2"
-// import AirDRLESection3 from "../components/AirDRLE/airDRLE-section-3"
 import AirDRLESection3 from "../components/AirDRLE/airDRLE-section-3"
-import Nurse3 from "../components/HeroImages/nurse-hero-3"
-import AirDRCSection6 from "../components/AirDRC/airDRC-section-6"
-import DROptions from "../components/AirDR/droptions-section"
+import AirDRLESection4 from "../components/AirDRLE/airDRLE-section-4"
+import AirDRLESection5 from "../components/AirDRLE/airDRLE-section-5"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -171,8 +169,8 @@ const AirDRLE = ({ data }) => {
           <AirDRLEHero />
           <AirDRLESection2 />
           <AirDRLESection3 />
-          <DROptions />
-          <AirDRCSection6 />
+          <AirDRLESection4 />
+          <AirDRLESection5 />
         </div>
       </Container>
     </Layout>

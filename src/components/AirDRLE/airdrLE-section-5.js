@@ -156,12 +156,12 @@ const AirDRLESection5 = () => {
                 panel cover can travel with your AirDR and fit into any table
                 and wall stand with no modifications.
               </p>
-              <div style={{ width: "100%", height: "225px" }}>
+              <div style={{ width: "100%", height: "250px" }}>
                 <Img
                   fluid={airCase.sharp.fluid}
                   style={{
                     width: "58%",
-                    top: -20,
+                    top: -10,
                     left: -20,
                     backgroundSize: "cover",
                     margin: "0 auto",
