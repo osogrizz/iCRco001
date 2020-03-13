@@ -146,7 +146,7 @@ const IDRLHero = () => {
   const {
     blueLogo,
     image,
-    airdr,
+    idrl,
     motor,
     clarity,
     workStation,
@@ -169,7 +169,7 @@ const IDRLHero = () => {
           }
         }
       }
-      airdr: file(relativePath: { eq: "AirDR2.png" }) {
+      idrl: file(relativePath: { eq: "iDR_L.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -233,7 +233,7 @@ const IDRLHero = () => {
         <div
           style={{
             position: "relative",
-            width: "320px",
+            width: "200px",
             zIndex: "1000",
             margin: "30px auto 20px",
           }}
@@ -314,11 +314,11 @@ const IDRLHero = () => {
               transform: "rotate(270deg) translate(11em) rotate(-270deg)",
             }}
           >
-            <div style={{ width: "50px" }}>
-              <Img fluid={airdr.sharp.fluid} />
+            <div style={{ width: "30px" }}>
+              <Img fluid={idrl.sharp.fluid} />
             </div>
             <div>
-              <p>AirDR</p>
+              <p>iDR-L</p>
             </div>
           </li>
 

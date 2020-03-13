@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `iCRco`,
     description: `iCRco, Inc., an ISO 13485 certified company, is an independent leader in the design and manufacture of digital imaging hardware and software, offering innovative solutions for medical, industrial, and veterinary markets for 30 years.`,
-    author: `@gatsbyjs`,
+    author: `@LeoTorres`,
   },
   plugins: [
     `gatsby-plugin-material-ui`,
