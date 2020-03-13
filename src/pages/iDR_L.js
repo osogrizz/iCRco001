@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-// import AirDrVideo from "../images/AirDR_Animation.mp4"
-import SkyHero from "../components/AirDR/sky-hero"
+import IDRLHero from "../components/iDRL/iDRL-hero"
+
 import NurseSection from "../components/AirDR/nurse-section"
 import Dimension from "../components/AirDR/dimensions-section"
 import DROptions from "../components/AirDR/droptions-section"
@@ -167,8 +167,8 @@ const iDR_L = ({ data }) => {
         </ProductHeader>
 
         <div>
-          iDR L
-          <SkyHero />
+          <IDRLHero />
+
           <NurseSection />
           <Dimension />
           <DROptions />

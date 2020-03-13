@@ -8,8 +8,6 @@ import AirDRLECSection3 from "../components/AirDRLEC/airDRLEC-section-3"
 import AirDRLECSection4 from "../components/AirDRLEC/airDRLEC-section-4"
 import AirDRLECSection5 from "../components/AirDRLEC/airDRLEC-section-5"
 
-import Protection from "../components/AirDR/protection-section"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -173,8 +171,6 @@ const AirDR_LE_C = ({ data }) => {
           <AirDRLECSection3 />
           <AirDRLECSection4 />
           <AirDRLECSection5 />
-
-          {/* <Protection /> */}
         </div>
       </Container>
     </Layout>
