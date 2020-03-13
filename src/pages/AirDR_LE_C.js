@@ -4,9 +4,10 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import AirDRLECHero from "../components/AirDRLEC/airDRLEC-hero"
 import AirDRLECSection2 from "../components/AirDRLEC/airDRLEC-section-2"
-import NurseSection from "../components/AirDR/nurse-section"
-import Dimension from "../components/AirDR/dimensions-section"
-import DROptions from "../components/AirDR/droptions-section"
+import AirDRLECSection3 from "../components/AirDRLEC/airDRLEC-section-3"
+import AirDRLECSection4 from "../components/AirDRLEC/airDRLEC-section-4"
+import AirDRLECSection5 from "../components/AirDRLEC/airDRLEC-section-5"
+
 import Protection from "../components/AirDR/protection-section"
 
 import Layout from "../components/layout"
@@ -167,13 +168,13 @@ const AirDR_LE_C = ({ data }) => {
         </ProductHeader>
 
         <div>
-          {/* <SkyHero /> */}
           <AirDRLECHero />
-          {/* <NurseSection /> */}
           <AirDRLECSection2 />
-          <Dimension />
-          <DROptions />
-          <Protection />
+          <AirDRLECSection3 />
+          <AirDRLECSection4 />
+          <AirDRLECSection5 />
+
+          {/* <Protection /> */}
         </div>
       </Container>
     </Layout>
