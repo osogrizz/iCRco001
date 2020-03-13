@@ -202,7 +202,7 @@ export const query = graphql`
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-    iDRL: imageSharp(fluid: { originalName: { eq: "iDR-L.png" } }) {
+    iDRL: imageSharp(fluid: { originalName: { eq: "iDR_L.png" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
