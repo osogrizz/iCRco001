@@ -166,11 +166,11 @@ const AirDRLE = ({ data }) => {
         </ProductHeader>
 
         <div>
-          <AirDRLEHero />
-          <AirDRLESection2 />
-          <AirDRLESection3 />
-          <AirDRLESection4 />
-          <AirDRLESection5 />
+          {/* <AirDRLEHero /> */}
+          {/* <AirDRLESection2 /> */}
+          {/* <AirDRLESection3 /> */}
+          {/* <AirDRLESection4 /> */}
+          {/* <AirDRLESection5 /> */}
         </div>
       </Container>
     </Layout>
