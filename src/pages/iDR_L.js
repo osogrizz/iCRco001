@@ -4,8 +4,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import IDRLHero from "../components/iDRL/iDRL-hero"
 import IDRLSection2 from "../components/iDRL/iDRL-section-2"
-import NurseSection from "../components/AirDR/nurse-section"
-import Dimension from "../components/AirDR/dimensions-section"
+import IDRLSection3 from "../components/iDRL/iDRL-sectioon-3"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -167,7 +166,7 @@ const iDR_L = ({ data }) => {
         <div>
           <IDRLHero />
           <IDRLSection2 />
-          <Dimension />
+          <IDRLSection3 />
         </div>
       </Container>
     </Layout>

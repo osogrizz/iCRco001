@@ -6,7 +6,6 @@ import AirDRLEHero from "../components/AirDRLE/airDRLE-hero"
 import AirDRLESection2 from "../components/AirDRLE/airDRLE-section-2"
 import AirDRLESection3 from "../components/AirDRLE/airDRLE-section-3"
 import AirDRLESection4 from "../components/AirDRLE/airDRLE-section-4"
-import AirDRLESection5 from "../components/AirDRLE/airDRLE-section-5"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -170,7 +169,6 @@ const AirDRLE = ({ data }) => {
           <AirDRLESection2 />
           <AirDRLESection3 />
           <AirDRLESection4 />
-          <AirDRLESection5 />
         </div>
       </Container>
     </Layout>
