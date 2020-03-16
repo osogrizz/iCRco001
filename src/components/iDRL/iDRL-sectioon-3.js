@@ -25,7 +25,7 @@ const Table = styled("div")`
   h2 {
     color: #0069aa;
     font-size: 2.765rem;
-    margin: 0 auto 20px;
+    margin: 40px auto 20px;
     text-align: center;
   }
   p {
@@ -67,6 +67,7 @@ const TopRow = styled("div")`
   div {
     margin: 0 auto;
     width: 100%;
+    text-align: center;
   }
 
   p {
@@ -101,7 +102,7 @@ const Row = styled("div")`
 
 const FinePrint = styled("div")`
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 0;
   font-size: 0.85rem;
 `
 
@@ -151,7 +152,6 @@ const Section3 = () => {
               width: "100%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-evenly",
             }}
           >
             <Table>
