@@ -174,6 +174,7 @@ const Section3 = () => {
                         margin: "0 auto",
                         borderRight: "1px solid #333",
                         width: "100%",
+                        color: "#333",
                       }}
                     >
                       <p>200</p>
@@ -198,11 +199,12 @@ const Section3 = () => {
                       style={{
                         borderRight: "1px solid #333",
                         paddin: "0 auto",
+                        color: "#333",
                       }}
                     >
-                      <p>200</p>
-                      <p>155</p>
-                      <p>100</p>
+                      <p>5</p>
+                      <p>7.5</p>
+                      <p>10</p>
                     </div>
                   </div>
                 </TopRow>
@@ -222,11 +224,12 @@ const Section3 = () => {
                       style={{
                         borderRight: "1px solid #333",
                         paddin: "0 auto",
+                        color: "#333",
                       }}
                     >
-                      <p>200</p>
-                      <p>155</p>
-                      <p>100</p>
+                      <p>127</p>
+                      <p>163</p>
+                      <p>154</p>
                     </div>
                   </div>
                 </TopRow>
@@ -241,10 +244,10 @@ const Section3 = () => {
                     <div>
                       <p>Line Pairs Per mm</p>
                     </div>
-                    <div className="top-column">
-                      <p>200</p>
-                      <p>155</p>
-                      <p>100</p>
+                    <div className="top-column" style={{ color: "#333" }}>
+                      <p>2.5</p>
+                      <p>3.7</p>
+                      <p>5</p>
                     </div>
                   </div>
                 </TopRow>
