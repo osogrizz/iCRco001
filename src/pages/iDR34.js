@@ -2,9 +2,9 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-// import AirDrVideo from "../images/AirDR_Animation.mp4"
-import SkyHero from "../components/AirDR/sky-hero"
-import NurseSection from "../components/AirDR/nurse-section"
+import IDRL34Hero from "../components/iDR34/iDRL34-hero"
+import IDR34Section2 from "../components/iDR34/iDRL34-section-2"
+// import NurseSection from "../components/AirDR/nurse-section"
 import Dimension from "../components/AirDR/dimensions-section"
 import DROptions from "../components/AirDR/droptions-section"
 import Protection from "../components/AirDR/protection-section"
@@ -167,12 +167,9 @@ const iDR34 = ({ data }) => {
         </ProductHeader>
 
         <div>
-          iDR34
-          <SkyHero />
-          <NurseSection />
+          <IDRL34Hero />
+          <IDR34Section2 />
           <Dimension />
-          <DROptions />
-          <Protection />
         </div>
       </Container>
     </Layout>
