@@ -25,13 +25,55 @@ const Table = styled("div")`
   h2 {
     color: #0069aa;
     font-size: 2.765rem;
-    margin: 20px auto;
+    margin: 0 auto 20px;
     text-align: center;
   }
   p {
-    margin: 10px 10%;
     text-align: left;
     font-size: 0.675rem;
+  }
+
+  .column-container {
+    display: flex;
+    margin: 0 10% 10px;
+  }
+  .top-column {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: lightgray;
+
+    p {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+`
+
+const TopTable = styled("div")`
+  display: flex;
+  margin: 0 10% 20px;
+`
+
+const TopRow = styled("div")`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  background: #0069aa88;
+
+  div {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  p {
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
   }
 `
 
@@ -60,7 +102,6 @@ const Row = styled("div")`
 const FinePrint = styled("div")`
   width: 80%;
   margin: 0 auto;
-  padding-top: 15px;
   font-size: 0.85rem;
 `
 
@@ -97,7 +138,7 @@ const Section3 = () => {
               width: "100%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
             }}
           >
             <div style={{ width: "60%", margin: "70px auto 0", zIndex: "-10" }}>
@@ -105,81 +146,158 @@ const Section3 = () => {
             </div>
           </div>
 
-          <div style={{ width: "100%" }}>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+            }}
+          >
             <Table>
               <h2>iDR-L SPECIFICATIONS</h2>
+              <TopTable>
+                <TopRow>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <div style={{ borderRight: "1px solid #333" }}>
+                      <p>Micron Spot Size</p>
+                    </div>
+                    <div
+                      className="top-column"
+                      style={{
+                        margin: "0 auto",
+                        borderRight: "1px solid #333",
+                        width: "100%",
+                      }}
+                    >
+                      <p>200</p>
+                      <p>155</p>
+                      <p>100</p>
+                    </div>
+                  </div>
+                </TopRow>
+                <TopRow>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <div style={{ borderRight: "1px solid #333" }}>
+                      <p>Pixels Per mm</p>
+                    </div>
+                    <div
+                      className="top-column"
+                      style={{
+                        borderRight: "1px solid #333",
+                        paddin: "0 auto",
+                      }}
+                    >
+                      <p>200</p>
+                      <p>155</p>
+                      <p>100</p>
+                    </div>
+                  </div>
+                </TopRow>
+                <TopRow>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <div style={{ borderRight: "1px solid #333" }}>
+                      <p>Dots Per Inch (DPI)</p>
+                    </div>
+                    <div
+                      className="top-column"
+                      style={{
+                        borderRight: "1px solid #333",
+                        paddin: "0 auto",
+                      }}
+                    >
+                      <p>200</p>
+                      <p>155</p>
+                      <p>100</p>
+                    </div>
+                  </div>
+                </TopRow>
+                <TopRow>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <div>
+                      <p>Line Pairs Per mm</p>
+                    </div>
+                    <div className="top-column">
+                      <p>200</p>
+                      <p>155</p>
+                      <p>100</p>
+                    </div>
+                  </div>
+                </TopRow>
+              </TopTable>
               <div>
                 <Row>
-                  <div>Technology</div>
-                  <div>a-Si TFT with photodiode</div>
+                  <div>Grayscale Resolution</div>
+                  <div>16 bits/pixel source file, 65536 shades of gray</div>
                 </Row>
                 <Row>
-                  <div>Scintilator</div>
-                  <div>
-                    Csl:Tl/Gd<sub>2</sub>0<sub>2</sub>S:Tb
-                  </div>
+                  <div>Scanning</div>
+                  <div>17" x 51" active area. 14" x 51" option</div>
                 </Row>
                 <Row>
-                  <div>Pixel Pitch</div>
-                  <div>140 µm</div>
+                  <div>Configuration</div>
+                  <div>Wall mounted, upright full-spine imaging</div>
                 </Row>
                 <Row>
-                  <div>Spatial Resolution</div>
-                  <div>3.5 lp/mm</div>
-                </Row>
-                <Row>
-                  <div>Pixels</div>
-                  <div>3072 x 3072 pixels</div>
-                </Row>
-                <Row>
-                  <div>Image Size</div>
-                  <div>17" x 17" (43.0 cm x 43.0 cm; 432 mm x 432 mm)</div>
-                </Row>
-                <Row>
-                  <div>Gray Scale</div>
-                  <div>16 bit</div>
-                </Row>
-                <Row>
-                  <div>Image Acquisition Time</div>
-                  <div>
-                    Wired: 1.5 seconds <br />
-                    Wireless: 3 seconds
-                  </div>
-                </Row>
-                <Row>
-                  <div>Recommended Cycle Time</div>
-                  <div>15 seconds</div>
-                </Row>
-                <Row>
-                  <div>
-                    Data Interface <br />
-                    (Data Output)
-                  </div>
-                  <div>
-                    Gigabit Ethernet <br />
-                    IEEE 802.11n
-                  </div>
-                </Row>
-                <Row>
-                  <div>X-Ray Generator Interface</div>
-                  <div>
-                    Line Trigger: DR Trigger Mode
-                    <br />
-                    Auto Trigger AED Mode
-                  </div>
+                  <div>Weight</div>
+                  <div>Approx. 100 lbs</div>
                 </Row>
                 <Row>
                   <div>Dimensions</div>
                   <div>
-                    18.11 x 18.11 x 59" <br />
-                    46.0 cm x 46.0 cm x 1.5 cm
+                    iDR 17x51: W22.5" x D6.32" x H72.25" <br />
+                    iDR 14x51: W19.5" x D6.32" x H72.25"
                   </div>
                 </Row>
                 <Row>
-                  <div>Weight</div>
+                  <div>Power Source</div>
                   <div>
-                    4.2 Kg <br />
-                    4.5 kg (9.4lb) (including battery)
+                    100-240V AC/2.5A max; 47-63Hz (universal power supply){" "}
+                    <br />
+                    24V option available
+                  </div>
+                </Row>
+                <Row>
+                  <div>iSupply</div>
+                  <div>
+                    24V portable DC power supply available <br />
+                    270 scans on a single charge
+                  </div>
+                </Row>
+                <Row>
+                  <div>Heat Generation</div>
+                  <div>Standby 230W, Maximum 1610W</div>
+                </Row>
+                <Row>
+                  <div>Operating Conditions</div>
+                  <div>
+                    Temperature: 0-40˚C/32-105˚F, temperature change: 0.5˚C/min,
+                    humidity: 15%-95% RH, magnetic fields: max1260 µT (in
+                    conformance with En 6100-4-8: Level 3), 10 A/m
                   </div>
                 </Row>
               </div>

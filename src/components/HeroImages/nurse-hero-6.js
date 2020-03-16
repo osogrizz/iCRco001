@@ -16,7 +16,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(80, 80, 80, 0.1)
     ),
     url("../images/AirDRc_cover.png");
-  /* background-size: cover cover; */
+  background-size: cover cover;
   top: -35px;
 
   @media (max-width: 800px) {
