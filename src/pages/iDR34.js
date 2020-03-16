@@ -4,10 +4,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import IDRL34Hero from "../components/iDR34/iDRL34-hero"
 import IDR34Section2 from "../components/iDR34/iDRL34-section-2"
-// import NurseSection from "../components/AirDR/nurse-section"
-import Dimension from "../components/AirDR/dimensions-section"
-import DROptions from "../components/AirDR/droptions-section"
-import Protection from "../components/AirDR/protection-section"
+import IDR34Section3 from "../components/iDR34/iDRL34-section-3"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -169,7 +166,7 @@ const iDR34 = ({ data }) => {
         <div>
           <IDRL34Hero />
           <IDR34Section2 />
-          <Dimension />
+          <IDR34Section3 />
         </div>
       </Container>
     </Layout>
