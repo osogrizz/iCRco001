@@ -92,8 +92,8 @@ const InfoCard = styled("div")`
   }
 `
 
-const AirDRLESection5 = () => {
-  const { protection, leCase, tough } = useStaticQuery(graphql`
+const AirDRLSection5 = () => {
+  const { protection, airCase, tough } = useStaticQuery(graphql`
     query {
       protection: file(relativePath: { eq: "protection_hero.png" }) {
         sharp: childImageSharp {
@@ -102,16 +102,16 @@ const AirDRLESection5 = () => {
           }
         }
       }
-      leCase: file(relativePath: { eq: "AirDRLE_CaseNew.png" }) {
+      airCase: file(relativePath: { eq: "AirDRLE_Case.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       tough: file(relativePath: { eq: "AirDR_Tough.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -154,11 +154,11 @@ const AirDRLESection5 = () => {
                 panel cover can travel with your AirDR and fit into any table
                 and wall stand with no modifications.
               </p>
-              <div style={{ width: "100%", height: "250px" }}>
+              <div style={{ width: "100%", height: "255px" }}>
                 <Img
-                  fluid={leCase.sharp.fluid}
+                  fluid={airCase.sharp.fluid}
                   style={{
-                    width: "58%",
+                    width: "62%",
                     top: -10,
                     left: -20,
                     backgroundSize: "cover",
@@ -226,4 +226,4 @@ const AirDRLESection5 = () => {
   )
 }
 
-export default AirDRLESection5
+export default AirDRLSection5
