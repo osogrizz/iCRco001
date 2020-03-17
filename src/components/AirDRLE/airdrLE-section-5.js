@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
 
@@ -47,7 +47,6 @@ const Container = styled("div")`
 
 const SelectionBox = styled("div")`
   width: 100%;
-  /* height: 100vh; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -94,7 +93,7 @@ const InfoCard = styled("div")`
 `
 
 const AirDRLESection5 = () => {
-  const { protection, airCase, tough } = useStaticQuery(graphql`
+  const { protection, leCase, tough } = useStaticQuery(graphql`
     query {
       protection: file(relativePath: { eq: "protection_hero.png" }) {
         sharp: childImageSharp {
@@ -103,7 +102,7 @@ const AirDRLESection5 = () => {
           }
         }
       }
-      airCase: file(relativePath: { eq: "AirDRLE_CaseNew.png" }) {
+      leCase: file(relativePath: { eq: "AirDRLE_CaseNew.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -157,7 +156,7 @@ const AirDRLESection5 = () => {
               </p>
               <div style={{ width: "100%", height: "250px" }}>
                 <Img
-                  fluid={airCase.sharp.fluid}
+                  fluid={leCase.sharp.fluid}
                   style={{
                     width: "58%",
                     top: -10,
