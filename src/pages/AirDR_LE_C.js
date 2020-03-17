@@ -6,7 +6,7 @@ import AirDRLECHero from "../components/AirDRLEC/airDRLEC-hero"
 import AirDRLECSection2 from "../components/AirDRLEC/airDRLEC-section-2"
 import AirDRLECSection3 from "../components/AirDRLEC/airDRLEC-section-3"
 import AirDRLECSection4 from "../components/AirDRLEC/airDRLEC-section-4"
-// import AirDRLECSection5 from "../components/AirDRLEC/airDRLEC-section-5"
+import AirDRLECSection5 from "../components/AirDRLEC/airDRLEC-section-5"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -170,7 +170,7 @@ const AirDR_LE_C = ({ data }) => {
           <AirDRLECSection2 />
           <AirDRLECSection3 />
           <AirDRLECSection4 />
-          {/* <AirDRLECSection5 /> */}
+          <AirDRLECSection5 />
         </div>
       </Container>
     </Layout>

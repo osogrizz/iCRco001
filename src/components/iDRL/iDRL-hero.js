@@ -17,7 +17,7 @@ const ImageBackground = styled(BackgroundImage)`
       rgba(80, 80, 80, 0.2),
       rgba(80, 80, 80, 0.2)
     ),
-    url("../images/Sky.png");
+    url("../images/iDRL_Product_Page.png");
   background-size: cover cover;
   z-index: 1;
   overflow: hidden;
@@ -155,7 +155,7 @@ const IDRLHero = () => {
     pacs,
   } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "Sky.png" }) {
+      image: file(relativePath: { eq: "iDRL_Product_Page.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -228,7 +228,11 @@ const IDRLHero = () => {
     }
   `)
   return (
-    <Container>
+    <ImageBackground
+      fluid={image.sharp.fluid}
+      fadeIn="soft"
+      preserveStackingContext
+    >
       <section>
         <div
           style={{
@@ -350,7 +354,7 @@ const IDRLHero = () => {
           </li>
         </ProductConfig>
       </section>
-    </Container>
+    </ImageBackground>
   )
 }
 

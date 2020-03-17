@@ -208,7 +208,7 @@ const SkyHero = () => {
             position: "relative",
             width: "320px",
             zIndex: "1000",
-            margin: "30px auto 20px",
+            margin: "0 auto",
           }}
         >
           <Img fluid={blueLogo.sharp.fluid} />

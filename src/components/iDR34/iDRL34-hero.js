@@ -206,7 +206,7 @@ const IDR34 = () => {
         <div
           style={{
             position: "relative",
-            width: "320px",
+            width: "200px",
             zIndex: "1000",
             margin: "30px auto 20px",
           }}

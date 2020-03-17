@@ -1,8 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
 import styled from "@emotion/styled"
-// import { graphql } from "gatsby"
-// import Img from "gatsby-image"
 import {
   FaFacebookF,
   FaInstagram,
@@ -33,12 +30,8 @@ const Wrapper = styled("div")`
     margin-bottom: 5%;
   }
   .bottom-footer {
-    /* bottom: 0; */
-    /* left: 0; */
     display: flex;
     justify-content: space-evenly;
-    /* width: 960px; */
-    /* margin: 20px auto; */
     margin-top: 20px;
     padding-bottom: 8rem;
   }
@@ -55,12 +48,10 @@ const Wrapper = styled("div")`
   }
 
   li {
-    /* text-align: left; */
     list-style-type: none;
   }
 
   p {
-    /* text-align: left; */
     font-size: 0.675rem;
     margin: 0px;
     color: #7a7a7a;
@@ -74,7 +65,6 @@ const Wrapper = styled("div")`
   hr {
     margin: 0 5%;
     background: #777;
-    /* background: lightgray; */
   }
 
   h6 {
@@ -129,100 +119,8 @@ const MidContainer = styled("div")`
 `
 
 const Footer = ({ data }) => {
-  console.log("data", data)
   return (
     <Wrapper>
-      {/* <div className="top-footer">
-        <li>
-          <h5>solutions</h5>
-          <Link>
-            <p>Computed Tomography</p>
-          </Link>
-          <Link>
-            <p>Computed Radiology</p>
-          </Link>
-          <Link>
-            <p>Digital Radiology</p>
-          </Link>
-          <Link>
-            <p>DICOM Printers</p>
-          </Link>
-          <Link>
-            <p>X-Ray Room Solutions</p>
-          </Link>
-          <Link>
-            <p>Software & Hardware Solutions</p>
-          </Link>
-        </li>
-
-        <li>
-          <h5>specialties</h5>
-          <Link>
-            <p>Urgent Care</p>
-          </Link>
-          <Link>
-            <p>Chiropractic</p>
-          </Link>
-          <Link>
-            <p>Orthopedic</p>
-          </Link>
-          <Link>
-            <p>Podiatry</p>
-          </Link>
-          <Link>
-            <p>General Radiology</p>
-          </Link>
-          <Link>
-            <p>Veterinary</p>
-          </Link>
-        </li>
-
-        <li>
-          <h5>services & support</h5>
-          <Link>
-            <p>Sales Support</p>
-          </Link>
-          <Link>
-            <p>Technical Support</p>
-          </Link>
-          <Link>
-            <p>Product Registration</p>
-          </Link>
-          <Link>
-            <p>Parts</p>
-          </Link>
-          <Link>
-            <p>Dealer Assistance</p>
-          </Link>
-        </li>
-
-        <li>
-          <h5>quick links</h5>
-          <Link>
-            <p>About Us</p>
-          </Link>
-          <Link>
-            <p>News & Events</p>
-          </Link>
-        </li>
-
-        <li>
-          <h5>contact us</h5>
-          <Link>
-            <p>iCRco Headquarters</p>
-          </Link>
-          <Link>
-            <p>26 Coromar Dr. Goleta, CA 93117</p>
-          </Link>
-          <Link>
-            <p>(310) 921-9559</p>
-          </Link>
-          <Link>
-            <p>info@company.com</p>
-          </Link>
-        </li>
-      </div> */}
-
       <MidContainer>
         <FlagImage />
         <li>
@@ -292,13 +190,3 @@ const Footer = ({ data }) => {
 }
 
 export default Footer
-
-// export const query = graphql`
-//   query FlagQuery {
-//     flag: imageSharp(fluid: { originalName: { eq: "flag.png" } }) {
-//       fluid(maxWidth: 800) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `
