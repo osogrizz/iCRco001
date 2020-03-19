@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
@@ -28,6 +28,7 @@ const ImageBackground = styled(BackgroundImage)`
     font-weight: 400;
     margin: 20px auto 40px;
   }
+
   a {
     color: #fff;
     border-radius: 20px;
@@ -54,7 +55,6 @@ const ProductConfig = styled("ul")`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: 1; */
 
   transition: 0.24s 0.2s;
 
@@ -82,10 +82,12 @@ const ProductConfig = styled("ul")`
     width: 4em;
     margin: -2em;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
   }
 
   .option-container {
-    width: 30px;
+    /* width: 30px; */
   }
 
   p {
@@ -116,12 +118,18 @@ const SkyHero = () => {
     blueLogo,
     image,
     airdr,
+    colorairdr,
     motor,
+    colormotor,
     clarity,
     workStation,
+    colorStation,
     registration,
+    colorReg,
     xc,
+    colorXC,
     pacs,
+    colorPACS,
   } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "Sky.png" }) {
@@ -145,7 +153,21 @@ const SkyHero = () => {
           }
         }
       }
+      colorairdr: file(relativePath: { eq: "AirDR-color.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
       motor: file(relativePath: { eq: "CPU.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      colormotor: file(relativePath: { eq: "color-motor.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -166,6 +188,13 @@ const SkyHero = () => {
           }
         }
       }
+      colorReg: file(relativePath: { eq: "Product-Registration-Color.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
       xc: file(relativePath: { eq: "XC_Icon.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
@@ -173,7 +202,21 @@ const SkyHero = () => {
           }
         }
       }
+      colorXC: file(relativePath: { eq: "xc-box.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
       workStation: file(relativePath: { eq: "PACS_Icon.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      colorStation: file(relativePath: { eq: "Dell.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -194,8 +237,45 @@ const SkyHero = () => {
           }
         }
       }
+      colorPACS: file(relativePath: { eq: "ClarityPACS.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `)
+
+  const [workstation, setWorkstation] = useState(false)
+  const [airdrImg, setAirdrImg] = useState(false)
+  const [xcImage, setXCIMage] = useState(false)
+  const [clarityImg, setClarityImg] = useState(false)
+  const [registrationImg, setRegistration] = useState(false)
+
+  const handleWorkstation = e => {
+    e.preventDefault()
+    setWorkstation(!workstation)
+  }
+
+  const handleAirdr = e => {
+    e.preventDefault()
+    setAirdrImg(!airdrImg)
+  }
+
+  const handleXC = e => {
+    e.preventDefault()
+    setXCIMage(!xcImage)
+  }
+  const handleClarity = e => {
+    e.preventDefault()
+    setClarityImg(!clarityImg)
+  }
+  const handleRegistration = e => {
+    e.preventDefault()
+    setRegistration(!registrationImg)
+  }
+
   return (
     <ImageBackground
       fluid={image.sharp.fluid}
@@ -228,21 +308,29 @@ const SkyHero = () => {
             </div>
           </div>
 
-          <li
+          {/* <li
+            onMouseEnter={handleWorkstation}
+            onMouseLeave={handleWorkstation}
             style={{
               transform: "rotate(-324deg) translate(-11em) rotate(324deg)",
             }}
           >
-            <div className="option-container">
-              <Img fluid={motor.sharp.fluid} />
-            </div>
+            {!workstation ? (
+              <div style={{ width: "30px" }}>
+                <Img fluid={motor.sharp.fluid} />
+              </div>
+            ) : (
+              <div style={{ width: "70px" }}>
+                <Img fluid={colormotor.sharp.fluid} />
+              </div>
+            )}
             <div style={{ width: "120px" }}>
               <p>iCRco Integrated PACS</p>
               <p>& Workstation PC</p>
             </div>
-          </li>
+          </li> */}
 
-          <li
+          {/* <li
             style={{
               transform: "rotate(60deg) translate(11em) rotate(-60deg)",
             }}
@@ -254,28 +342,44 @@ const SkyHero = () => {
               <p>Clarity</p>
               <p>Practice</p>
             </div>
-          </li>
+          </li> */}
           <li
+            onMouseEnter={handleWorkstation}
+            onMouseLeave={handleWorkstation}
             style={{
-              transform: "rotate(165deg) translate(11em) rotate(-165deg)",
+              transform: "rotate(212deg) translate(11em) rotate(-212deg)",
             }}
           >
-            <div style={{ width: "90px" }}>
-              <Img fluid={workStation.sharp.fluid} />
-            </div>
+            {!workstation ? (
+              <div style={{ width: "90px" }}>
+                <Img fluid={workStation.sharp.fluid} />
+              </div>
+            ) : (
+              <div style={{ width: "90px" }}>
+                <Img fluid={colorStation.sharp.fluid} />
+              </div>
+            )}
             <div style={{ margin: 0, padding: 0, width: "120px" }}>
               <p>Acquisition Station</p>
             </div>
           </li>
 
           <li
+            onMouseEnter={handleRegistration}
+            onMouseLeave={handleRegistration}
             style={{
-              transform: "rotate(-60deg) translate(-11em) rotate(60deg)",
+              transform: "rotate(-35deg) translate(-11em) rotate(35deg)",
             }}
           >
-            <div style={{ width: "60px" }}>
-              <Img fluid={registration.sharp.fluid} />
-            </div>
+            {!registrationImg ? (
+              <div style={{ width: "60px" }}>
+                <Img fluid={registration.sharp.fluid} />
+              </div>
+            ) : (
+              <div style={{ width: "60px" }}>
+                <Img fluid={colorReg.sharp.fluid} />
+              </div>
+            )}
             <div>
               <p>Product</p>
               <p>Registration</p>
@@ -283,39 +387,70 @@ const SkyHero = () => {
           </li>
 
           <li
+            onMouseEnter={handleAirdr}
+            onMouseLeave={handleAirdr}
             style={{
               transform: "rotate(270deg) translate(11em) rotate(-270deg)",
             }}
           >
-            <div style={{ width: "50px" }}>
-              <Img fluid={airdr.sharp.fluid} />
-            </div>
-            <div>
-              <p>AirDR</p>
-            </div>
+            {!airdrImg ? (
+              <>
+                <div style={{ width: "50px" }}>
+                  <Img fluid={airdr.sharp.fluid} />
+                </div>
+                <div>
+                  <p>AirDR</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div style={{ width: "72px" }}>
+                  <Img fluid={colorairdr.sharp.fluid} />
+                </div>
+                <div style={{ width: "60px", margin: 0, padding: 0 }}>
+                  <p>AirDR</p>
+                </div>
+              </>
+            )}
           </li>
 
           <li
+            onMouseEnter={handleXC}
+            onMouseLeave={handleXC}
             style={{
               transform: "rotate(330deg) translate(11em) rotate(-330deg)",
             }}
           >
-            <div style={{ width: "80px" }}>
-              <Img fluid={xc.sharp.fluid} />
-            </div>
+            {!xcImage ? (
+              <div style={{ width: "80px" }}>
+                <Img fluid={xc.sharp.fluid} />
+              </div>
+            ) : (
+              <div style={{ width: "80px" }}>
+                <Img fluid={colorXC.sharp.fluid} />
+              </div>
+            )}
             <div style={{ width: "180px" }}>
               <p>XC 2.0 Acquisition</p>
               <p>Software</p>
             </div>
           </li>
           <li
+            onMouseEnter={handleClarity}
+            onMouseLeave={handleClarity}
             style={{
-              transform: "rotate(15deg) translate(12em) rotate(-15deg)",
+              transform: "rotate(30deg) translate(12em) rotate(-30deg)",
             }}
           >
-            <div style={{ width: "80px" }}>
-              <Img fluid={pacs.sharp.fluid} />
-            </div>
+            {!clarityImg ? (
+              <div style={{ width: "80px" }}>
+                <Img fluid={pacs.sharp.fluid} />
+              </div>
+            ) : (
+              <div style={{ width: "90px" }}>
+                <Img fluid={colorPACS.sharp.fluid} />
+              </div>
+            )}
             <div style={{ width: "180px" }}>
               <p>Clarity</p>
               <p>PACS</p>
