@@ -79,7 +79,7 @@ const ClarisXTHero = () => {
           <ClarisLogo />
         </HeroBottom>
         <h3>The Next Dimension of 3D Imaging.</h3>
-        <Link to="/ClarisXT">Learn More</Link>
+        <Link to="/Claris_Solution">Learn More</Link>
       </div>
     </ImageBackground>
   )

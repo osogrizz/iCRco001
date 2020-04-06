@@ -75,7 +75,7 @@ const ThreeSixHero = () => {
         <ThreeHunLogo />
       </HeroBottom>
       <h3>The Flagship CR.</h3>
-      <Link to="/3600">Learn More</Link>
+      <Link to="/3600_Solution">Learn More</Link>
     </ImageBackground>
   )
 }
