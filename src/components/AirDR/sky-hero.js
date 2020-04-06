@@ -84,6 +84,47 @@ const ProductConfig = styled("ul")`
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background: rgba(180, 180, 180, 0.5);
+      width: 140px;
+      height: 140px;
+    }
+  }
+  #airdr {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      margin: -3.725em;
+      padding: 10px;
+    }
+  }
+  #xc {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      margin: -3.725em;
+      padding: 10px;
+    }
+  }
+  #clarity {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      margin: -3.725em;
+      padding: 10px;
+    }
+  }
+  #registration {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      margin: -3.725em;
+      padding: 10px;
+    }
+  }
+  #workstation {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      margin: -3.325em;
+      padding: 10px;
+    }
   }
 
   .option-container {
@@ -344,10 +385,11 @@ const SkyHero = () => {
             </div>
           </li> */}
           <li
+            id="workstation"
             onMouseEnter={handleWorkstation}
             onMouseLeave={handleWorkstation}
             style={{
-              transform: "rotate(212deg) translate(11em) rotate(-212deg)",
+              transform: "rotate(202deg) translate(11em) rotate(-202deg)",
             }}
           >
             {!workstation ? (
@@ -365,10 +407,11 @@ const SkyHero = () => {
           </li>
 
           <li
+            id="registration"
             onMouseEnter={handleRegistration}
             onMouseLeave={handleRegistration}
             style={{
-              transform: "rotate(-35deg) translate(-11em) rotate(35deg)",
+              transform: "rotate(-58deg) translate(-11em) rotate(58deg)",
             }}
           >
             {!registrationImg ? (
@@ -387,6 +430,7 @@ const SkyHero = () => {
           </li>
 
           <li
+            id="airdr"
             onMouseEnter={handleAirdr}
             onMouseLeave={handleAirdr}
             style={{
@@ -404,7 +448,12 @@ const SkyHero = () => {
               </>
             ) : (
               <>
-                <div style={{ width: "72px" }}>
+                <div
+                  style={{
+                    width: "100px",
+                    margin: 0,
+                  }}
+                >
                   <Img fluid={colorairdr.sharp.fluid} />
                 </div>
                 <div style={{ width: "60px", margin: 0, padding: 0 }}>
@@ -415,10 +464,11 @@ const SkyHero = () => {
           </li>
 
           <li
+            id="xc"
             onMouseEnter={handleXC}
             onMouseLeave={handleXC}
             style={{
-              transform: "rotate(330deg) translate(11em) rotate(-330deg)",
+              transform: "rotate(342deg) translate(11em) rotate(-342deg)",
             }}
           >
             {!xcImage ? (
@@ -436,18 +486,19 @@ const SkyHero = () => {
             </div>
           </li>
           <li
+            id="clarity"
             onMouseEnter={handleClarity}
             onMouseLeave={handleClarity}
             style={{
-              transform: "rotate(30deg) translate(12em) rotate(-30deg)",
+              transform: "rotate(50deg) translate(11.5em) rotate(-50deg)",
             }}
           >
             {!clarityImg ? (
-              <div style={{ width: "80px" }}>
+              <div style={{ width: "80px", height: "80px" }}>
                 <Img fluid={pacs.sharp.fluid} />
               </div>
             ) : (
-              <div style={{ width: "90px" }}>
+              <div style={{ width: "82px", height: "80px" }}>
                 <Img fluid={colorPACS.sharp.fluid} />
               </div>
             )}

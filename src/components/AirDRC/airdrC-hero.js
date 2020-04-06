@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
@@ -112,6 +112,8 @@ const ProductConfig = styled("ul")`
 `
 
 const AirDRCHero = () => {
+  const [airdrImg, setAirdr] = useState(false)
+
   const {
     blueLogo,
     image,
@@ -139,6 +141,13 @@ const AirDRCHero = () => {
         }
       }
       airdr: file(relativePath: { eq: "AirDRC2.png" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      colorAirdr: file(relativePath: { eq: "AirDRC2.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
