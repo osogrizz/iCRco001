@@ -77,7 +77,7 @@ const AirDRHero = () => {
         </HeroBottom>
         <h3>Innovative Digital Imaging.</h3>
 
-        <Link to="/AirDR">Learn More</Link>
+        <Link to="/DR_Solution">Learn More</Link>
       </div>
     </ImageBackground>
   )
