@@ -2,6 +2,9 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 import ConfigNav from "../components/config-nav"
+import AirDRHero from "../components/HeroImages/airdr-hero"
+import NureseHeroC from "../components/HeroImages/nurse-heroC"
+import NurseHero2 from "../components/HeroImages/nurse-hero-2"
 
 const Container = styled("div")`
   display: flex;
@@ -83,11 +86,11 @@ const FormContainer = styled("form")`
 
 const ImgContainer = styled("div")`
   width: 100%;
-  max-height: 80vh;
+  max-height: 100vh;
 `
 
 const DR_Solution = () => {
-  const [image, setImage] = useState("step1")
+  const [image, setImage] = useState("step3")
 
   return (
     <div>
@@ -152,11 +155,11 @@ const DR_Solution = () => {
 
         <ImgContainer>
           {image === "step1" ? (
-            <h1>step1</h1>
+            <AirDRHero />
           ) : image === "step2" ? (
-            <h1>step2</h1>
+            <NureseHeroC />
           ) : (
-            <h1>step3</h1>
+            <NurseHero2 />
           )}
         </ImgContainer>
       </Container>

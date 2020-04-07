@@ -40,7 +40,7 @@ const ConfigNav = () => {
   return (
     <Container>
       <button className="active">1. Build Your Kit</button>
-      <button>2. Kit Overview</button>
+      <button disabled>2. Kit Overview</button>
       <button disabled>3. Quote</button>
     </Container>
   )
