@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 const Container = styled("div")`
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -19,6 +21,7 @@ const Container = styled("div")`
     width: 100%;
     height: 100%;
     color: lightgray;
+    background: #fff;
     cursor: default;
     outline: transparent;
     &:active {

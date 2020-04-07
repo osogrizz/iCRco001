@@ -9,6 +9,7 @@ import NurseHero2 from "../components/HeroImages/nurse-hero-2"
 const Container = styled("div")`
   display: flex;
   width: 100%;
+  height: 100vh;
 `
 
 const FormContainer = styled("form")`
@@ -16,10 +17,11 @@ const FormContainer = styled("form")`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
-
+  overflow: hidden;
   width: 60%;
-  max-height: 85vh;
+  max-height: 100vh;
   padding: 0 4%;
+  margin-top: 80px;
 
   .section {
     width: 100%;
@@ -86,11 +88,14 @@ const FormContainer = styled("form")`
 
 const ImgContainer = styled("div")`
   width: 100%;
-  max-height: 100vh;
+  max-height: 100vh - 80px;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 80px;
 `
 
 const DR_Solution = () => {
-  const [image, setImage] = useState("step3")
+  const [image, setImage] = useState("step1")
 
   return (
     <div>
@@ -102,20 +107,20 @@ const DR_Solution = () => {
               <h4 className="activeTitle">Speciality</h4>
             </div>
             <div>
-              <select name="specialty" id="">
-                <option value="">Hospital</option>
-                <option value="">Urgent Care</option>
-                <option value="">Spine Surgeon</option>
-                <option value="">Hand Surgeon</option>
-                <option value="">Urology</option>
-                <option value="">Chest Sreening</option>
-                <option value="">Chiropractics</option>
-                <option value="">Orthopedic</option>
-                <option value="">Podiatry</option>
-                <option value="">Pediatric</option>
-                <option value="">Mammography</option>
-                <option value="">Emergency Response</option>
-                <option value="">Veterinary</option>
+              <select name="specialty" id="step1-select">
+                <option value="step1">Hospital</option>
+                <option value="step1">Urgent Care</option>
+                <option value="step1">Spine Surgeon</option>
+                <option value="step1">Hand Surgeon</option>
+                <option value="step1">Urology</option>
+                <option value="step2">Chest Sreening</option>
+                <option value="step2">Chiropractics</option>
+                <option value="step2">Orthopedic</option>
+                <option value="step2">Podiatry</option>
+                <option value="step2">Pediatric</option>
+                <option value="step3">Mammography</option>
+                <option value="step2">Emergency Response</option>
+                <option value="step2">Veterinary</option>
               </select>
             </div>
           </div>
