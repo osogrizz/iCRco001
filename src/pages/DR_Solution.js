@@ -18,7 +18,7 @@ const FormContainer = styled("form")`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 60%;
+  width: 46%;
   max-height: 100vh;
   padding: 0 4%;
   margin-top: 80px;
@@ -96,6 +96,12 @@ const ImgContainer = styled("div")`
 
 const DR_Solution = () => {
   const [image, setImage] = useState("step1")
+  const [stageOpen, setStageOpen] = useState({
+    stage1: true,
+    stage2: false,
+    stage3: false,
+    stage4: false,
+  })
 
   const handleSelect = e => {
     e.preventDefault()
