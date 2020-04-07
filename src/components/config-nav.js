@@ -1,5 +1,4 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 const Container = styled("div")`
@@ -12,7 +11,7 @@ const Container = styled("div")`
 
   border-bottom: 2px solid gray;
 
-  a {
+  button {
     display: flex;
     font-weight: 700;
     justify-content: center;
@@ -21,6 +20,12 @@ const Container = styled("div")`
     height: 100%;
     color: lightgray;
     cursor: default;
+    outline: transparent;
+    &:active {
+      color: #222;
+      background: lightgray;
+      transition: all 0.2s ease-in-out;
+    }
   }
   .active {
     cursor: pointer;
@@ -30,17 +35,13 @@ const Container = styled("div")`
 `
 
 const ConfigNav = () => {
+  const [steps, setSteps] = useState()
+
   return (
     <Container>
-      <Link activeClassName="active" to="/DR_Solution">
-        1. Build Your Kit
-      </Link>
-      <Link activeClassName="active" to="/DR_Kit_Overview">
-        2. Kit Overview
-      </Link>
-      <Link activeClassName="active" to="DR_Quote">
-        3. Quote
-      </Link>
+      <button className="active">1. Build Your Kit</button>
+      <button>2. Kit Overview</button>
+      <button disabled>3. Quote</button>
     </Container>
   )
 }
