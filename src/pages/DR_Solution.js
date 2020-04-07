@@ -109,6 +109,10 @@ const DR_Solution = () => {
     setImage(e.target.value)
   }
 
+  const handleNext = e => {
+    e.preventDefault()
+  }
+
   return (
     <div>
       <ConfigNav />
@@ -171,7 +175,9 @@ const DR_Solution = () => {
             </div>
           </div>
 
-          <button className="nextBtn">Next</button>
+          <button className="nextBtn" onClick={handleNext}>
+            Next
+          </button>
         </FormContainer>
 
         <ImgContainer>
@@ -179,8 +185,10 @@ const DR_Solution = () => {
             <AirDRHero />
           ) : image === "step2" ? (
             <NureseHeroC />
-          ) : (
+          ) : image === "step3" ? (
             <NurseHero2 />
+          ) : (
+            <AirDRHero />
           )}
         </ImgContainer>
       </Container>
