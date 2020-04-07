@@ -97,6 +97,12 @@ const ImgContainer = styled("div")`
 const DR_Solution = () => {
   const [image, setImage] = useState("step1")
 
+  const handleSelect = e => {
+    e.preventDefault()
+    console.log("selected", e.target.value)
+    setImage(e.target.value)
+  }
+
   return (
     <div>
       <ConfigNav />
@@ -107,7 +113,11 @@ const DR_Solution = () => {
               <h4 className="activeTitle">Speciality</h4>
             </div>
             <div>
-              <select name="specialty" id="step1-select">
+              <select
+                name="specialty"
+                id="step1-select"
+                onChange={handleSelect}
+              >
                 <option value="step1">Hospital</option>
                 <option value="step1">Urgent Care</option>
                 <option value="step1">Spine Surgeon</option>
