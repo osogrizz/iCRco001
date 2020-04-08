@@ -73,7 +73,6 @@ const DropDown = styled("div")`
   border: none;
   backdrop-filter: blur(10px);
   background: rgba(250, 250, 250, 0.3);
-
   border-radius: 0 0 3px 3px;
   min-width: 150px;
 
@@ -182,7 +181,7 @@ const Navbar = () => {
                 <Link to="/sales-support">Sales Support</Link>
                 <Link to="technical-support">Technical Support</Link>
                 <Link to="product-registration">Product Registration</Link>
-                <Link to="parts">Parts</Link>
+                {/* <Link to="parts">Parts</Link> */}
               </DropDown>
             ) : null}
           </div>

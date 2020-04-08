@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 
 const Container = styled("div")`
   position: absolute;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;

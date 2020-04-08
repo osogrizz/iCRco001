@@ -1,27 +1,29 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 
+import Header from "../components/header"
 import ConfigNav from "../components/config-nav"
 import AirDRHero from "../components/HeroImages/airdr-hero"
 import NureseHeroC from "../components/HeroImages/nurse-heroC"
 import NurseHero2 from "../components/HeroImages/nurse-hero-2"
 
 const Container = styled("div")`
+  position: fixed;
   display: flex;
   width: 100%;
   height: 100vh;
 `
 
-const FormContainer = styled("form")`
+const FormContainer = styled("div")`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 46%;
-  max-height: 100vh;
+  max-height: 85vh;
   padding: 0 4%;
-  margin-top: 80px;
+  margin-top: 110px;
 
   .section {
     width: 100%;
@@ -88,10 +90,10 @@ const FormContainer = styled("form")`
 
 const ImgContainer = styled("div")`
   width: 100%;
-  max-height: 100vh - 80px;
+  height: 100vh -130px;
   overflow: hidden;
   padding: 0;
-  margin-top: 80px;
+  margin-top: 130px;
 `
 
 const DR_Solution = () => {
@@ -115,6 +117,7 @@ const DR_Solution = () => {
 
   return (
     <div>
+      <Header />
       <ConfigNav />
       <Container>
         <FormContainer>
