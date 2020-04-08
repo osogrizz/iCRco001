@@ -170,7 +170,7 @@ const Navbar = () => {
         <Link
           className="top-nav"
           activeStyle={activeStyles}
-          to="/services/"
+          to="/sales-support"
           onMouseEnter={handleService}
           onMouseLeave={handleService}
         >
@@ -186,9 +186,9 @@ const Navbar = () => {
             ) : null}
           </div>
         </Link>
-        <Link activeStyle={activeStyles} to="/news/" className="top-nav">
+        {/* <Link activeStyle={activeStyles} to="/news/" className="top-nav">
           News & Events
-        </Link>
+        </Link> */}
         <Link
           className="top-nav"
           activeStyle={activeStyles}
@@ -207,7 +207,7 @@ const Navbar = () => {
           >
             {about ? (
               <DropDown>
-                <Link to="/CEO">CEO</Link>
+                {/* <Link to="/CEO">CEO</Link> */}
                 <Link to="/technology">Technology</Link>
               </DropDown>
             ) : null}
