@@ -220,7 +220,7 @@ const DigitalRadiography = () => {
                 <div style={{ width: "120px" }}>
                   <Img fluid={lbLogo.sharp.fluid} />
                   <h4>Long Length DR</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-idrl">Browse</Link>
                 </div>
 
                 <div style={{ width: "138px" }}>
