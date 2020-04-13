@@ -33,7 +33,7 @@ const Container = styled("div")`
     font-size: 0.895rem;
     /* letter-spacing: 0.5px; */
     font-weight: 600;
-    margin: 20px 0 0;
+    margin: 20px 0;
   }
 
   .white-section {
@@ -56,6 +56,19 @@ const Container = styled("div")`
     width: 86%;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 80px;
+
+    /* a {
+      width: 120px;
+      margin: 20px auto 40px;
+      padding: 10px 20px;
+      background: #0069aa;
+      color: #fff;
+      border: none;
+      outline: orange;
+      cursor: pointer;
+      border-radius: 5px;
+    } */
   }
 
   a {
@@ -71,6 +84,7 @@ const Container = styled("div")`
   }
   .gray-section {
     background: #f4f5f5;
+    margin-top: 80px;
 
     .section-heading {
       background: #fff;
@@ -127,13 +141,13 @@ const DigitalRadiography = () => {
           }
         }
       }
-      idr34: file(relativePath: { eq: "IDR-34-2.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
+      # idr34: file(relativePath: { eq: "IDR-34-2.png" }) {
+      #   sharp: childImageSharp {
+      #     fluid(maxWidth: 800) {
+      #       ...GatsbyImageSharpFluid_tracedSVG
+      #     }
+      #   }
+      # }
       lbLogo: file(relativePath: { eq: "iDRL_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
