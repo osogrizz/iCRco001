@@ -91,6 +91,8 @@ const Container = styled("div")`
       display: flex;
       justify-content: space-around;
       width: 100%;
+      padding-left: 100px;
+
       h3 {
         color: #333;
       }
@@ -122,7 +124,6 @@ const Container = styled("div")`
 const DigitalRadiography = () => {
   const {
     longbone,
-    idr34,
     lbLogo,
     logo34,
     airdr,
@@ -141,13 +142,6 @@ const DigitalRadiography = () => {
           }
         }
       }
-      # idr34: file(relativePath: { eq: "IDR-34-2.png" }) {
-      #   sharp: childImageSharp {
-      #     fluid(maxWidth: 800) {
-      #       ...GatsbyImageSharpFluid_tracedSVG
-      #     }
-      #   }
-      # }
       lbLogo: file(relativePath: { eq: "iDRL_Logo.png" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 800) {
