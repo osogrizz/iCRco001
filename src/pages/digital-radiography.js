@@ -31,7 +31,6 @@ const Container = styled("div")`
 
   h4 {
     font-size: 0.895rem;
-    /* letter-spacing: 0.5px; */
     font-weight: 600;
     margin: 20px 0;
   }
