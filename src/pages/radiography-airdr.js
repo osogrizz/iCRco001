@@ -155,7 +155,9 @@ const DigitalRadiography = () => {
     <div>
       <Layout>
         <Container>
-          <div style={{ height: "450px" }}>{/* <DRPageHero /> */}</div>
+          <div style={{ height: "450px" }}>
+            <DRPageHero />
+          </div>
           <div className="text-info">
             <div className="btn-section">
               <p>
