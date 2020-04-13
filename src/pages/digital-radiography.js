@@ -302,7 +302,7 @@ const DigitalRadiography = () => {
                 <div className="image-wrapper">
                   <Img fluid={airdrlec.sharp.fluid} style={{ width: "50%" }} />
                   <h4>Budget DR Solution</h4>
-                  <Link to="/radiography-airdrle">Browse</Link>
+                  <Link to="/radiography-airdrlec">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrp.sharp.fluid} style={{ width: "32%" }} />
