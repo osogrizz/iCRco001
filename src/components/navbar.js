@@ -35,7 +35,8 @@ const NavContainer = styled("div")`
 
   .top-nav {
     padding: 10px 0;
-    color: #fff;
+    /* color: #fff; */
+    color: #333;
     font-weight: 500;
   }
 

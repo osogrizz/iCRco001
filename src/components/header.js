@@ -13,7 +13,8 @@ const HeaderWrapper = styled("div")`
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(20, 20, 20, 0.8);
+  /* background: rgba(20, 20, 20, 0.8); */
+  background: rgba(240, 240, 240, 0.8);
   z-index: 900;
 `
 
@@ -55,7 +56,8 @@ const HeaderContainer = styled("div")`
 const LogoContainer = styled("div")`
   /* margin: 0 20px; */
   width: fit-content;
-  color: #fff;
+  /* color: #fff; */
+  color: #222;
   outline: transparent;
   display: flex;
   justify-content: space-between;
