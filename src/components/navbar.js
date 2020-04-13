@@ -128,9 +128,9 @@ const Navbar = () => {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {solutions ? (
               <DropDown>
+                <Link to="digital-radiography">Digital Radiography</Link>
                 <Link to="computerd-tomogrphy">Computed Tomography</Link>
                 <Link to="computed-radiology">Computed Radiography</Link>
-                <Link to="AirDR">Digital Radiography</Link>
                 <Link to="dicom-printers">DICOM Printers</Link>
                 <Link to="xray-rooms">X-Ray Room Solutions</Link>
                 <Link to="software-hardware-solutions">

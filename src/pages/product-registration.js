@@ -4,9 +4,17 @@ import styled from "@emotion/styled"
 import Layout from "../components/layout"
 
 const Container = styled("div")`
-  margin-top: 80px;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 100px auto 80px;
   text-align: center;
+  max-width: 960px;
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
 `
 
 const ProductRegistration = () => {
