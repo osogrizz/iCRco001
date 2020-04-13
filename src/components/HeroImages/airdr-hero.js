@@ -76,8 +76,9 @@ const AirDRHero = () => {
           <AirLogo />
         </HeroBottom>
         <h3>Innovative Digital Imaging.</h3>
-
-        <Link to="/DR_Solution">Learn More</Link>
+        {/* futur link destination */}
+        {/* <Link to="/DR_Solution">Learn More</Link> */}
+        <Link to="/digital-radiography">Learn More</Link>
       </div>
     </ImageBackground>
   )

@@ -141,7 +141,7 @@ const IndexPage = () => {
           >
             <source src={ShortVideo} type="video/mp4" />
           </video>
-          <div style={{ margin: "35px 0 0" }}>
+          {/* <div style={{ margin: "35px 0 0" }}>
             <Link
               style={{
                 background: "transparent",
@@ -154,7 +154,7 @@ const IndexPage = () => {
             >
               Learn More
             </Link>
-          </div>
+          </div> */}
         </section>
 
         <SideNav>

@@ -227,7 +227,7 @@ const DigitalRadiography = () => {
                 <div style={{ width: "138px" }}>
                   <Img fluid={logo34.sharp.fluid} />
                   <h4>Full Spine DR</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-idr34">Browse</Link>
                 </div>
               </div>
             </div>
@@ -254,17 +254,17 @@ const DigitalRadiography = () => {
                 <div className="image-wrapper">
                   <Img fluid={airdr.sharp.fluid} style={{ width: "45%" }} />
                   <h4>Innovative DR Solution</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-airdr">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrc.sharp.fluid} style={{ width: "50%" }} />
                   <h4>Innovative DR Solution</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-airdrc">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrp.sharp.fluid} style={{ width: "32%" }} />
                   <h4>DR Solution for Printers</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-airdr">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrpc.sharp.fluid} style={{ width: "50%" }} />
@@ -297,12 +297,12 @@ const DigitalRadiography = () => {
                 <div className="image-wrapper">
                   <Img fluid={airdrle.sharp.fluid} style={{ width: "50%" }} />
                   <h4>Budget DR Solution</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-airdrle">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrlec.sharp.fluid} style={{ width: "50%" }} />
                   <h4>Budget DR Solution</h4>
-                  <Link>Browse</Link>
+                  <Link to="/radiography-airdrle">Browse</Link>
                 </div>
                 <div className="image-wrapper">
                   <Img fluid={airdrp.sharp.fluid} style={{ width: "32%" }} />
